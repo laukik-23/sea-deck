@@ -1499,7 +1499,7 @@ body::-webkit-scrollbar { display: none; }
   background: var(--maroon);
 }
 
-/* Two-column layout  - uses a 2x2 grid for vertical alignment */
+/* Two-column layout — uses a 2x2 grid for vertical alignment */
 .s5n-columns {
   display: grid;
   grid-template-columns: 52% 48%;
@@ -1868,264 +1868,526 @@ body::-webkit-scrollbar { display: none; }
 
 
 /* ══════════════════════════════════════════════════════════
-   SLIDE 5: Local Champions, Global Ambition
+   SLIDE 2v: The Bloc Nobody Sees - CUSTOM LAYOUT
    ══════════════════════════════════════════════════════════ */
-.s5c-slide .slide-header { margin-bottom: 14px; }
-.s5c-slide .slide-header h2 { font-size: 26px; }
-.s5c-slide .header-divider { margin-bottom: 0; }
+.s2v-slide .slide-header { margin-bottom: 14px; }
+.s2v-slide .slide-header h2 { font-size: 26px; }
+.s2v-slide .header-divider { margin-bottom: 0; }
 
-.s5c-intro {
-  font-size: 10.5px;
-  font-weight: 300;
-  line-height: 1.65;
-  color: var(--text-secondary);
-  max-width: 95%;
-  margin-top: 8px;
-  margin-bottom: 4px;
-  flex: none;
+.s2v-intro {
+  font-size: 10.5px; font-weight: 300; line-height: 1.65;
+  color: var(--text-secondary); max-width: 95%;
+  margin-top: 8px; margin-bottom: 6px; flex: none;
 }
 
-.s5c-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 14px;
-  flex: 1;
-  align-content: start;
+/* GDP Horizontal Bars */
+.s2v-gdp-section { margin-top: 10px; flex: none; }
+.s2v-gdp-label {
+  font-size: 8px; font-weight: 600; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px;
 }
+.s2v-gdp-bars { display: flex; flex-direction: column; gap: 5px; }
+.s2v-gdp-row { display: flex; align-items: center; gap: 10px; }
+.s2v-gdp-name {
+  font-size: 10px; font-weight: 400; color: var(--text-secondary);
+  width: 110px; flex-shrink: 0; text-align: right;
+}
+.s2v-gdp-name.s2v-highlight { color: var(--maroon); font-weight: 600; }
+.s2v-gdp-track {
+  flex: 1; height: 22px; background: rgba(36,24,24,0.03);
+  border-radius: 4px; overflow: visible; display: flex; align-items: center;
+}
+.s2v-gdp-fill {
+  height: 100%; border-radius: 4px;
+  transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.s2v-gdp-fill.s2v-maroon { background: var(--maroon); }
+.s2v-gdp-fill.s2v-gray { background: rgba(36,24,24,0.12); }
+.s2v-gdp-fill.s2v-dashed {
+  background: transparent;
+  border: 1.5px dashed var(--maroon);
+  opacity: 0.4;
+}
+.s2v-gdp-val {
+  font-family: 'Gelasio', Georgia, serif;
+  font-size: 10px; font-weight: 600; white-space: nowrap;
+  margin-left: 8px; flex-shrink: 0; color: var(--text-secondary);
+}
+.s2v-gdp-fill.s2v-maroon + .s2v-gdp-val { color: var(--maroon); }
 
-.s5c-card {
-  padding: 16px 18px 14px;
-  border-radius: 12px;
-  border: 1px solid var(--border-light);
-  background: var(--white);
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  transition: all 0.3s ease;
+/* Six Economy Cards Row */
+.s2v-economies {
+  display: grid; grid-template-columns: repeat(6, 1fr);
+  gap: 10px; margin-top: 18px; flex: none;
 }
-.s5c-card:hover {
+.s2v-econ-card {
+  padding: 12px 10px; border-radius: 10px;
+  border: 1px solid var(--border-light); background: var(--white);
+  text-align: center; transition: all 0.3s ease;
+}
+.s2v-econ-card:hover {
   border-color: rgba(107,10,20,0.15);
-  box-shadow: 0 4px 16px rgba(107,10,20,0.04);
+  box-shadow: 0 3px 12px rgba(107,10,20,0.04);
   transform: translateY(-1px);
 }
-.s5c-card-head {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 4px;
+.s2v-econ-flag { font-size: 16px; margin-bottom: 4px; }
+.s2v-econ-name {
+  font-size: 8px; font-weight: 600; letter-spacing: 0.8px;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px;
 }
-.s5c-card-flag {
-  font-size: 16px;
-  line-height: 1;
-}
-.s5c-card-country {
-  font-size: 8px;
-  font-weight: 600;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-.s5c-card-headline {
+.s2v-econ-gdp {
   font-family: 'Gelasio', Georgia, serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--maroon);
-  line-height: 1.25;
-  margin-bottom: 4px;
+  font-size: 16px; font-weight: 600; color: var(--maroon); line-height: 1;
 }
-.s5c-card-text {
-  font-size: 9.5px;
-  font-weight: 300;
-  line-height: 1.55;
-  color: var(--text-secondary);
+.s2v-econ-percap {
+  font-size: 8px; font-weight: 400; color: var(--text-muted); margin-top: 3px;
 }
-.s5c-card-text strong {
-  font-weight: 600;
-  color: var(--text-primary);
+.s2v-econ-growth {
+  font-size: 9px; font-weight: 600; color: var(--maroon);
+  margin-top: 4px; padding-top: 4px;
+  border-top: 1px solid var(--border-light);
 }
 
-.s5c-pullquote {
-  margin-top: auto;
-  padding: 14px 22px;
-  background: rgba(107,10,20,0.04);
-  border: 1px solid rgba(107,10,20,0.08);
-  border-radius: 10px;
-  border-left: 4px solid var(--maroon);
-  flex: none;
+/* Bottom Callout Row */
+.s2v-callouts {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 14px; margin-top: 16px; flex: none;
 }
-.s5c-pullquote-text {
-  font-size: 11px;
-  font-weight: 400;
-  font-style: italic;
-  font-family: 'Gelasio', Georgia, serif;
-  color: var(--text-primary);
-  line-height: 1.65;
-}
-
-/* Wide card spanning two columns */
-.s5c-card-wide {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0;
-  padding: 14px 20px;
-  border-radius: 12px;
+.s2v-callout-card {
+  padding: 14px 18px; border-radius: 12px;
   border: 1px solid rgba(107,10,20,0.12);
   background: rgba(107,10,20,0.03);
+  display: flex; align-items: center; gap: 14px;
 }
-.s5c-wide-col {
-  text-align: center;
-  padding: 0 14px;
-}
-.s5c-wide-col:not(:last-child) {
-  border-right: 1px solid rgba(107,10,20,0.10);
-}
-.s5c-wide-country {
-  font-size: 8px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 3px;
-}
-.s5c-wide-num {
+.s2v-callout-num {
   font-family: 'Gelasio', Georgia, serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--maroon);
-  line-height: 1;
-  margin-bottom: 3px;
+  font-size: 26px; font-weight: 600; color: var(--maroon);
+  line-height: 1; flex-shrink: 0;
 }
-.s5c-wide-text {
-  font-size: 8.5px;
-  font-weight: 300;
-  color: var(--text-secondary);
-  line-height: 1.45;
+.s2v-callout-body { display: flex; flex-direction: column; gap: 2px; }
+.s2v-callout-title {
+  font-size: 10px; font-weight: 500; color: var(--text-primary);
+}
+.s2v-callout-text {
+  font-size: 9px; font-weight: 300; color: var(--text-secondary); line-height: 1.5;
 }
 
 /* ══════════════════════════════════════════════════════════
-   SLIDE 6: The Singapore Gateway
+   SLIDE 3v: Young, Digital, Spending - CUSTOM LAYOUT
    ══════════════════════════════════════════════════════════ */
-.s6g-slide .slide-header { margin-bottom: 14px; }
-.s6g-slide .slide-header h2 { font-size: 26px; }
-.s6g-slide .header-divider { margin-bottom: 0; }
+.s3v-slide .slide-header { margin-bottom: 14px; }
+.s3v-slide .slide-header h2 { font-size: 26px; }
+.s3v-slide .header-divider { margin-bottom: 0; }
 
-.s6g-intro {
-  font-size: 10.5px;
-  font-weight: 300;
-  line-height: 1.65;
-  color: var(--text-secondary);
-  max-width: 95%;
-  margin-top: 8px;
-  flex: none;
+.s3v-intro {
+  font-size: 10.5px; font-weight: 300; line-height: 1.65;
+  color: var(--text-secondary); max-width: 95%;
+  margin-top: 8px; margin-bottom: 4px; flex: none;
 }
 
-.s6g-hero-row {
-  display: flex;
-  justify-content: center;
-  gap: 0;
-  margin-top: 20px;
-  padding: 20px 28px;
-  border-radius: 14px;
-  background: var(--maroon);
-  flex: none;
+/* Reuse s2n country age cards from base CSS */
+
+/* Compact stat cards */
+.s3v-stats {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px; flex: none;
 }
-.s6g-hero-col {
-  flex: 1;
-  text-align: center;
-  padding: 0 18px;
+.s3v-stat-card {
+  padding: 16px 18px; border-radius: 12px;
+  border: 1px solid var(--border-light); background: var(--white);
+  transition: all 0.3s ease;
 }
-.s6g-hero-col:not(:last-child) {
-  border-right: 1px solid rgba(255,255,255,0.15);
+.s3v-stat-card:hover {
+  border-color: rgba(107,10,20,0.12);
+  box-shadow: 0 3px 14px rgba(107,10,20,0.04);
+  transform: translateY(-1px);
 }
-.s6g-hero-num {
+.s3v-stat-num {
   font-family: 'Gelasio', Georgia, serif;
-  font-size: 30px;
-  font-weight: 600;
-  color: var(--white);
-  line-height: 1;
-  margin-bottom: 5px;
+  font-size: 32px; font-weight: 600; color: var(--maroon);
+  line-height: 1; margin-bottom: 5px;
 }
-.s6g-hero-label {
-  font-size: 8px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.6);
+.s3v-stat-title {
+  font-size: 10px; font-weight: 500; color: var(--text-primary);
+  margin-bottom: 6px;
+}
+.s3v-stat-text {
+  font-size: 9px; font-weight: 300; line-height: 1.55;
+  color: var(--text-secondary);
 }
 
-.s6g-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  margin-top: 22px;
-  flex: 1;
-  align-items: start;
+/* Digital callout banner */
+.s3v-callout {
+  margin-top: 16px; padding: 14px 22px; border-radius: 12px;
+  background: var(--maroon); flex: none;
+}
+.s3v-callout-text {
+  font-size: 10.5px; font-weight: 300; line-height: 1.65;
+  color: rgba(255,255,255,0.92);
+}
+.s3v-callout-text strong {
+  font-weight: 600; color: rgba(255,255,255,1);
 }
 
-.s6g-section-label {
-  font-size: 8px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--maroon);
+/* ══════════════════════════════════════════════════════════
+   SLIDE 4v: Supply Chain Migration - CUSTOM LAYOUT
+   ══════════════════════════════════════════════════════════ */
+.s4v-slide .slide-header { margin-bottom: 14px; }
+.s4v-slide .slide-header h2 { font-size: 26px; }
+.s4v-slide .header-divider { margin-bottom: 0; }
+
+.s4v-intro {
+  font-size: 10.5px; font-weight: 300; line-height: 1.65;
+  color: var(--text-secondary); max-width: 95%;
+  margin-top: 8px; flex: none;
+}
+
+/* FDI Bar Chart Section */
+.s4v-fdi-section {
+  margin-top: 16px; padding: 16px 22px; border-radius: 14px;
+  background: rgba(107,10,20,0.04); border: 1px solid rgba(107,10,20,0.08);
+  flex: none;
+}
+.s4v-fdi-header {
+  display: flex; justify-content: space-between; align-items: baseline;
   margin-bottom: 10px;
 }
-
-.s6g-fact-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.s4v-fdi-title {
+  font-size: 10px; font-weight: 600; color: var(--text-primary);
 }
-.s6g-fact {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-}
-.s6g-fact-num {
-  font-family: 'Gelasio', Georgia, serif;
-  font-size: 22px;
-  font-weight: 600;
+.s4v-fdi-subtitle {
+  font-size: 9px; font-weight: 500; font-style: italic;
   color: var(--maroon);
-  line-height: 1;
-  min-width: 65px;
-  flex-shrink: 0;
 }
-.s6g-fact-body {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+.s4v-fdi-bars { display: flex; flex-direction: column; gap: 6px; }
+.s4v-fdi-row { display: flex; align-items: center; gap: 10px; }
+.s4v-fdi-label {
+  font-size: 9px; font-weight: 400; color: var(--text-secondary);
+  width: 80px; flex-shrink: 0; text-align: right;
 }
-.s6g-fact-title {
-  font-size: 10.5px;
-  font-weight: 500;
-  color: var(--text-primary);
+.s4v-fdi-label.s4v-hl { color: var(--maroon); font-weight: 600; }
+.s4v-fdi-track {
+  flex: 1; height: 20px; background: rgba(36,24,24,0.03);
+  border-radius: 3px; overflow: visible; display: flex; align-items: center;
 }
-.s6g-fact-text {
-  font-size: 9.5px;
-  font-weight: 300;
-  line-height: 1.55;
+.s4v-fdi-fill {
+  height: 100%; border-radius: 3px;
+  transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.s4v-fdi-fill.s4v-maroon { background: var(--maroon); }
+.s4v-fdi-fill.s4v-gray { background: rgba(36,24,24,0.12); }
+.s4v-fdi-val {
+  font-size: 9px; font-weight: 600; white-space: nowrap;
+  margin-left: 6px; color: var(--text-secondary);
+}
+.s4v-fdi-fill.s4v-maroon + .s4v-fdi-val { color: var(--maroon); }
+.s4v-fdi-note {
+  font-size: 8px; font-weight: 400; color: var(--text-muted);
+  margin-top: 6px; font-style: italic;
+}
+
+/* Three Country Feature Cards */
+.s4v-countries {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px; margin-top: 18px; flex: none;
+}
+.s4v-country-card {
+  padding: 18px 18px 14px; border-radius: 14px;
+  border: 1px solid var(--border-light); background: var(--white);
+  display: flex; flex-direction: column; transition: all 0.3s ease;
+}
+.s4v-country-card:hover {
+  border-color: rgba(107,10,20,0.15);
+  box-shadow: 0 4px 16px rgba(107,10,20,0.04);
+  transform: translateY(-2px);
+}
+.s4v-cc-head {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 8px;
+}
+.s4v-cc-flag { font-size: 16px; }
+.s4v-cc-name {
+  font-size: 8px; font-weight: 600; letter-spacing: 1.2px;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.s4v-cc-num {
+  font-family: 'Gelasio', Georgia, serif;
+  font-size: 28px; font-weight: 600; color: var(--maroon);
+  line-height: 1; margin-bottom: 4px;
+}
+.s4v-cc-title {
+  font-size: 10px; font-weight: 500; color: var(--text-primary);
+  margin-bottom: 8px;
+}
+.s4v-cc-text {
+  font-size: 9px; font-weight: 300; line-height: 1.55;
+  color: var(--text-secondary); flex: 1;
+}
+.s4v-cc-text strong { font-weight: 600; color: var(--text-primary); }
+.s4v-cc-footer {
+  margin-top: 8px; padding-top: 6px;
+  border-top: 1px solid var(--border-light);
+  font-size: 8px; font-weight: 400; color: var(--text-muted); line-height: 1.4;
+}
+
+/* Pullquote */
+.s4v-pullquote {
+  margin-top: auto; padding: 12px 22px;
+  background: rgba(107,10,20,0.04); border: 1px solid rgba(107,10,20,0.08);
+  border-radius: 10px; border-left: 4px solid var(--maroon); flex: none;
+}
+.s4v-pullquote-text {
+  font-size: 11px; font-weight: 400; font-style: italic;
+  font-family: 'Gelasio', Georgia, serif;
+  color: var(--text-primary); line-height: 1.65;
+}
+
+/* ══════════════════════════════════════════════════════════
+   SLIDE 5v: Local Champions - CUSTOM LAYOUT
+   ══════════════════════════════════════════════════════════ */
+.s5v-slide .slide-header { margin-bottom: 14px; }
+.s5v-slide .slide-header h2 { font-size: 26px; }
+.s5v-slide .header-divider { margin-bottom: 0; }
+
+.s5v-intro {
+  font-size: 10.5px; font-weight: 300; line-height: 1.65;
+  color: var(--text-secondary); max-width: 95%;
+  margin-top: 8px; margin-bottom: 4px; flex: none;
+}
+
+/* VS Comparison Rows */
+.s5v-vs-section {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 14px; margin-top: 14px; flex: none;
+}
+.s5v-vs-card {
+  padding: 16px 18px; border-radius: 14px;
+  border: 1px solid var(--border-light); background: var(--cream);
+  transition: all 0.3s ease;
+}
+.s5v-vs-card:hover {
+  border-color: rgba(107,10,20,0.15);
+  box-shadow: 0 3px 14px rgba(107,10,20,0.04);
+}
+.s5v-vs-country {
+  font-size: 8px; font-weight: 600; letter-spacing: 1.2px;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px;
+}
+.s5v-vs-matchup {
+  display: flex; flex-direction: column; gap: 5px; margin-bottom: 10px;
+}
+.s5v-vs-row { display: flex; align-items: center; gap: 8px; }
+.s5v-vs-name {
+  font-size: 9px; font-weight: 500; width: 75px;
+  flex-shrink: 0; text-align: right;
+}
+.s5v-vs-name.s5v-local { color: var(--maroon); font-weight: 600; }
+.s5v-vs-name.s5v-global { color: var(--text-muted); }
+.s5v-vs-track {
+  flex: 1; height: 18px; background: rgba(36,24,24,0.04);
+  border-radius: 3px; overflow: visible; display: flex; align-items: center;
+}
+.s5v-vs-fill {
+  height: 100%; border-radius: 3px;
+  transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.s5v-vs-fill.s5v-local-fill { background: var(--maroon); }
+.s5v-vs-fill.s5v-global-fill { background: rgba(36,24,24,0.12); }
+.s5v-vs-val {
+  font-size: 9px; font-weight: 600; margin-left: 6px; white-space: nowrap;
+}
+.s5v-vs-fill.s5v-local-fill + .s5v-vs-val { color: var(--maroon); }
+.s5v-vs-fill.s5v-global-fill + .s5v-vs-val { color: var(--text-muted); }
+.s5v-vs-detail {
+  font-size: 9px; font-weight: 300; line-height: 1.55;
+  color: var(--text-secondary);
+}
+.s5v-vs-detail strong { font-weight: 600; color: var(--text-primary); }
+
+/* Three country cards below */
+.s5v-countries {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px; margin-top: 14px; flex: none;
+}
+.s5v-country-card {
+  padding: 14px 16px; border-radius: 12px;
+  border: 1px solid var(--border-light); background: var(--cream);
+  transition: all 0.3s ease;
+}
+.s5v-country-card:hover {
+  border-color: rgba(107,10,20,0.15);
+  transform: translateY(-1px);
+}
+.s5v-cc-head {
+  display: flex; align-items: center; gap: 6px; margin-bottom: 6px;
+}
+.s5v-cc-flag { font-size: 14px; }
+.s5v-cc-name {
+  font-size: 8px; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.s5v-cc-headline {
+  font-family: 'Gelasio', Georgia, serif;
+  font-size: 13px; font-weight: 600; color: var(--maroon);
+  line-height: 1.25; margin-bottom: 5px;
+}
+.s5v-cc-text {
+  font-size: 9px; font-weight: 300; line-height: 1.5;
   color: var(--text-secondary);
 }
 
-.s6g-callout {
-  margin-top: auto;
-  padding: 14px 22px;
-  border-radius: 12px;
-  background: rgba(107,10,20,0.04);
-  border: 1px solid rgba(107,10,20,0.08);
+/* Pattern callout */
+.s5v-callout {
+  margin-top: auto; padding: 12px 22px;
+  background: rgba(107,10,20,0.04); border: 1px solid rgba(107,10,20,0.08);
+  border-radius: 10px; border-left: 4px solid var(--maroon); flex: none;
+}
+.s5v-callout-text {
+  font-size: 11px; font-weight: 400; font-style: italic;
+  font-family: 'Gelasio', Georgia, serif;
+  color: var(--text-primary); line-height: 1.65;
+}
+
+/* ══════════════════════════════════════════════════════════
+   SLIDE 6v: The Singapore Gateway - CUSTOM LAYOUT
+   ══════════════════════════════════════════════════════════ */
+.s6v-slide .slide-header { margin-bottom: 14px; }
+.s6v-slide .slide-header h2 { font-size: 26px; }
+.s6v-slide .header-divider { margin-bottom: 0; }
+
+.s6v-intro {
+  font-size: 10.5px; font-weight: 300; line-height: 1.65;
+  color: var(--text-secondary); max-width: 95%;
+  margin-top: 8px; flex: none;
+}
+
+/* Hero stat bar */
+.s6v-hero {
+  display: flex; justify-content: center; gap: 0;
+  margin-top: 16px; padding: 18px 24px; border-radius: 14px;
+  background: var(--maroon); flex: none;
+}
+.s6v-hero-col {
+  flex: 1; text-align: center; padding: 0 16px;
+}
+.s6v-hero-col:not(:last-child) {
+  border-right: 1px solid rgba(255,255,255,0.15);
+}
+.s6v-hero-num {
+  font-family: 'Gelasio', Georgia, serif;
+  font-size: 28px; font-weight: 600; color: var(--white);
+  line-height: 1; margin-bottom: 4px;
+}
+.s6v-hero-label {
+  font-size: 7.5px; font-weight: 500; letter-spacing: 0.8px;
+  text-transform: uppercase; color: rgba(255,255,255,0.6);
+}
+
+/* Two visual columns */
+.s6v-columns {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 24px; margin-top: 18px; flex: none;
+}
+.s6v-col-label {
+  font-size: 8px; font-weight: 600; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--maroon); margin-bottom: 10px;
+}
+
+/* Vertical bar chart for family offices */
+.s6v-vbars {
+  display: flex; align-items: flex-end; gap: 12px;
+  height: 120px; padding-top: 8px;
+  border-bottom: 1px solid var(--border-light);
+}
+.s6v-vbar-col {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; gap: 3px; height: 100%;
+  justify-content: flex-end;
+}
+.s6v-vbar-val {
+  font-size: 9px; font-weight: 600; color: var(--maroon); white-space: nowrap;
+}
+.s6v-vbar-bar {
+  width: 100%; border-radius: 4px 4px 0 0;
+  background: var(--maroon); position: relative;
+  transition: height 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.s6v-vbar-year {
+  font-size: 8px; font-weight: 400; color: var(--text-muted);
+  margin-top: 5px;
+}
+.s6v-col-note {
+  font-size: 9px; font-weight: 300; line-height: 1.55;
+  color: var(--text-secondary); margin-top: 8px;
+}
+.s6v-col-note strong { font-weight: 600; color: var(--text-primary); }
+
+/* VC correction visual */
+.s6v-vc-chart { display: flex; flex-direction: column; gap: 6px; }
+.s6v-vc-row { display: flex; align-items: center; gap: 8px; }
+.s6v-vc-year {
+  font-size: 9px; font-weight: 400; color: var(--text-muted);
+  width: 36px; flex-shrink: 0; text-align: right;
+}
+.s6v-vc-track {
+  flex: 1; height: 20px; background: rgba(36,24,24,0.03);
+  border-radius: 3px; display: flex; align-items: center; overflow: visible;
+}
+.s6v-vc-fill {
+  height: 100%; border-radius: 3px;
+  transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.s6v-vc-fill.s6v-peak { background: rgba(36,24,24,0.15); }
+.s6v-vc-fill.s6v-bottom { background: var(--maroon); }
+.s6v-vc-fill.s6v-recovery { background: rgba(107,10,20,0.5); }
+.s6v-vc-val {
+  font-size: 9px; font-weight: 600; margin-left: 6px;
+  white-space: nowrap; color: var(--text-secondary);
+}
+.s6v-vc-fill.s6v-bottom + .s6v-vc-val { color: var(--maroon); }
+.s6v-vc-badge {
+  display: inline-block; font-size: 7.5px; font-weight: 600;
+  padding: 2px 7px; border-radius: 10px; margin-left: 4px;
+  letter-spacing: 0.3px;
+}
+.s6v-vc-badge.s6v-green {
+  background: rgba(29,59,41,0.08); color: var(--green);
+}
+
+/* Bottom stat row */
+.s6v-bottom-stats {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px; margin-top: 16px; flex: none;
+}
+.s6v-bstat {
+  padding: 12px 16px; border-radius: 10px;
+  border: 1px solid var(--border-light); background: var(--white);
+  text-align: center; transition: all 0.3s ease;
+}
+.s6v-bstat:hover {
+  border-color: rgba(107,10,20,0.12);
+  transform: translateY(-1px);
+}
+.s6v-bstat-num {
+  font-family: 'Gelasio', Georgia, serif;
+  font-size: 22px; font-weight: 600; color: var(--maroon);
+  line-height: 1; margin-bottom: 3px;
+}
+.s6v-bstat-label {
+  font-size: 8px; font-weight: 500; letter-spacing: 0.8px;
+  text-transform: uppercase; color: var(--text-muted);
+}
+
+/* Callout */
+.s6v-callout {
+  margin-top: auto; padding: 14px 22px; border-radius: 12px;
+  background: rgba(107,10,20,0.04); border: 1px solid rgba(107,10,20,0.08);
   flex: none;
 }
-.s6g-callout-text {
-  font-size: 11px;
-  font-weight: 400;
-  font-style: italic;
+.s6v-callout-text {
+  font-size: 11px; font-weight: 400; font-style: italic;
   font-family: 'Gelasio', Georgia, serif;
-  color: var(--text-primary);
-  line-height: 1.6;
-  border-left: 4px solid var(--maroon);
-  padding-left: 18px;
+  color: var(--text-primary); line-height: 1.6;
+  border-left: 4px solid var(--maroon); padding-left: 18px;
 }
 
 </style>
@@ -2167,9 +2429,7 @@ body::-webkit-scrollbar { display: none; }
      ══════════════════════════════════════════════════════════ -->
 <div class="deck" id="deck">
 
-<!-- ══════════════════════════════════════════════════════════
-     SLIDE 1: COVER
-     ══════════════════════════════════════════════════════════ -->
+<!-- ═══ SLIDE 1: COVER ═══ -->
 <div class="slide slide-cover" data-bg="light">
   <div class="accent-bar"></div>
   <div class="deco-circle-dashed" style="top:-18%;right:-6%;width:55vh;height:55vh;border-color:rgba(107,10,20,0.18);animation-duration:90s;"></div>
@@ -2177,9 +2437,9 @@ body::-webkit-scrollbar { display: none; }
   <div class="deco-circle-dashed" style="top:30%;right:2%;width:22vh;height:22vh;border-color:rgba(107,10,20,0.10);animation-duration:100s;"></div>
   <div class="deco-glow" style="top:15%;right:3%;width:35vh;height:35vh;background:radial-gradient(circle,rgba(107,10,20,0.08),transparent 70%);"></div>
   <div class="cover-content">
-    <div class="cover-fund-label animate-in stagger-1">Lanmea Capital  - Market Appendix</div>
+    <div class="cover-fund-label animate-in stagger-1">Lanmea Capital - Market Appendix</div>
     <h1 class="animate-in stagger-2">Southeast Asia <em>Private Markets</em><br>Market Context &amp; Data</h1>
-    <p class="cover-tagline animate-in stagger-3">Six economies, $3.8 trillion in combined GDP, 614 million people  - the most underweighted growth region in institutional portfolios.</p>
+    <p class="cover-tagline animate-in stagger-3">Six economies, $3.8 trillion in combined GDP, 614 million people - the most underweighted growth region in institutional portfolios.</p>
     <div class="animate-in stagger-3" style="width:64px;height:1.5px;background:#6B0A14;margin-top:20px;opacity:0.3;"></div>
   </div>
   <div class="cover-footer animate-in stagger-4">
@@ -2190,159 +2450,131 @@ body::-webkit-scrollbar { display: none; }
 </div>
 
 
-<!-- ══════════════════════════════════════════════════════════
-     SLIDE 2: THE BLOC NOBODY SEES (Scale)
-     ══════════════════════════════════════════════════════════ -->
-<div class="slide slide-cream s5n-slide" data-bg="light">
+<!-- ═══ SLIDE 2: THE BLOC NOBODY SEES ═══ -->
+<div class="slide slide-cream s2v-slide" data-bg="light">
   <div class="accent-bar"></div><div class="top-line"></div>
 
   <div class="slide-header animate-in stagger-1">
     <div class="section-label">THE SEA OPPORTUNITY</div>
     <h2>The Bloc <span>Nobody Sees</span></h2>
-    <div class="sub">ASEAN-6 is the world&rsquo;s 5th largest economy  - and most institutional investors have never allocated to it.</div>
+    <div class="sub">ASEAN-6 is the world&rsquo;s 5th largest economy - and most institutional investors have minimal allocation.</div>
   </div>
   <div class="header-divider"></div>
 
-  <div class="s5n-intro animate-in stagger-2">
-    <p>Combine Indonesia, Vietnam, the Philippines, Thailand, Malaysia, and Singapore into a single bloc and you get a $3.8 trillion economy  - already larger than the United Kingdom, closing in on Japan and Germany, and on track to surpass both by 2030. This is not a frontier market curiosity. ASEAN-6 is a G5-scale economic force with 614 million people  - more than the entire European Union  - and most institutional portfolios have minimal allocation.</p>
-  </div>
+  <p class="s2v-intro animate-in stagger-2">Combine Indonesia, Vietnam, the Philippines, Thailand, Malaysia, and Singapore into a single bloc and you get a $3.8 trillion economy - already larger than the United Kingdom, closing in on Japan and Germany, and on track to surpass both by 2030. ASEAN-6 has 614 million people, more than the entire European Union.</p>
 
-  <div class="s5n-columns">
-    <!-- TOP-LEFT: GDP Ranking Ladder -->
-    <div class="s5n-top-left animate-in stagger-3">
-      <div class="s5n-ladder-label">GDP Nominal Ranking (2025, USD)</div>
-      <table class="s5n-ladder">
-        <tr><td>#1</td><td></td><td>$29.0T</td><td>United States</td></tr>
-        <tr><td>#2</td><td></td><td>$18.5T</td><td>China</td></tr>
-        <tr><td>#3</td><td></td><td>$4.6T</td><td>Germany</td></tr>
-        <tr><td>#4</td><td></td><td>$4.1T</td><td>Japan</td></tr>
-        <tr class="s5n-highlight"><td>#5</td><td></td><td>$3.8T</td><td>ASEAN-6 (combined)</td></tr>
-        <tr><td>#6</td><td></td><td>$3.5T</td><td>United Kingdom</td></tr>
-        <tr class="s5n-projected"><td>&rsquo;30</td><td></td><td>$5.8T</td><td>ASEAN-6 (projected)</td></tr>
-      </table>
-      <div class="s5n-overtook">Already <strong>larger than the UK</strong>. Projected to reach <strong>$5.8T by 2030</strong>  - a 53% increase in six years, on track to rival Germany and Japan.</div>
-    </div>
-
-    <!-- TOP-RIGHT: Six Economy Diversity -->
-    <div class="s5n-top-right animate-in stagger-4">
-      <div class="s5n-right-section">
-        <div class="s5n-right-num">6</div>
-        <div class="s5n-right-title">Distinct economies, one allocation</div>
-        <div class="s5n-right-text">From Singapore at $93K GDP per capita to the Philippines at $3,500  - spanning advanced, upper-middle, and frontier income economies. No single-country concentration risk. Each economy has a different growth driver and cycle. A SEA portfolio naturally diversifies across development stages, sectors, and currencies.</div>
-        <div class="s5n-consumer-card" style="margin-top:12px;">
-          <div class="s5n-consumer-label">Indonesia PPP</div>
-          <div class="s5n-consumer-vals">$5.9T</div>
-          <div class="s5n-consumer-growth">#8 globally &middot; ahead of UK &amp; France</div>
-        </div>
+  <!-- GDP Horizontal Bars -->
+  <div class="s2v-gdp-section animate-in stagger-3">
+    <div class="s2v-gdp-label">GDP Nominal (2025, USD) - ASEAN-6 shown as combined bloc</div>
+    <div class="s2v-gdp-bars">
+      <div class="s2v-gdp-row">
+        <div class="s2v-gdp-name">United States</div>
+        <div class="s2v-gdp-track"><div class="s2v-gdp-fill s2v-gray" style="width:100%;"></div><div class="s2v-gdp-val">$29.0T</div></div>
       </div>
-    </div>
-
-    <!-- BOTTOM-LEFT: GDP Growth Comparison -->
-    <div class="s5n-bot-left animate-in stagger-5">
-      <div class="s5n-growth-stat">
-        <div class="s5n-growth-num">5.0&ndash;7.1%</div>
-        <div class="s5n-growth-sub">GDP growth across ASEAN-6 (2024)</div>
+      <div class="s2v-gdp-row">
+        <div class="s2v-gdp-name">China</div>
+        <div class="s2v-gdp-track"><div class="s2v-gdp-fill s2v-gray" style="width:63.8%;"></div><div class="s2v-gdp-val">$18.5T</div></div>
       </div>
-      <div class="s5n-mini-chart-label">Real GDP Growth Rate  - 2024</div>
-      <div class="s5n-hbars">
-        <div class="s5n-hbar-row">
-          <div class="s5n-hbar-label s5n-india-label">Vietnam</div>
-          <div class="s5n-hbar-track">
-            <div class="s5n-hbar-fill s5n-maroon" style="width:95%;"></div>
-            <div class="s5n-hbar-val">7.1%</div>
-          </div>
-        </div>
-        <div class="s5n-hbar-row">
-          <div class="s5n-hbar-label s5n-india-label">Philippines</div>
-          <div class="s5n-hbar-track">
-            <div class="s5n-hbar-fill s5n-maroon" style="width:77%;"></div>
-            <div class="s5n-hbar-val">5.8%</div>
-          </div>
-        </div>
-        <div class="s5n-hbar-row">
-          <div class="s5n-hbar-label s5n-india-label">Indonesia</div>
-          <div class="s5n-hbar-track">
-            <div class="s5n-hbar-fill s5n-maroon" style="width:67%;"></div>
-            <div class="s5n-hbar-val">5.0%</div>
-          </div>
-        </div>
-        <div class="s5n-hbar-row">
-          <div class="s5n-hbar-label">USA</div>
-          <div class="s5n-hbar-track">
-            <div class="s5n-hbar-fill s5n-gray" style="width:33%;"></div>
-            <div class="s5n-hbar-val">~2.5%</div>
-          </div>
-        </div>
-        <div class="s5n-hbar-row">
-          <div class="s5n-hbar-label">Japan</div>
-          <div class="s5n-hbar-track">
-            <div class="s5n-hbar-fill s5n-gray" style="width:16%;"></div>
-            <div class="s5n-hbar-val">~1.2%</div>
-          </div>
-        </div>
-        <div class="s5n-hbar-row">
-          <div class="s5n-hbar-label">Germany</div>
-          <div class="s5n-hbar-track">
-            <div class="s5n-hbar-fill s5n-gray" style="width:5%;"></div>
-            <div class="s5n-hbar-val">~0.3%</div>
-          </div>
-        </div>
+      <div class="s2v-gdp-row">
+        <div class="s2v-gdp-name">Germany</div>
+        <div class="s2v-gdp-track"><div class="s2v-gdp-fill s2v-gray" style="width:15.9%;"></div><div class="s2v-gdp-val">$4.6T</div></div>
       </div>
-      <div class="s5n-growth-text">Vietnam is growing <strong>2.8x</strong> faster than the US. <strong>24x</strong> faster than Germany. Even Indonesia, the region&rsquo;s largest economy, grows at <strong>twice</strong> the pace of any G7 nation.</div>
-    </div>
-
-    <!-- BOTTOM-RIGHT: RCEP Trade Access -->
-    <div class="s5n-bot-right">
-      <div class="s5n-right-section animate-in stagger-6">
-        <div class="s5n-right-num">$29.7T</div>
-        <div class="s5n-right-title">RCEP  - the world&rsquo;s largest trade bloc</div>
-        <div class="s5n-urban-bars">
-          <div class="s5n-urban-row">
-            <div class="s5n-urban-label s5n-urban-india">RCEP</div>
-            <div class="s5n-urban-track">
-              <div class="s5n-urban-fill s5n-urban-maroon" style="width:90%;"></div>
-              <div class="s5n-urban-val">2.2B people</div>
-            </div>
-          </div>
-          <div class="s5n-urban-row">
-            <div class="s5n-urban-label">EU</div>
-            <div class="s5n-urban-track">
-              <div class="s5n-urban-fill s5n-urban-gray" style="width:28%;"></div>
-              <div class="s5n-urban-val">448M</div>
-            </div>
-          </div>
-          <div class="s5n-urban-row">
-            <div class="s5n-urban-label">USMCA</div>
-            <div class="s5n-urban-track">
-              <div class="s5n-urban-fill s5n-urban-gray" style="width:33%;"></div>
-              <div class="s5n-urban-val">510M</div>
-            </div>
-          </div>
-        </div>
-        <div class="s5n-right-text" style="margin-top:14px;">Any PE portfolio company in ASEAN has preferential trade access to China, Japan, Korea, Australia, and India  - no other region offers this. US-ASEAN trade hit <strong style="color:var(--maroon);font-weight:700;">$572B</strong> in 2024 (+13.4% YoY). ASEAN sits where the world&rsquo;s three largest economies are all competing for market access.</div>
+      <div class="s2v-gdp-row">
+        <div class="s2v-gdp-name">Japan</div>
+        <div class="s2v-gdp-track"><div class="s2v-gdp-fill s2v-gray" style="width:14.1%;"></div><div class="s2v-gdp-val">$4.1T</div></div>
+      </div>
+      <div class="s2v-gdp-row">
+        <div class="s2v-gdp-name s2v-highlight">ASEAN-6</div>
+        <div class="s2v-gdp-track"><div class="s2v-gdp-fill s2v-maroon" style="width:13.1%;"></div><div class="s2v-gdp-fill s2v-dashed" style="width:6.9%;"></div><div class="s2v-gdp-val">$3.8T &rarr; $5.8T by 2030</div></div>
+      </div>
+      <div class="s2v-gdp-row">
+        <div class="s2v-gdp-name">United Kingdom</div>
+        <div class="s2v-gdp-track"><div class="s2v-gdp-fill s2v-gray" style="width:12.1%;"></div><div class="s2v-gdp-val">$3.5T</div></div>
       </div>
     </div>
   </div>
 
-  <div class="source-note animate-in stagger-7">Sources: IMF WEO October 2025, ASEAN Secretariat 2024, UNCTAD, Jakarta Globe, AMRO, WEF, Asia Global Institute RCEP Tracker</div>
+  <!-- Six Economy Cards -->
+  <div class="s2v-economies animate-in stagger-4">
+    <div class="s2v-econ-card">
+      <div class="s2v-econ-flag">&#x1F1EE;&#x1F1E9;</div>
+      <div class="s2v-econ-name">Indonesia</div>
+      <div class="s2v-econ-gdp">$1.4T</div>
+      <div class="s2v-econ-percap">$4,900 per capita</div>
+      <div class="s2v-econ-growth">+5.0%</div>
+    </div>
+    <div class="s2v-econ-card">
+      <div class="s2v-econ-flag">&#x1F1F9;&#x1F1ED;</div>
+      <div class="s2v-econ-name">Thailand</div>
+      <div class="s2v-econ-gdp">$527B</div>
+      <div class="s2v-econ-percap">$7,300 per capita</div>
+      <div class="s2v-econ-growth">+2.5%</div>
+    </div>
+    <div class="s2v-econ-card">
+      <div class="s2v-econ-flag">&#x1F1F8;&#x1F1EC;</div>
+      <div class="s2v-econ-name">Singapore</div>
+      <div class="s2v-econ-gdp">$547B</div>
+      <div class="s2v-econ-percap">$93,000 per capita</div>
+      <div class="s2v-econ-growth">+4.1%</div>
+    </div>
+    <div class="s2v-econ-card">
+      <div class="s2v-econ-flag">&#x1F1FB;&#x1F1F3;</div>
+      <div class="s2v-econ-name">Vietnam</div>
+      <div class="s2v-econ-gdp">$500B+</div>
+      <div class="s2v-econ-percap">$4,700 per capita</div>
+      <div class="s2v-econ-growth">+7.1%</div>
+    </div>
+    <div class="s2v-econ-card">
+      <div class="s2v-econ-flag">&#x1F1F5;&#x1F1ED;</div>
+      <div class="s2v-econ-name">Philippines</div>
+      <div class="s2v-econ-gdp">$462B</div>
+      <div class="s2v-econ-percap">$3,500 per capita</div>
+      <div class="s2v-econ-growth">+5.8%</div>
+    </div>
+    <div class="s2v-econ-card">
+      <div class="s2v-econ-flag">&#x1F1F2;&#x1F1FE;</div>
+      <div class="s2v-econ-name">Malaysia</div>
+      <div class="s2v-econ-gdp">$422B</div>
+      <div class="s2v-econ-percap">$11,700 per capita</div>
+      <div class="s2v-econ-growth">+4.8%</div>
+    </div>
+  </div>
+
+  <!-- Bottom Callouts -->
+  <div class="s2v-callouts animate-in stagger-5">
+    <div class="s2v-callout-card">
+      <div class="s2v-callout-num">$5.9T</div>
+      <div class="s2v-callout-body">
+        <div class="s2v-callout-title">Indonesia&rsquo;s purchasing power (PPP)</div>
+        <div class="s2v-callout-text">8th globally. Ahead of the UK and France. The purchasing power of 284 million Indonesians is dramatically underestimated by nominal GDP.</div>
+      </div>
+    </div>
+    <div class="s2v-callout-card">
+      <div class="s2v-callout-num">2.2B</div>
+      <div class="s2v-callout-body">
+        <div class="s2v-callout-title">RCEP trade access - world&rsquo;s largest bloc</div>
+        <div class="s2v-callout-text">$29.7T GDP, 30% of global trade. Any PE portfolio company in ASEAN has preferential access to China, Japan, Korea, Australia, and India.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="source-note animate-in stagger-6">Sources: IMF WEO October 2025, ASEAN Secretariat, UNCTAD, Jakarta Globe, AMRO, Asia Global Institute RCEP Tracker 2024</div>
   <div class="slide-footer"><span>March 2026</span><div class="sep"></div><span>For Qualified Investors Only</span><div class="sep"></div><span>lanmea.com</span></div>
 </div>
 
 
-<!-- ══════════════════════════════════════════════════════════
-     SLIDE 3: YOUNG, DIGITAL, SPENDING
-     ══════════════════════════════════════════════════════════ -->
-<div class="slide slide-light s2n-slide" data-bg="light">
+<!-- ═══ SLIDE 3: YOUNG, DIGITAL, SPENDING ═══ -->
+<div class="slide slide-light s3v-slide" data-bg="light">
   <div class="accent-bar"></div><div class="top-line"></div>
 
   <div class="slide-header animate-in stagger-1">
     <div class="section-label">THE SEA OPPORTUNITY</div>
     <h2>Young, Digital, <span>Spending</span></h2>
-    <div class="sub">614 million people who skipped credit cards and went straight to mobile  - and 415 million of them will be middle class by 2030.</div>
+    <div class="sub">614 million people who skipped credit cards and went straight to mobile - and 415 million of them will be middle class by 2030.</div>
   </div>
   <div class="header-divider"></div>
 
-  <p class="s2n-intro animate-in stagger-2">Southeast Asia is a full generation younger than Europe or Japan  - and unlike those markets, its working-age population is still growing. The Philippines won&rsquo;t peak until the 2050s. Indonesia until the 2040s. These young consumers didn&rsquo;t adopt the West&rsquo;s financial infrastructure. They skipped credit cards entirely and went straight to mobile wallets, creating a $263 billion internet economy that turned profitable in 2024.</p>
+  <p class="s3v-intro animate-in stagger-2">Southeast Asia is a full generation younger than Europe or Japan - and unlike those markets, its working-age population is still growing. The Philippines won&rsquo;t peak until the 2050s. Indonesia until the 2040s. These young consumers didn&rsquo;t adopt the West&rsquo;s financial infrastructure. They skipped credit cards entirely and went straight to mobile wallets, creating a $263 billion internet economy that turned profitable in 2024.</p>
 
   <!-- Country Age Cards -->
   <div class="s2n-cards-row animate-in stagger-3">
@@ -2392,299 +2624,327 @@ body::-webkit-scrollbar { display: none; }
 
   <div class="s2n-vline animate-in stagger-4"></div>
 
-  <!-- Three stat columns: middle class / digital economy / digital wallets -->
-  <div class="s2n-stats-row animate-in stagger-5">
-    <div class="s2n-stat-col">
-      <div class="s2n-stat-num">415M</div>
-      <div class="s2n-stat-title">Middle-class consumers by 2030</div>
-      <div class="s2n-stat-text">More than the entire US population. 70% of ASEAN will be middle class by 2030. High-income households nearly doubling from 30M to 57M. ASEAN will contribute 140 million new consumers this decade  - 16% of the world&rsquo;s new consumer class.</div>
+  <!-- Compact Stat Cards -->
+  <div class="s3v-stats animate-in stagger-5">
+    <div class="s3v-stat-card">
+      <div class="s3v-stat-num">415M</div>
+      <div class="s3v-stat-title">Middle-class consumers by 2030</div>
+      <div class="s3v-stat-text">More than the entire US population. 70% of ASEAN will be middle class. 140 million new consumers this decade - 16% of the world&rsquo;s new consumer class.</div>
     </div>
-    <div class="s2n-stat-col">
-      <div class="s2n-stat-num">$263B</div>
-      <div class="s2n-stat-title">Internet economy  - now profitable</div>
-      <div class="s2n-stat-text">7.4x growth in a decade. $11 billion in profit in 2024  - up from $4 billion two years earlier. 460 million digital consumers, more than the entire EU. Indonesia alone: $99B. This is no longer growth-at-all-costs  - the ecosystem is monetising.</div>
+    <div class="s3v-stat-card">
+      <div class="s3v-stat-num">$263B</div>
+      <div class="s3v-stat-title">Internet economy - now profitable</div>
+      <div class="s3v-stat-text">7.4x growth in a decade. $11B in profit in 2024, up from $4B two years earlier. 460M digital consumers - more than the entire EU.</div>
     </div>
-    <div class="s2n-stat-col">
-      <div class="s2n-stat-num">80%</div>
-      <div class="s2n-stat-title">of Filipinos use digital wallets</div>
-      <div class="s2n-stat-text">Most SEA consumers skipped credit cards entirely. Indonesia&rsquo;s financial inclusion leaped from 49% to 74% in six years  - through mobile wallets, not bank branches. Indonesia&rsquo;s QRIS processed 2.7 billion transactions in 2024 (+66% YoY). The fintech rails are already built.</div>
+    <div class="s3v-stat-card">
+      <div class="s3v-stat-num">80%</div>
+      <div class="s3v-stat-title">of Filipinos use digital wallets</div>
+      <div class="s3v-stat-text">Indonesia&rsquo;s inclusion leaped from 49% to 74% in six years via mobile. QRIS: 2.7B transactions in 2024 (+66% YoY). Fintech rails already built.</div>
     </div>
   </div>
 
-  <div class="source-note animate-in stagger-6">Sources: UN DESA 2024, WEF, Bain, Google/Temasek/Bain e-Conomy SEA 2024, Thunes, Bank Indonesia, OJK, World Bank Global Findex</div>
+  <!-- Digital Callout -->
+  <div class="s3v-callout animate-in stagger-6">
+    <div class="s3v-callout-text">Most SEA consumers went straight from cash to mobile wallets, skipping credit cards entirely. Digital wallets now account for <strong>75% of all APAC e-commerce payments</strong>. Indonesia alone has a <strong>$99B</strong> digital economy. E-commerce is on track to double to <strong>$410B by 2030</strong>.</div>
+  </div>
+
+  <div class="source-note animate-in stagger-7">Sources: UN DESA 2024, WEF, Bain, Google/Temasek/Bain e-Conomy SEA 2024, Thunes, Bank Indonesia, World Bank Global Findex</div>
   <div class="slide-footer"><span>March 2026</span><div class="sep"></div><span>For Qualified Investors Only</span><div class="sep"></div><span>lanmea.com</span></div>
 </div>
 
 
-<!-- ══════════════════════════════════════════════════════════
-     SLIDE 4: WHERE THE WORLD'S SUPPLY CHAINS ARE MOVING
-     ══════════════════════════════════════════════════════════ -->
-<div class="slide slide-cream s4n-slide" data-bg="light">
+<!-- ═══ SLIDE 4: WHERE THE WORLD'S SUPPLY CHAINS ARE MOVING ═══ -->
+<div class="slide slide-cream s4v-slide" data-bg="light">
   <div class="accent-bar"></div><div class="top-line"></div>
 
   <div class="slide-header animate-in stagger-1">
     <div class="section-label">THE SEA OPPORTUNITY</div>
     <h2>Where the World&rsquo;s Supply Chains <span>Are Moving</span></h2>
-    <div class="sub">Apple, Samsung, and the world&rsquo;s largest chip makers aren&rsquo;t considering SEA  - they&rsquo;re already there.</div>
+    <div class="sub">Apple, Samsung, and the world&rsquo;s largest chip makers aren&rsquo;t considering SEA - they&rsquo;re already there.</div>
   </div>
   <div class="header-divider"></div>
 
-  <p class="s4n-intro animate-in stagger-2">Apple makes nearly all its iPads, Macs, AirPods, and Watches in Vietnam. Samsung&rsquo;s single largest manufacturing base outside Korea is Vietnam  - generating revenue equal to 13% of the country&rsquo;s entire GDP. Malaysia exports $130 billion in semiconductors. Thailand produces more cars than the UK or Italy. This is not a forecast. ASEAN has been the #1 FDI destination among developing regions for three consecutive years.</p>
+  <p class="s4v-intro animate-in stagger-2">ASEAN captured 17% of global FDI in 2024 - nearly 3x its share a decade ago - while global FDI declined 11%. It has been the #1 FDI destination among developing regions for three consecutive years. The world&rsquo;s most valuable companies are actively executing China+1 in Southeast Asia, and each country has carved out a distinct position in the global supply chain.</p>
 
-  <!-- Triple Panel -->
-  <div class="s4n-panel animate-in stagger-3">
-    <div class="s4n-triple">
-      <div class="s4n-triple-col">
-        <div class="s4n-triple-num">17%</div>
-        <div class="s4n-triple-title">Share of Global FDI</div>
-        <div class="s4n-triple-sub">Nearly 3x ASEAN&rsquo;s share a decade ago. Rose from ~6% to 17%.</div>
+  <!-- FDI Bar Chart -->
+  <div class="s4v-fdi-section animate-in stagger-3">
+    <div class="s4v-fdi-header">
+      <div class="s4v-fdi-title">Share of Global FDI - Developing Regions (2024)</div>
+      <div class="s4v-fdi-subtitle">$226B total inflows (+8% YoY)</div>
+    </div>
+    <div class="s4v-fdi-bars">
+      <div class="s4v-fdi-row">
+        <div class="s4v-fdi-label s4v-hl">ASEAN</div>
+        <div class="s4v-fdi-track"><div class="s4v-fdi-fill s4v-maroon" style="width:85%;"></div><div class="s4v-fdi-val">17% - 3x its share a decade ago</div></div>
       </div>
-      <div class="s4n-triple-col">
-        <div class="s4n-triple-num">$226B</div>
-        <div class="s4n-triple-title">FDI Inflows (2024)</div>
-        <div class="s4n-triple-sub">+8% YoY while global FDI declined 11%. #1 among developing regions, 3 years running.</div>
+      <div class="s4v-fdi-row">
+        <div class="s4v-fdi-label">Latin America</div>
+        <div class="s4v-fdi-track"><div class="s4v-fdi-fill s4v-gray" style="width:50%;"></div><div class="s4v-fdi-val">~10%</div></div>
       </div>
-      <div class="s4n-triple-col">
-        <div class="s4n-triple-num">23.6%</div>
-        <div class="s4n-triple-title">Global Semiconductor Exports</div>
-        <div class="s4n-triple-sub">World&rsquo;s #2 exporter. Behind only East Asia. Ahead of the US and Europe.</div>
+      <div class="s4v-fdi-row">
+        <div class="s4v-fdi-label">Africa</div>
+        <div class="s4v-fdi-track"><div class="s4v-fdi-fill s4v-gray" style="width:20%;"></div><div class="s4v-fdi-val">~4%</div></div>
+      </div>
+      <div class="s4v-fdi-row">
+        <div class="s4v-fdi-label">Middle East</div>
+        <div class="s4v-fdi-track"><div class="s4v-fdi-fill s4v-gray" style="width:15%;"></div><div class="s4v-fdi-val">~3%</div></div>
       </div>
     </div>
-    <div class="s4n-panel-divider"></div>
-    <div class="s4n-panel-footer">The Manufacturing Migration Is Structural and Accelerating</div>
+    <div class="s4v-fdi-note">#1 FDI destination among developing regions for 3 consecutive years (2022-2024)</div>
   </div>
 
-  <div class="s4n-vline animate-in stagger-4"></div>
-
-  <!-- Two-column: Vietnam + Malaysia/Thailand -->
-  <div class="s4n-takeaway animate-in stagger-5">
-    <div class="s4n-take-col">
-      <div class="s4n-take-num">85%</div>
-      <div class="s4n-take-title">of new electronics investments went to Vietnam (2018&ndash;2024)</div>
-      <div class="s4n-take-lead">Vietnam captured 85% of global electronics greenfield FDI  - transforming from a low-cost labor market to an irreplaceable node in global tech supply chains:</div>
-      <ul class="s4n-take-bullets">
-        <li>Apple: 35+ suppliers, 38 factories  - everything except iPhones is diversifying to Vietnam</li>
-        <li>Samsung: $23.2B invested, $54.4B in exports  - revenue equals 13% of Vietnam&rsquo;s GDP</li>
-        <li>96.6% literacy rate at $4,700 GDP per capita  - higher than countries 3x richer. This is why manufacturing chose Vietnam over cheaper alternatives</li>
-      </ul>
-      <div class="s4n-take-closing">Vietnam&rsquo;s GDP crossed $500B in 2025  - up from $116B in 2012. 4.3x in 13 years. FTSE upgraded Vietnam to emerging market status in October 2025.</div>
+  <!-- Three Country Cards -->
+  <div class="s4v-countries animate-in stagger-4">
+    <!-- Vietnam -->
+    <div class="s4v-country-card">
+      <div class="s4v-cc-head">
+        <span class="s4v-cc-flag">&#x1F1FB;&#x1F1F3;</span>
+        <span class="s4v-cc-name">Vietnam</span>
+      </div>
+      <div class="s4v-cc-num">85%</div>
+      <div class="s4v-cc-title">of new electronics investments (2018-2024)</div>
+      <div class="s4v-cc-text"><strong>Apple:</strong> 35+ suppliers, 38 factories. Nearly all iPads, Macs, AirPods, Watches made here. <strong>Samsung:</strong> $23.2B invested, revenue = 13% of Vietnam&rsquo;s entire GDP. 96.6% literacy at $4,700 per capita - this is why manufacturing chose Vietnam.</div>
+      <div class="s4v-cc-footer">GDP: $116B (2012) &rarr; $500B (2025). FTSE emerging market upgrade Oct 2025.</div>
     </div>
-    <div class="s4n-take-col">
-      <div class="s4n-take-num">$130B</div>
-      <div class="s4n-take-title">Malaysia semiconductor exports  - 13% of global chip testing &amp; packaging</div>
-      <ul class="s4n-take-bullets">
-        <li>National Semiconductor Strategy launched 2024 with $100B+ investment target. Google ($2B), Microsoft ($2.2B), ByteDance ($2.1B) all building in Malaysia</li>
-        <li>43.5% of tertiary students in STEM  - highest in ASEAN</li>
-        <li>Johor is becoming the &lsquo;Northern Virginia of ASEAN&rsquo;  - $25-30B+ committed by hyperscalers, 30km from Singapore</li>
-      </ul>
-      <div class="s4n-take-closing" style="margin-top:10px;padding-top:8px;"><strong style="color:var(--maroon);">Thailand  - &ldquo;Detroit of Asia&rdquo;:</strong> 1.8M vehicles/year, more than the UK or Italy. EV adoption surged from 0% to ~12% of new car sales in just 3 years  - fastest in Southeast Asia. BYD opened its first overseas passenger vehicle factory in Rayong.</div>
+    <!-- Malaysia -->
+    <div class="s4v-country-card">
+      <div class="s4v-cc-head">
+        <span class="s4v-cc-flag">&#x1F1F2;&#x1F1FE;</span>
+        <span class="s4v-cc-name">Malaysia</span>
+      </div>
+      <div class="s4v-cc-num">$130B</div>
+      <div class="s4v-cc-title">in semiconductor exports</div>
+      <div class="s4v-cc-text">13% of global chip testing and packaging. National Semiconductor Strategy targeting $100B+ investment. <strong>Google ($2B), Microsoft ($2.2B), ByteDance ($2.1B)</strong> all building data centres. 43.5% of students in STEM - highest in ASEAN.</div>
+      <div class="s4v-cc-footer">Johor: $25-30B+ committed by hyperscalers. 30km from Singapore.</div>
+    </div>
+    <!-- Thailand -->
+    <div class="s4v-country-card">
+      <div class="s4v-cc-head">
+        <span class="s4v-cc-flag">&#x1F1F9;&#x1F1ED;</span>
+        <span class="s4v-cc-name">Thailand</span>
+      </div>
+      <div class="s4v-cc-num">1.8M</div>
+      <div class="s4v-cc-title">vehicles per year - "Detroit of Asia"</div>
+      <div class="s4v-cc-text">More cars than the UK or Italy. ~50% of all ASEAN vehicles. 2,500 Tier 1-3 suppliers. Now pivoting to EV: adoption went from <strong>0% to ~12%</strong> of new car sales in just 3 years. BYD opened its first overseas factory in Rayong.</div>
+      <div class="s4v-cc-footer">Deepest auto supply chain in SEA. Not easily replicated.</div>
     </div>
   </div>
 
-  <!-- Pull-quote -->
-  <div class="s4n-pullquote animate-in stagger-6">
-    <div class="s4n-pullquote-text">ASEAN holds a critical, irreplaceable position in the world&rsquo;s most strategic supply chains  - semiconductors, electronics, EVs, and AI infrastructure. The capital is already there. The question for European LPs is why they aren&rsquo;t.</div>
+  <!-- Pullquote -->
+  <div class="s4v-pullquote animate-in stagger-5">
+    <div class="s4v-pullquote-text">ASEAN sits where the world&rsquo;s three largest economies - the US, China, and Japan - are all actively competing for market access. The capital is already there. The question for European LPs is why they aren&rsquo;t.</div>
   </div>
 
-  <div class="source-note animate-in stagger-7">Sources: ASEAN Investment Report 2024, McKinsey 2024, Vietnam-Briefing 2025, FTSE Russell, ASEAN Exchanges, Malaysia NSS, MIDA, FTI, OICA, EVAT</div>
+  <div class="source-note animate-in stagger-6">Sources: ASEAN Investment Report 2024, McKinsey, Vietnam-Briefing, FTSE Russell, ASEAN Exchanges, Malaysia NSS, MIDA, FTI, OICA, EVAT</div>
   <div class="slide-footer"><span>March 2026</span><div class="sep"></div><span>For Qualified Investors Only</span><div class="sep"></div><span>lanmea.com</span></div>
 </div>
 
 
-<!-- ══════════════════════════════════════════════════════════
-     SLIDE 5: LOCAL CHAMPIONS, GLOBAL AMBITION
-     ══════════════════════════════════════════════════════════ -->
-<div class="slide slide-light s5c-slide" data-bg="light">
+<!-- ═══ SLIDE 5: LOCAL CHAMPIONS, GLOBAL AMBITION ═══ -->
+<div class="slide slide-light s5v-slide" data-bg="light">
   <div class="accent-bar"></div><div class="top-line"></div>
 
   <div class="slide-header animate-in stagger-1">
     <div class="section-label">THE SEA OPPORTUNITY</div>
     <h2>Local Champions, <span>Global Ambition</span></h2>
-    <div class="sub">These aren&rsquo;t just cheap-labour economies. Local brands beat global giants, and the depth of these markets will surprise you.</div>
+    <div class="sub">Local brands beat global giants, and the depth of these markets will surprise you.</div>
   </div>
   <div class="header-divider"></div>
 
-  <p class="s5c-intro animate-in stagger-2">Every major emerging market has its version of the &ldquo;it&rsquo;s more than just GDP&rdquo; story. Southeast Asia&rsquo;s version is uniquely vivid: a fast-food chain that outsells McDonald&rsquo;s 3-to-1, a coffee brand with 6x more stores than Starbucks, a country building a $33 billion new capital city, and 80.6 million motorcycles about to become cars.</p>
+  <p class="s5v-intro animate-in stagger-2">Every major emerging market has its &ldquo;more than just GDP&rdquo; story. Southeast Asia&rsquo;s version is uniquely vivid: a fast-food chain that outsells McDonald&rsquo;s 3-to-1, a coffee brand with 6x more stores than Starbucks, and a country building a $33 billion new capital city from scratch.</p>
 
-  <!-- Country fact cards -->
-  <div class="s5c-grid animate-in stagger-3">
-
-    <!-- Philippines -->
-    <div class="s5c-card">
-      <div class="s5c-card-head">
-        <span class="s5c-card-flag">&#x1F1F5;&#x1F1ED;</span>
-        <span class="s5c-card-country">Philippines</span>
-      </div>
-      <div class="s5c-card-headline">Jollibee beats McDonald&rsquo;s 55% to 20%</div>
-      <div class="s5c-card-text">The world&rsquo;s 3rd largest English-speaking country, with a $38B BPO industry employing 1.82 million people. Local champions don&rsquo;t just compete  - they <strong>dominate</strong>. Jollibee is now expanding to 30+ countries. Median age 24.3, demographic peak not until the 2050s.</div>
-    </div>
-
-    <!-- Vietnam -->
-    <div class="s5c-card">
-      <div class="s5c-card-head">
-        <span class="s5c-card-flag">&#x1F1FB;&#x1F1F3;</span>
-        <span class="s5c-card-country">Vietnam</span>
-      </div>
-      <div class="s5c-card-headline">Highlands Coffee has 6x more stores than Starbucks</div>
-      <div class="s5c-card-text">The world&rsquo;s #2 coffee producer. GDP went from $116B to $500B in 13 years. <strong>80.6 million motorcycles</strong> for 100 million people  - on the cusp of the car ownership transition that fuelled growth in Korea, China, and Thailand. 96.6% literacy at just $4,700 per capita.</div>
-    </div>
-
-    <!-- Indonesia -->
-    <div class="s5c-card">
-      <div class="s5c-card-head">
-        <span class="s5c-card-flag">&#x1F1EE;&#x1F1E9;</span>
-        <span class="s5c-card-country">Indonesia</span>
-      </div>
-      <div class="s5c-card-headline">Building a $33B new capital city in Borneo</div>
-      <div class="s5c-card-text">284 million people. $5.9 trillion in purchasing power  - 8th globally, ahead of the UK and France. Jakarta is literally sinking, so Indonesia is building Nusantara from scratch: 80% privately funded, designed as a forest city. One of the largest new-city projects of the 21st century.</div>
-    </div>
-
-    <!-- Thailand -->
-    <div class="s5c-card">
-      <div class="s5c-card-head">
-        <span class="s5c-card-flag">&#x1F1F9;&#x1F1ED;</span>
-        <span class="s5c-card-country">Thailand</span>
-      </div>
-      <div class="s5c-card-headline">32.4M tourists, $42.7B in spending</div>
-      <div class="s5c-card-text">8th most visited country globally. Tourism growing to 30% of GDP by 2030. But Thailand isn&rsquo;t just beaches: Bumrungrad Hospital treats patients from <strong>190+ countries</strong>. 3.5&ndash;4 million medical tourists per year. Heart bypass: $15&ndash;25K vs $100&ndash;150K+ in the US, at comparable clinical outcomes.</div>
-    </div>
-
-    <!-- Malaysia -->
-    <div class="s5c-card" style="grid-column: 1 / -1;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
-        <div>
-          <div class="s5c-card-head">
-            <span class="s5c-card-flag">&#x1F1F2;&#x1F1FE;</span>
-            <span class="s5c-card-country">Malaysia</span>
-          </div>
-          <div class="s5c-card-headline">JAKIM halal certification  - passport to a $3T+ economy</div>
-          <div class="s5c-card-text">The world&rsquo;s first government-backed halal certification body, recognised across all 57 OIC member states (~2 billion Muslims). Malaysia ranked #1 on the Global Islamic Economy Indicator for ~10 consecutive years. JAKIM is the &lsquo;Swiss Made&rsquo; of halal  - a regulatory moat no other country possesses.</div>
+  <!-- VS Comparison Cards -->
+  <div class="s5v-vs-section animate-in stagger-3">
+    <!-- Jollibee vs McDonald's -->
+    <div class="s5v-vs-card">
+      <div class="s5v-vs-country">&#x1F1F5;&#x1F1ED; Philippines</div>
+      <div class="s5v-vs-matchup">
+        <div class="s5v-vs-row">
+          <div class="s5v-vs-name s5v-local">Jollibee</div>
+          <div class="s5v-vs-track"><div class="s5v-vs-fill s5v-local-fill" style="width:55%;"></div><div class="s5v-vs-val">55%</div></div>
         </div>
-        <div>
-          <div class="s5c-card-headline" style="margin-top:22px;">PETRONAS: ~$75B revenue, ~$25B profit</div>
-          <div class="s5c-card-text">More profitable than most European energy majors. Ranks #3&ndash;5 globally among national oil companies by net profit. Operations in 50+ countries. Its supply chain creates PE opportunities in oilfield services, downstream petrochemicals, and energy transition.</div>
+        <div class="s5v-vs-row">
+          <div class="s5v-vs-name s5v-global">McDonald&rsquo;s</div>
+          <div class="s5v-vs-track"><div class="s5v-vs-fill s5v-global-fill" style="width:20%;"></div><div class="s5v-vs-val">20%</div></div>
         </div>
       </div>
+      <div class="s5v-vs-detail">Expanding to <strong>30+ countries</strong>. The world&rsquo;s 3rd largest English-speaking country (55M speakers). $38B BPO industry employing 1.82M people - 9% of GDP. Median age 24.3, demographic peak not until the 2050s.</div>
+    </div>
+    <!-- Highlands vs Starbucks -->
+    <div class="s5v-vs-card">
+      <div class="s5v-vs-country">&#x1F1FB;&#x1F1F3; Vietnam</div>
+      <div class="s5v-vs-matchup">
+        <div class="s5v-vs-row">
+          <div class="s5v-vs-name s5v-local">Highlands</div>
+          <div class="s5v-vs-track"><div class="s5v-vs-fill s5v-local-fill" style="width:75%;"></div><div class="s5v-vs-val">928 stores</div></div>
+        </div>
+        <div class="s5v-vs-row">
+          <div class="s5v-vs-name s5v-global">Starbucks</div>
+          <div class="s5v-vs-track"><div class="s5v-vs-fill s5v-global-fill" style="width:12%;"></div><div class="s5v-vs-val">~150 stores</div></div>
+        </div>
+      </div>
+      <div class="s5v-vs-detail">World&rsquo;s <strong>#2 coffee producer</strong>. GDP went from $116B to $500B in 13 years. <strong>80.6M motorcycles</strong> for 100M people - on the cusp of the car ownership transition that fuelled growth in Korea, China, and Thailand.</div>
     </div>
   </div>
 
-  <!-- Pull-quote -->
-  <div class="s5c-pullquote animate-in stagger-4">
-    <div class="s5c-pullquote-text">The pattern repeats across Southeast Asia: local champions adapted to local tastes and conditions consistently outperform global incumbents. Jollibee over McDonald&rsquo;s. Highlands over Starbucks. Grab over Uber. Shopee over Amazon. For PE investors, this is the thesis  - back the local winners.</div>
+  <!-- Three Country Cards -->
+  <div class="s5v-countries animate-in stagger-4">
+    <div class="s5v-country-card">
+      <div class="s5v-cc-head">
+        <span class="s5v-cc-flag">&#x1F1EE;&#x1F1E9;</span>
+        <span class="s5v-cc-name">Indonesia</span>
+      </div>
+      <div class="s5v-cc-headline">$33B new capital city in Borneo</div>
+      <div class="s5v-cc-text">284M people. $5.9T purchasing power (8th globally, ahead of UK and France). Jakarta is sinking, so they&rsquo;re building Nusantara from scratch. 80% privately funded.</div>
+    </div>
+    <div class="s5v-country-card">
+      <div class="s5v-cc-head">
+        <span class="s5v-cc-flag">&#x1F1F9;&#x1F1ED;</span>
+        <span class="s5v-cc-name">Thailand</span>
+      </div>
+      <div class="s5v-cc-headline">32.4M tourists, $42.7B in spending</div>
+      <div class="s5v-cc-text">8th most visited country globally. Tourism growing to 30% of GDP. Bumrungrad Hospital treats patients from 190+ countries. 3.5-4M medical tourists per year.</div>
+    </div>
+    <div class="s5v-country-card">
+      <div class="s5v-cc-head">
+        <span class="s5v-cc-flag">&#x1F1F2;&#x1F1FE;</span>
+        <span class="s5v-cc-name">Malaysia</span>
+      </div>
+      <div class="s5v-cc-headline">JAKIM halal - passport to a $3T+ economy</div>
+      <div class="s5v-cc-text">World&rsquo;s first halal certification, recognised across 57 OIC nations (~2B Muslims). #1 on Global Islamic Economy Indicator for ~10 years. A regulatory moat no other country has.</div>
+    </div>
   </div>
 
-  <div class="source-note animate-in stagger-5">Sources: JFC Annual Reports, VietData, Nusantara NCA, Tourism Authority Thailand, Bumrungrad, DinarStandard, PETRONAS Annual Report, Euromonitor</div>
+  <!-- Pattern Callout -->
+  <div class="s5v-callout animate-in stagger-5">
+    <div class="s5v-callout-text">The pattern repeats: Jollibee over McDonald&rsquo;s. Highlands over Starbucks. Grab over Uber. Shopee over Amazon. Local champions adapted to local tastes consistently outperform global incumbents. For PE investors, this is the thesis - back the local winners.</div>
+  </div>
+
+  <div class="source-note animate-in stagger-6">Sources: JFC Annual Reports, VietData, Nusantara NCA, Tourism Authority Thailand, Bumrungrad, DinarStandard, Euromonitor, IBPAP</div>
   <div class="slide-footer"><span>March 2026</span><div class="sep"></div><span>For Qualified Investors Only</span><div class="sep"></div><span>lanmea.com</span></div>
 </div>
 
 
-<!-- ══════════════════════════════════════════════════════════
-     SLIDE 6: THE SINGAPORE GATEWAY
-     ══════════════════════════════════════════════════════════ -->
-<div class="slide slide-cream s6g-slide" data-bg="light">
+<!-- ═══ SLIDE 6: THE SINGAPORE GATEWAY ═══ -->
+<div class="slide slide-cream s6v-slide" data-bg="light">
   <div class="accent-bar"></div><div class="top-line"></div>
 
   <div class="slide-header animate-in stagger-1">
     <div class="section-label">THE SEA OPPORTUNITY</div>
     <h2>The Singapore <span>Gateway</span></h2>
-    <div class="sub">World-class investment infrastructure is already in place  - and the timing has never been better.</div>
+    <div class="sub">World-class investment infrastructure is already in place - and the timing has never been better.</div>
   </div>
   <div class="header-divider"></div>
 
-  <p class="s6g-intro animate-in stagger-2">Singapore is 733 square kilometres  - roughly the size of one New York City borough  - with a GDP per capita above $140,000. It surpassed Hong Kong as Asia&rsquo;s #1 financial centre in 2024, ranks #3 globally after New York and London, and manages $4.1 trillion in assets. For LPs allocating to Southeast Asia, the infrastructure, legal frameworks, and talent are already world-class.</p>
+  <p class="s6v-intro animate-in stagger-2">Singapore is 733 square kilometres - roughly one New York City borough - with a GDP per capita above $140,000. It surpassed Hong Kong as Asia&rsquo;s #1 financial centre in 2024, ranks #3 globally, and manages $4.1 trillion in assets. For LPs allocating to Southeast Asia, the infrastructure, legal frameworks, and talent are already world-class.</p>
 
-  <!-- Hero stat row -->
-  <div class="s6g-hero-row animate-in stagger-3">
-    <div class="s6g-hero-col">
-      <div class="s6g-hero-num">#3</div>
-      <div class="s6g-hero-label">Global Financial Centre</div>
+  <!-- Hero Stat Bar -->
+  <div class="s6v-hero animate-in stagger-3">
+    <div class="s6v-hero-col">
+      <div class="s6v-hero-num">#3</div>
+      <div class="s6v-hero-label">Global Financial Centre</div>
     </div>
-    <div class="s6g-hero-col">
-      <div class="s6g-hero-num">$4.1T</div>
-      <div class="s6g-hero-label">Assets Under Management</div>
+    <div class="s6v-hero-col">
+      <div class="s6v-hero-num">$4.1T</div>
+      <div class="s6v-hero-label">Assets Under Management</div>
     </div>
-    <div class="s6g-hero-col">
-      <div class="s6g-hero-num">56%</div>
-      <div class="s6g-hero-label">of All SEA PE Deal Value</div>
+    <div class="s6v-hero-col">
+      <div class="s6v-hero-num">56%</div>
+      <div class="s6v-hero-label">of All SEA PE Deal Value</div>
     </div>
-    <div class="s6g-hero-col">
-      <div class="s6g-hero-num">1,500+</div>
-      <div class="s6g-hero-label">Family Offices (from 400 in 2020)</div>
+    <div class="s6v-hero-col">
+      <div class="s6v-hero-num">1,500+</div>
+      <div class="s6v-hero-label">Family Offices</div>
     </div>
   </div>
 
-  <!-- Two columns -->
-  <div class="s6g-columns animate-in stagger-4">
-    <!-- Left: Capital Migration -->
+  <!-- Two Visual Columns -->
+  <div class="s6v-columns animate-in stagger-4">
+    <!-- Left: Family Office Growth -->
     <div>
-      <div class="s6g-section-label">Capital Is Migrating to Singapore</div>
-      <div class="s6g-fact-list">
-        <div class="s6g-fact">
-          <div class="s6g-fact-num">3.5x</div>
-          <div class="s6g-fact-body">
-            <div class="s6g-fact-title">Family office growth in four years</div>
-            <div class="s6g-fact-text">From ~400 in 2020 to 1,500+ in 2024. Inflows from Greater China, Indonesia, India, and the Middle East. Singapore is now arguably the #1 family office destination in Asia.</div>
-          </div>
+      <div class="s6v-col-label">Capital Is Migrating to Singapore</div>
+      <div class="s6v-vbars">
+        <div class="s6v-vbar-col">
+          <div class="s6v-vbar-val">~400</div>
+          <div class="s6v-vbar-bar" style="height:27%;opacity:0.4;"></div>
+          <div class="s6v-vbar-year">2020</div>
         </div>
-        <div class="s6g-fact">
-          <div class="s6g-fact-num">$4.1T</div>
-          <div class="s6g-fact-body">
-            <div class="s6g-fact-title">Largest wealth management centre in Asia-Pacific</div>
-            <div class="s6g-fact-text">78% of AUM sourced from outside Singapore. 64% growth since 2017. Gaining share as Swiss private banks and Hong Kong-based firms relocate Asia desks. 800+ fund management companies.</div>
-          </div>
+        <div class="s6v-vbar-col">
+          <div class="s6v-vbar-val">~700</div>
+          <div class="s6v-vbar-bar" style="height:47%;opacity:0.55;"></div>
+          <div class="s6v-vbar-year">2021</div>
         </div>
-        <div class="s6g-fact">
-          <div class="s6g-fact-num">$50B+</div>
-          <div class="s6g-fact-body">
-            <div class="s6g-fact-title">AI infrastructure investment flowing into the region</div>
-            <div class="s6g-fact-text">Microsoft, Google, Amazon, ByteDance all building across SEA. Singapore captures 75%+ of the region&rsquo;s AI venture capital. The next wave of infrastructure spending is being allocated here.</div>
-          </div>
+        <div class="s6v-vbar-col">
+          <div class="s6v-vbar-val">~1,100</div>
+          <div class="s6v-vbar-bar" style="height:73%;opacity:0.7;"></div>
+          <div class="s6v-vbar-year">2022</div>
+        </div>
+        <div class="s6v-vbar-col">
+          <div class="s6v-vbar-val">~1,400</div>
+          <div class="s6v-vbar-bar" style="height:93%;opacity:0.85;"></div>
+          <div class="s6v-vbar-year">2023</div>
+        </div>
+        <div class="s6v-vbar-col">
+          <div class="s6v-vbar-val">1,500+</div>
+          <div class="s6v-vbar-bar" style="height:100%;"></div>
+          <div class="s6v-vbar-year">2024</div>
         </div>
       </div>
+      <div class="s6v-col-note"><strong>Single family offices</strong> surged 3.5x in four years. Inflows from Greater China, Indonesia, India, and the Middle East. 78% of AUM sourced from outside Singapore. <strong>$50B+</strong> in AI infrastructure investment flowing into the region.</div>
     </div>
 
-    <!-- Right: PE/VC Entry Point -->
+    <!-- Right: VC Correction -->
     <div>
-      <div class="s6g-section-label">A Generational Entry Point</div>
-      <div class="s6g-fact-list">
-        <div class="s6g-fact">
-          <div class="s6g-fact-num">-87%</div>
-          <div class="s6g-fact-body">
-            <div class="s6g-fact-title">VC correction from 2021 peak</div>
-            <div class="s6g-fact-text">Peak: $34.7B (2021) &rarr; $4.6B (2024). The excess has washed out. What remains are rational valuations and quality deals. SaaS funding +262%, AI +217% in 2024. Post-correction vintages historically outperform.</div>
-          </div>
+      <div class="s6v-col-label">A Generational Entry Point</div>
+      <div class="s6v-vc-chart">
+        <div class="s6v-vc-row">
+          <div class="s6v-vc-year">2021</div>
+          <div class="s6v-vc-track"><div class="s6v-vc-fill s6v-peak" style="width:100%;"></div><div class="s6v-vc-val">$34.7B (peak)</div></div>
         </div>
-        <div class="s6g-fact">
-          <div class="s6g-fact-num">64</div>
-          <div class="s6g-fact-body">
-            <div class="s6g-fact-title">Unicorns reaching exit maturity</div>
-            <div class="s6g-fact-text">Grab reached profitability. Sea Group&rsquo;s financial services +35% to $2.4B. PropertyGuru acquired for $1.1B. The first generation of SEA tech companies are reaching scale, profitability, and exit readiness.</div>
-          </div>
+        <div class="s6v-vc-row">
+          <div class="s6v-vc-year">2022</div>
+          <div class="s6v-vc-track"><div class="s6v-vc-fill s6v-peak" style="width:49%;"></div><div class="s6v-vc-val">$17B</div></div>
         </div>
-        <div class="s6g-fact">
-          <div class="s6g-fact-num">60%</div>
-          <div class="s6g-fact-body">
-            <div class="s6g-fact-title">PE deal value surge in 2024</div>
-            <div class="s6g-fact-text">SEA PE deal value surged to $16B. Average deal size: $133M (+22%). Megadeals ($1B+) up 50%. VCs pivoting from moonshots to 3&ndash;4x returns on profitable companies. The market is graduating from venture to institutional PE.</div>
-          </div>
+        <div class="s6v-vc-row">
+          <div class="s6v-vc-year">2023</div>
+          <div class="s6v-vc-track"><div class="s6v-vc-fill s6v-recovery" style="width:20%;"></div><div class="s6v-vc-val">$7B</div></div>
+        </div>
+        <div class="s6v-vc-row">
+          <div class="s6v-vc-year">2024</div>
+          <div class="s6v-vc-track"><div class="s6v-vc-fill s6v-bottom" style="width:13%;"></div><div class="s6v-vc-val">$4.6B (-87%)</div><span class="s6v-vc-badge s6v-green">SaaS +262%</span><span class="s6v-vc-badge s6v-green">AI +217%</span></div>
         </div>
       </div>
+      <div class="s6v-col-note">The excess has washed out. What remains are <strong>rational valuations and quality deals</strong>. Post-correction vintages historically outperform. PE deal value surged 60% to $16B in 2024. VCs pivoting from moonshots to 3-4x returns on profitable companies.</div>
     </div>
   </div>
 
-  <!-- Closing callout -->
-  <div class="s6g-callout animate-in stagger-5">
-    <div class="s6g-callout-text">Singapore is not just a gateway  - it is the London of Southeast Asia. Rule of law, English-speaking, world-class financial infrastructure, and a self-reinforcing flywheel: more wealth migrates here, more PE capital forms, more deals get done, more returns attract more wealth.</div>
+  <!-- Bottom Stats -->
+  <div class="s6v-bottom-stats animate-in stagger-5">
+    <div class="s6v-bstat">
+      <div class="s6v-bstat-num">64</div>
+      <div class="s6v-bstat-label">Unicorns reaching exit maturity</div>
+    </div>
+    <div class="s6v-bstat">
+      <div class="s6v-bstat-num">$16B</div>
+      <div class="s6v-bstat-label">PE deal value 2024 (+60% YoY)</div>
+    </div>
+    <div class="s6v-bstat">
+      <div class="s6v-bstat-num">$50B+</div>
+      <div class="s6v-bstat-label">AI infrastructure investment</div>
+    </div>
   </div>
 
-  <div class="source-note animate-in stagger-6">Sources: GFCI 2024, MAS Asset Management Survey 2023, EY SEA PE Pulse 2024, Bain APAC PE Report 2025, DealStreetAsia, PitchBook 2025, Deloitte</div>
+  <!-- Callout -->
+  <div class="s6v-callout animate-in stagger-6">
+    <div class="s6v-callout-text">Singapore is the London of Southeast Asia. Rule of law, English-speaking, world-class financial infrastructure, and a self-reinforcing flywheel: more wealth migrates, more PE capital forms, more deals get done, more returns attract more wealth.</div>
+  </div>
+
+  <div class="source-note animate-in stagger-7">Sources: GFCI 2024, MAS Asset Management Survey 2023, EY SEA PE Pulse 2024, Bain APAC PE Report 2025, DealStreetAsia, PitchBook, Deloitte</div>
   <div class="slide-footer"><span>March 2026</span><div class="sep"></div><span>For Qualified Investors Only</span><div class="sep"></div><span>lanmea.com</span></div>
 </div>
 
 
-<!-- ══════════════════════════════════════════════════════════
-     SLIDE 7: COVER (CLOSING)
-     ══════════════════════════════════════════════════════════ -->
+<!-- ═══ SLIDE 7: CLOSING COVER ═══ -->
 <div class="slide slide-cover" data-bg="light">
   <div class="accent-bar"></div>
   <div class="deco-circle-dashed" style="top:-18%;right:-6%;width:55vh;height:55vh;border-color:rgba(107,10,20,0.18);animation-duration:90s;"></div>
@@ -2692,7 +2952,7 @@ body::-webkit-scrollbar { display: none; }
   <div class="deco-circle-dashed" style="top:30%;right:2%;width:22vh;height:22vh;border-color:rgba(107,10,20,0.10);animation-duration:100s;"></div>
   <div class="deco-glow" style="top:15%;right:3%;width:35vh;height:35vh;background:radial-gradient(circle,rgba(107,10,20,0.08),transparent 70%);"></div>
   <div class="cover-content">
-    <div class="cover-fund-label animate-in stagger-1">Lanmea Capital  - Market Appendix</div>
+    <div class="cover-fund-label animate-in stagger-1">Lanmea Capital - Market Appendix</div>
     <h1 class="animate-in stagger-2">Southeast Asia <em>Private Markets</em><br>Market Context &amp; Data</h1>
     <p class="cover-tagline animate-in stagger-3">Macro opportunity, manufacturing migration, digital maturation, and the case for disciplined manager selection across six economies and $3.8 trillion in GDP.</p>
     <div class="animate-in stagger-3" style="width:64px;height:1.5px;background:#6B0A14;margin-top:20px;opacity:0.3;"></div>

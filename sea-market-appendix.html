@@ -1865,6 +1865,269 @@ body::-webkit-scrollbar { display: none; }
 
   .deco-circle-dashed { animation: none !important; }
 }
+
+
+/* ══════════════════════════════════════════════════════════
+   SLIDE 5: Local Champions, Global Ambition
+   ══════════════════════════════════════════════════════════ */
+.s5c-slide .slide-header { margin-bottom: 14px; }
+.s5c-slide .slide-header h2 { font-size: 26px; }
+.s5c-slide .header-divider { margin-bottom: 0; }
+
+.s5c-intro {
+  font-size: 10.5px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 95%;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  flex: none;
+}
+
+.s5c-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 14px;
+  flex: 1;
+  align-content: start;
+}
+
+.s5c-card {
+  padding: 16px 18px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: all 0.3s ease;
+}
+.s5c-card:hover {
+  border-color: rgba(107,10,20,0.15);
+  box-shadow: 0 4px 16px rgba(107,10,20,0.04);
+  transform: translateY(-1px);
+}
+.s5c-card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.s5c-card-flag {
+  font-size: 16px;
+  line-height: 1;
+}
+.s5c-card-country {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.s5c-card-headline {
+  font-family: 'Gelasio', Georgia, serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--maroon);
+  line-height: 1.25;
+  margin-bottom: 4px;
+}
+.s5c-card-text {
+  font-size: 9.5px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+.s5c-card-text strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.s5c-pullquote {
+  margin-top: auto;
+  padding: 14px 22px;
+  background: rgba(107,10,20,0.04);
+  border: 1px solid rgba(107,10,20,0.08);
+  border-radius: 10px;
+  border-left: 4px solid var(--maroon);
+  flex: none;
+}
+.s5c-pullquote-text {
+  font-size: 11px;
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'Gelasio', Georgia, serif;
+  color: var(--text-primary);
+  line-height: 1.65;
+}
+
+/* Wide card spanning two columns */
+.s5c-card-wide {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(107,10,20,0.12);
+  background: rgba(107,10,20,0.03);
+}
+.s5c-wide-col {
+  text-align: center;
+  padding: 0 14px;
+}
+.s5c-wide-col:not(:last-child) {
+  border-right: 1px solid rgba(107,10,20,0.10);
+}
+.s5c-wide-country {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+.s5c-wide-num {
+  font-family: 'Gelasio', Georgia, serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--maroon);
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.s5c-wide-text {
+  font-size: 8.5px;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* ══════════════════════════════════════════════════════════
+   SLIDE 6: The Singapore Gateway
+   ══════════════════════════════════════════════════════════ */
+.s6g-slide .slide-header { margin-bottom: 14px; }
+.s6g-slide .slide-header h2 { font-size: 26px; }
+.s6g-slide .header-divider { margin-bottom: 0; }
+
+.s6g-intro {
+  font-size: 10.5px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 95%;
+  margin-top: 8px;
+  flex: none;
+}
+
+.s6g-hero-row {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-top: 20px;
+  padding: 20px 28px;
+  border-radius: 14px;
+  background: var(--maroon);
+  flex: none;
+}
+.s6g-hero-col {
+  flex: 1;
+  text-align: center;
+  padding: 0 18px;
+}
+.s6g-hero-col:not(:last-child) {
+  border-right: 1px solid rgba(255,255,255,0.15);
+}
+.s6g-hero-num {
+  font-family: 'Gelasio', Georgia, serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.s6g-hero-label {
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
+
+.s6g-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 22px;
+  flex: 1;
+  align-items: start;
+}
+
+.s6g-section-label {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--maroon);
+  margin-bottom: 10px;
+}
+
+.s6g-fact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.s6g-fact {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.s6g-fact-num {
+  font-family: 'Gelasio', Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--maroon);
+  line-height: 1;
+  min-width: 65px;
+  flex-shrink: 0;
+}
+.s6g-fact-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.s6g-fact-title {
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.s6g-fact-text {
+  font-size: 9.5px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.s6g-callout {
+  margin-top: auto;
+  padding: 14px 22px;
+  border-radius: 12px;
+  background: rgba(107,10,20,0.04);
+  border: 1px solid rgba(107,10,20,0.08);
+  flex: none;
+}
+.s6g-callout-text {
+  font-size: 11px;
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'Gelasio', Georgia, serif;
+  color: var(--text-primary);
+  line-height: 1.6;
+  border-left: 4px solid var(--maroon);
+  padding-left: 18px;
+}
+
 </style>
 </head>
 <body>
@@ -1914,7 +2177,7 @@ body::-webkit-scrollbar { display: none; }
   <div class="deco-circle-dashed" style="top:30%;right:2%;width:22vh;height:22vh;border-color:rgba(107,10,20,0.10);animation-duration:100s;"></div>
   <div class="deco-glow" style="top:15%;right:3%;width:35vh;height:35vh;background:radial-gradient(circle,rgba(107,10,20,0.08),transparent 70%);"></div>
   <div class="cover-content">
-    <div class="cover-fund-label animate-in stagger-1">Lanmea Capital - Market Appendix</div>
+    <div class="cover-fund-label animate-in stagger-1">Lanmea Capital &mdash; Market Appendix</div>
     <h1 class="animate-in stagger-2">Southeast Asia <em>Private Markets</em><br>Market Context &amp; Data</h1>
     <p class="cover-tagline animate-in stagger-3">Six economies, $3.8 trillion in combined GDP, 614 million people &mdash; the most underweighted growth region in institutional portfolios.</p>
     <div class="animate-in stagger-3" style="width:64px;height:1.5px;background:#6B0A14;margin-top:20px;opacity:0.3;"></div>
@@ -1928,39 +2191,36 @@ body::-webkit-scrollbar { display: none; }
 
 
 <!-- ══════════════════════════════════════════════════════════
-     SLIDE 2: THE ECONOMIC POWERHOUSE
+     SLIDE 2: THE BLOC NOBODY SEES (Scale)
      ══════════════════════════════════════════════════════════ -->
 <div class="slide slide-cream s5n-slide" data-bg="light">
   <div class="accent-bar"></div><div class="top-line"></div>
 
-  <!-- Header -->
   <div class="slide-header animate-in stagger-1">
     <div class="section-label">THE SEA OPPORTUNITY</div>
-    <h2>The Economic <span>Powerhouse</span></h2>
+    <h2>The Bloc <span>Nobody Sees</span></h2>
     <div class="sub">ASEAN-6 is the world&rsquo;s 5th largest economy &mdash; and most institutional investors have never allocated to it.</div>
   </div>
   <div class="header-divider"></div>
 
-  <!-- Intro narrative -->
   <div class="s5n-intro animate-in stagger-2">
-    <p>Combine Indonesia, Vietnam, the Philippines, Thailand, Malaysia, and Singapore into a single bloc and you get a $3.8 trillion economy &mdash; already larger than the UK, closing in on Japan and Germany, and on track to surpass both by 2030. This is not a frontier market curiosity. ASEAN-6 is a G5-scale economic force that most European and American institutional investors are dramatically underweight in.</p>
+    <p>Combine Indonesia, Vietnam, the Philippines, Thailand, Malaysia, and Singapore into a single bloc and you get a $3.8 trillion economy &mdash; already larger than the United Kingdom, closing in on Japan and Germany, and on track to surpass both by 2030. This is not a frontier market curiosity. ASEAN-6 is a G5-scale economic force with 614 million people &mdash; more than the entire European Union &mdash; and most institutional portfolios have zero allocation.</p>
   </div>
 
-  <!-- Two-column layout -->
   <div class="s5n-columns">
     <!-- TOP-LEFT: GDP Ranking Ladder -->
     <div class="s5n-top-left animate-in stagger-3">
       <div class="s5n-ladder-label">GDP Nominal Ranking (2025, USD)</div>
       <table class="s5n-ladder">
-        <tr><td>#1</td><td>&#x1F1FA;&#x1F1F8;</td><td>$29.0T</td><td>United States</td></tr>
-        <tr><td>#2</td><td>&#x1F1E8;&#x1F1F3;</td><td>$18.5T</td><td>China</td></tr>
-        <tr><td>#3</td><td>&#x1F1E9;&#x1F1EA;</td><td>$4.6T</td><td>Germany</td></tr>
-        <tr><td>#4</td><td>&#x1F1EF;&#x1F1F5;</td><td>$4.1T</td><td>Japan</td></tr>
+        <tr><td>#1</td><td></td><td>$29.0T</td><td>United States</td></tr>
+        <tr><td>#2</td><td></td><td>$18.5T</td><td>China</td></tr>
+        <tr><td>#3</td><td></td><td>$4.6T</td><td>Germany</td></tr>
+        <tr><td>#4</td><td></td><td>$4.1T</td><td>Japan</td></tr>
         <tr class="s5n-highlight"><td>#5</td><td></td><td>$3.8T</td><td>ASEAN-6 (combined)</td></tr>
-        <tr><td>#6</td><td>&#x1F1EC;&#x1F1E7;</td><td>$3.5T</td><td>United Kingdom</td></tr>
+        <tr><td>#6</td><td></td><td>$3.5T</td><td>United Kingdom</td></tr>
         <tr class="s5n-projected"><td>&rsquo;30</td><td></td><td>$5.8T</td><td>ASEAN-6 (projected)</td></tr>
       </table>
-      <div class="s5n-overtook">Already <strong>larger than the UK</strong>. Projected to reach <strong>$5.8T by 2030</strong> &mdash; a 53% increase in six years. On track to rival Germany and Japan within the decade.</div>
+      <div class="s5n-overtook">Already <strong>larger than the UK</strong>. Projected to reach <strong>$5.8T by 2030</strong> &mdash; a 53% increase in six years, on track to rival Germany and Japan.</div>
     </div>
 
     <!-- TOP-RIGHT: Six Economy Diversity -->
@@ -1968,11 +2228,11 @@ body::-webkit-scrollbar { display: none; }
       <div class="s5n-right-section">
         <div class="s5n-right-num">6</div>
         <div class="s5n-right-title">Distinct economies, one allocation</div>
-        <div class="s5n-right-text">From Singapore at $93K GDP per capita (global top 5) to the Philippines at $3,500 &mdash; spanning advanced, upper-middle, and lower-middle income economies. Each at a different stage of the growth cycle. Each with different sector strengths.</div>
+        <div class="s5n-right-text">From Singapore at $93K GDP per capita to the Philippines at $3,500 &mdash; spanning advanced, upper-middle, and frontier income economies. No single-country concentration risk. Each economy has a different growth driver and cycle. A SEA portfolio naturally diversifies across development stages, sectors, and currencies.</div>
         <div class="s5n-consumer-card" style="margin-top:12px;">
-          <div class="s5n-consumer-label">RCEP Access</div>
-          <div class="s5n-consumer-vals">2.2B</div>
-          <div class="s5n-consumer-growth">people &middot; $29.7T GDP &middot; 30% of global trade</div>
+          <div class="s5n-consumer-label">Indonesia PPP</div>
+          <div class="s5n-consumer-vals">$5.9T</div>
+          <div class="s5n-consumer-growth">#8 globally &middot; ahead of UK &amp; France</div>
         </div>
       </div>
     </div>
@@ -1983,7 +2243,7 @@ body::-webkit-scrollbar { display: none; }
         <div class="s5n-growth-num">5.0&ndash;7.1%</div>
         <div class="s5n-growth-sub">GDP growth across ASEAN-6 (2024)</div>
       </div>
-      <div class="s5n-mini-chart-label">Real GDP Growth Rate Comparison &mdash; 2024</div>
+      <div class="s5n-mini-chart-label">Real GDP Growth Rate &mdash; 2024</div>
       <div class="s5n-hbars">
         <div class="s5n-hbar-row">
           <div class="s5n-hbar-label s5n-india-label">Vietnam</div>
@@ -2028,75 +2288,64 @@ body::-webkit-scrollbar { display: none; }
           </div>
         </div>
       </div>
-      <div class="s5n-growth-text">Vietnam is growing <strong>2.8x</strong> faster than the US. <strong>24x</strong> faster than Germany. Even Indonesia, the region&rsquo;s largest economy, is growing at <strong>twice</strong> the pace of any G7 nation.</div>
+      <div class="s5n-growth-text">Vietnam is growing <strong>2.8x</strong> faster than the US. <strong>24x</strong> faster than Germany. Even Indonesia, the region&rsquo;s largest economy, grows at <strong>twice</strong> the pace of any G7 nation.</div>
     </div>
 
-    <!-- BOTTOM-RIGHT: FDI Section -->
+    <!-- BOTTOM-RIGHT: RCEP Trade Access -->
     <div class="s5n-bot-right">
       <div class="s5n-right-section animate-in stagger-6">
-        <div class="s5n-right-num">$226B</div>
-        <div class="s5n-right-title">FDI inflows in 2024 (+8% YoY)</div>
+        <div class="s5n-right-num">$29.7T</div>
+        <div class="s5n-right-title">RCEP &mdash; the world&rsquo;s largest trade bloc</div>
         <div class="s5n-urban-bars">
           <div class="s5n-urban-row">
-            <div class="s5n-urban-label s5n-urban-india">ASEAN</div>
+            <div class="s5n-urban-label s5n-urban-india">RCEP</div>
             <div class="s5n-urban-track">
-              <div class="s5n-urban-fill s5n-urban-maroon" style="width:75%;"></div>
-              <div class="s5n-urban-val">17%</div>
+              <div class="s5n-urban-fill s5n-urban-maroon" style="width:90%;"></div>
+              <div class="s5n-urban-val">2.2B people</div>
             </div>
           </div>
           <div class="s5n-urban-row">
-            <div class="s5n-urban-label">L. America</div>
+            <div class="s5n-urban-label">EU</div>
             <div class="s5n-urban-track">
-              <div class="s5n-urban-fill s5n-urban-gray" style="width:45%;"></div>
-              <div class="s5n-urban-val">~10%</div>
+              <div class="s5n-urban-fill s5n-urban-gray" style="width:28%;"></div>
+              <div class="s5n-urban-val">448M</div>
             </div>
           </div>
           <div class="s5n-urban-row">
-            <div class="s5n-urban-label">Africa</div>
+            <div class="s5n-urban-label">USMCA</div>
             <div class="s5n-urban-track">
-              <div class="s5n-urban-fill s5n-urban-gray" style="width:18%;"></div>
-              <div class="s5n-urban-val">~4%</div>
-            </div>
-          </div>
-          <div class="s5n-urban-row">
-            <div class="s5n-urban-label">Mid. East</div>
-            <div class="s5n-urban-track">
-              <div class="s5n-urban-fill s5n-urban-gray" style="width:15%;"></div>
-              <div class="s5n-urban-val">~3%</div>
+              <div class="s5n-urban-fill s5n-urban-gray" style="width:33%;"></div>
+              <div class="s5n-urban-val">510M</div>
             </div>
           </div>
         </div>
-        <div class="s5n-right-text" style="margin-top:14px;">ASEAN captured <strong style="color:var(--maroon);font-weight:700;">17%</strong> of global FDI &mdash; nearly <strong style="color:var(--maroon);font-weight:700;">3x</strong> its share a decade ago. The #1 FDI destination among developing regions for <strong style="color:var(--maroon);font-weight:700;">three consecutive years</strong>. The capital is already moving at scale.</div>
+        <div class="s5n-right-text" style="margin-top:14px;">Any PE portfolio company in ASEAN has preferential trade access to China, Japan, Korea, Australia, and India &mdash; no other region offers this. US-ASEAN trade hit <strong style="color:var(--maroon);font-weight:700;">$572B</strong> in 2024 (+13.4% YoY). ASEAN sits where the world&rsquo;s three largest economies are all competing for market access.</div>
       </div>
     </div>
   </div>
 
-  <!-- Source + Footer -->
-  <div class="source-note animate-in stagger-7">Sources: IMF WEO October 2025, ASEAN Investment Report 2024, UNCTAD, Jakarta Globe, AMRO projections</div>
+  <div class="source-note animate-in stagger-7">Sources: IMF WEO October 2025, ASEAN Secretariat 2024, UNCTAD, Jakarta Globe, AMRO, WEF, Asia Global Institute RCEP Tracker</div>
   <div class="slide-footer"><span>March 2026</span><div class="sep"></div><span>For Qualified Investors Only</span><div class="sep"></div><span>lanmea.com</span></div>
 </div>
 
 
 <!-- ══════════════════════════════════════════════════════════
-     SLIDE 3: THE YOUTH DIVIDEND
+     SLIDE 3: YOUNG, DIGITAL, SPENDING
      ══════════════════════════════════════════════════════════ -->
 <div class="slide slide-light s2n-slide" data-bg="light">
   <div class="accent-bar"></div><div class="top-line"></div>
 
-  <!-- Header -->
   <div class="slide-header animate-in stagger-1">
     <div class="section-label">THE SEA OPPORTUNITY</div>
-    <h2>The Youth <span>Dividend</span></h2>
-    <div class="sub">614 million people, most of them young and working &mdash; with a demographic peak still decades away.</div>
+    <h2>Young, Digital, <span>Spending</span></h2>
+    <div class="sub">614 million people who skipped credit cards and went straight to mobile &mdash; and 415 million of them will be middle class by 2030.</div>
   </div>
   <div class="header-divider"></div>
 
-  <!-- Intro paragraph -->
-  <p class="s2n-intro animate-in stagger-2">Southeast Asia is a full generation younger than Europe, Japan, or South Korea &mdash; and unlike those economies, its working-age population is still growing. The Philippines won&rsquo;t peak until the 2050s. Indonesia until the 2040s. For investors, this creates a structural consumer and labor tailwind unlike anything available in today&rsquo;s developed markets.</p>
+  <p class="s2n-intro animate-in stagger-2">Southeast Asia is a full generation younger than Europe or Japan &mdash; and unlike those markets, its working-age population is still growing. The Philippines won&rsquo;t peak until the 2050s. Indonesia until the 2040s. These young consumers didn&rsquo;t adopt the West&rsquo;s financial infrastructure. They skipped credit cards entirely and went straight to mobile wallets, creating a $263 billion internet economy that turned profitable in 2024.</p>
 
-  <!-- Country Cards Row -->
+  <!-- Country Age Cards -->
   <div class="s2n-cards-row animate-in stagger-3">
-    <!-- Philippines -->
     <div class="s2n-country-card s2n-india-card">
       <div class="s2n-card-name">Philippines</div>
       <div class="s2n-card-num">24.3</div>
@@ -2104,7 +2353,6 @@ body::-webkit-scrollbar { display: none; }
       <div class="s2n-card-line"></div>
       <div class="s2n-card-tag">Youngest in ASEAN</div>
     </div>
-    <!-- Malaysia -->
     <div class="s2n-country-card">
       <div class="s2n-card-name">Malaysia</div>
       <div class="s2n-card-num">28.5</div>
@@ -2112,15 +2360,13 @@ body::-webkit-scrollbar { display: none; }
       <div class="s2n-card-line"></div>
       <div class="s2n-card-tag s2n-gap-tag">Sweet spot</div>
     </div>
-    <!-- Vietnam -->
     <div class="s2n-country-card">
       <div class="s2n-card-name">Vietnam</div>
       <div class="s2n-card-num">30.0</div>
       <div class="s2n-card-sub">years old</div>
       <div class="s2n-card-line"></div>
-      <div class="s2n-card-tag s2n-gap-tag">Sweet spot</div>
+      <div class="s2n-card-tag s2n-gap-tag">101M people</div>
     </div>
-    <!-- Indonesia -->
     <div class="s2n-country-card">
       <div class="s2n-card-name">Indonesia</div>
       <div class="s2n-card-num">30.2</div>
@@ -2128,183 +2374,62 @@ body::-webkit-scrollbar { display: none; }
       <div class="s2n-card-line"></div>
       <div class="s2n-card-tag s2n-gap-tag">284M people</div>
     </div>
-    <!-- Germany -->
     <div class="s2n-country-card">
       <div class="s2n-card-name">Germany</div>
       <div class="s2n-card-num">45.3</div>
       <div class="s2n-card-sub">years old</div>
       <div class="s2n-card-line"></div>
-      <div class="s2n-card-tag s2n-gap-tag">+14.8 yrs older</div>
+      <div class="s2n-card-tag s2n-gap-tag">+15 yrs older</div>
     </div>
-    <!-- Japan -->
     <div class="s2n-country-card">
       <div class="s2n-card-name">Japan</div>
       <div class="s2n-card-num">49.4</div>
       <div class="s2n-card-sub">years old</div>
       <div class="s2n-card-line"></div>
-      <div class="s2n-card-tag s2n-gap-tag">+19.2 yrs older</div>
+      <div class="s2n-card-tag s2n-gap-tag">+19 yrs older</div>
     </div>
   </div>
 
-  <!-- Vertical connector -->
   <div class="s2n-vline animate-in stagger-4"></div>
 
-  <!-- Three stat columns -->
+  <!-- Three stat columns: middle class / digital economy / digital wallets -->
   <div class="s2n-stats-row animate-in stagger-5">
-    <div class="s2n-stat-col">
-      <div class="s2n-stat-num">350M</div>
-      <div class="s2n-stat-title">Workers &mdash; 3rd largest labor force</div>
-      <div class="s2n-stat-text">68% of ASEAN&rsquo;s population is working-age. Only China and India have larger labor forces. This supply underpins manufacturing competitiveness, consumption growth, and services scaling across the region.</div>
-    </div>
     <div class="s2n-stat-col">
       <div class="s2n-stat-num">415M</div>
       <div class="s2n-stat-title">Middle-class consumers by 2030</div>
-      <div class="s2n-stat-text">70% of ASEAN will be middle-class by 2030. High-income households will nearly double from 30M to 57M. ASEAN will contribute 140 million new consumers &mdash; 16% of the world&rsquo;s new consumer class this decade.</div>
+      <div class="s2n-stat-text">More than the entire US population. 70% of ASEAN will be middle class by 2030. High-income households nearly doubling from 30M to 57M. ASEAN will contribute 140 million new consumers this decade &mdash; 16% of the world&rsquo;s new consumer class.</div>
     </div>
     <div class="s2n-stat-col">
-      <div class="s2n-stat-num">70M</div>
-      <div class="s2n-stat-title">Urban migration by 2040</div>
-      <div class="s2n-stat-text">Vietnam is 40% urbanised. The Philippines 49%. Indonesia 59%. The urbanisation-driven consumption and infrastructure boom that transformed China and India is still in its early chapters across Southeast Asia.</div>
+      <div class="s2n-stat-num">$263B</div>
+      <div class="s2n-stat-title">Internet economy &mdash; now profitable</div>
+      <div class="s2n-stat-text">7.4x growth in a decade. $11 billion in profit in 2024 &mdash; up from $4 billion two years earlier. 460 million digital consumers, more than the entire EU. Indonesia alone: $99B. This is no longer growth-at-all-costs &mdash; the ecosystem is monetising.</div>
+    </div>
+    <div class="s2n-stat-col">
+      <div class="s2n-stat-num">80%</div>
+      <div class="s2n-stat-title">of Filipinos use digital wallets</div>
+      <div class="s2n-stat-text">Most SEA consumers skipped credit cards entirely. Indonesia&rsquo;s financial inclusion leaped from 49% to 74% in six years &mdash; through mobile wallets, not bank branches. Indonesia&rsquo;s QRIS processed 2.7 billion transactions in 2024 (+66% YoY). The fintech rails are already built.</div>
     </div>
   </div>
 
-  <!-- Source + Footer -->
-  <div class="source-note animate-in stagger-6">Sources: UN World Population Prospects 2024, World Bank, WEF, Bain &amp; Company, Statista, ASEAN Statistical Highlights 2023</div>
+  <div class="source-note animate-in stagger-6">Sources: UN DESA 2024, WEF, Bain, Google/Temasek/Bain e-Conomy SEA 2024, Thunes, Bank Indonesia, OJK, World Bank Global Findex</div>
   <div class="slide-footer"><span>March 2026</span><div class="sep"></div><span>For Qualified Investors Only</span><div class="sep"></div><span>lanmea.com</span></div>
 </div>
 
 
 <!-- ══════════════════════════════════════════════════════════
-     SLIDE 4: THE DIGITAL LEAP
+     SLIDE 4: WHERE THE WORLD'S SUPPLY CHAINS ARE MOVING
      ══════════════════════════════════════════════════════════ -->
-<div class="slide slide-cream s3n-slide" data-bg="light">
+<div class="slide slide-cream s4n-slide" data-bg="light">
   <div class="accent-bar"></div><div class="top-line"></div>
 
-  <!-- Header -->
   <div class="slide-header animate-in stagger-1">
     <div class="section-label">THE SEA OPPORTUNITY</div>
-    <h2>The Digital <span>Leap</span></h2>
-    <div class="sub">A $263 billion internet economy that went from growth-at-all-costs to profitability in three years.</div>
+    <h2>Where the World&rsquo;s Supply Chains <span>Are Moving</span></h2>
+    <div class="sub">Apple, Samsung, and the world&rsquo;s largest chip makers aren&rsquo;t considering SEA &mdash; they&rsquo;re already there.</div>
   </div>
   <div class="header-divider"></div>
 
-  <!-- Opening narrative -->
-  <p class="s3n-intro animate-in stagger-2">Southeast Asia didn&rsquo;t follow the West&rsquo;s path of desktop-first internet and credit card infrastructure. Its 614 million people went straight from cash to mobile wallets, from no internet to smartphone-first. The result: a $263 billion internet economy that grew 7.4x in a decade, with 460 million digital consumers &mdash; more than the entire population of the European Union. And in 2024, for the first time, the ecosystem turned collectively profitable.</p>
-
-  <!-- Two feature cards -->
-  <div class="s3n-cards-row animate-in stagger-3">
-    <!-- Card A: Internet Economy -->
-    <div class="s3n-feature-card">
-      <div class="s3n-card-hero">$263B Internet Economy</div>
-      <div class="s3n-card-stats">
-        <span>$89B revenue (+14%)</span><span class="s3n-sep">|</span>
-        <span>$11B profit (+24%)</span><span class="s3n-sep">|</span>
-        <span>7.4x growth since 2015</span>
-      </div>
-      <div class="s3n-card-para">This isn&rsquo;t &lsquo;growth at all costs&rsquo; anymore. SEA&rsquo;s internet economy generated $11 billion in profit in 2024 &mdash; up from $4 billion just two years earlier. Revenue grew 11.2x since 2015. Grab reached profitability. Sea Group&rsquo;s digital financial services surged 35% to $2.4B. The ecosystem has matured from venture-backed bets to real, cash-flowing businesses.</div>
-      <div class="s3n-card-compare">On track for <strong style="color:var(--maroon);font-weight:700;">$305B GMV</strong> in 2025 &nbsp;|&nbsp; E-commerce alone: <strong style="color:var(--maroon);font-weight:700;">$202B &rarr; $410B by 2030</strong></div>
-    </div>
-    <!-- Card B: Digital Consumers -->
-    <div class="s3n-feature-card">
-      <div class="s3n-card-hero">460M Digital Consumers</div>
-      <div class="s3n-card-stats">
-        <span>73% internet penetration</span><span class="s3n-sep">|</span>
-        <span>Malaysia 97%</span><span class="s3n-sep">|</span>
-        <span>Singapore 95%</span>
-      </div>
-      <div class="s3n-card-para">Internet penetration surged from 34% in 2013 to 73% in 2024. There are more digital consumers in Southeast Asia than people in all of Europe. Social media usage is the highest of any region on Earth &mdash; the Philippines and Vietnam lead the world in daily engagement. Marketing efficiency for consumer-facing businesses is unmatched: digital customer acquisition is cheaper and faster here than anywhere.</div>
-      <div class="s3n-card-compare">EU population: 448M &nbsp;|&nbsp; <strong style="color:var(--maroon);font-weight:700;">SEA digital consumers: 460M</strong> &mdash; and still growing</div>
-    </div>
-  </div>
-
-  <!-- Maroon callout banner -->
-  <div class="s3n-callout animate-in stagger-4">
-    <div class="s3n-callout-text">Most SEA consumers went straight from cash to mobile wallets, skipping credit cards entirely. 80% of Filipinos use digital wallets. Indonesia&rsquo;s QRIS processed 2.7 billion transactions in 2024 (+66% YoY). Digital wallets now account for 75% of all APAC e-commerce payments. The fintech infrastructure is already mature &mdash; financial inclusion happened via mobile, not banks.</div>
-  </div>
-
-  <!-- Bottom: Chart left + Stat right -->
-  <div class="s3n-bottom animate-in stagger-5">
-    <!-- Left: E-commerce growth chart -->
-    <div class="s3n-chart-area">
-      <div class="s3n-chart-label">Digital Economy GMV by Country &mdash; 2024</div>
-      <div class="s3n-chart-subtitle">Indonesia alone: $99B &mdash; larger than many European digital economies</div>
-      <div class="s3n-hbars">
-        <div class="s3n-hbar-row">
-          <div class="s3n-hbar-label s3n-india-label">Indonesia</div>
-          <div class="s3n-hbar-track">
-            <div class="s3n-hbar-fill s3n-maroon" style="width:92%;"></div>
-            <div class="s3n-hbar-val">$99B</div>
-          </div>
-        </div>
-        <div class="s3n-hbar-row">
-          <div class="s3n-hbar-label">Vietnam</div>
-          <div class="s3n-hbar-track">
-            <div class="s3n-hbar-fill s3n-maroon" style="width:34%;opacity:0.7;"></div>
-            <div class="s3n-hbar-val">$36B</div>
-          </div>
-        </div>
-        <div class="s3n-hbar-row">
-          <div class="s3n-hbar-label">Thailand</div>
-          <div class="s3n-hbar-track">
-            <div class="s3n-hbar-fill s3n-maroon" style="width:28%;opacity:0.7;"></div>
-            <div class="s3n-hbar-val">$30B</div>
-          </div>
-        </div>
-        <div class="s3n-hbar-row">
-          <div class="s3n-hbar-label">Philippines</div>
-          <div class="s3n-hbar-track">
-            <div class="s3n-hbar-fill s3n-maroon" style="width:26%;opacity:0.7;"></div>
-            <div class="s3n-hbar-val">$28B</div>
-          </div>
-        </div>
-        <div class="s3n-hbar-row">
-          <div class="s3n-hbar-label">Malaysia</div>
-          <div class="s3n-hbar-track">
-            <div class="s3n-hbar-fill s3n-gray" style="width:22%;"></div>
-            <div class="s3n-hbar-val">$23B</div>
-          </div>
-        </div>
-        <div class="s3n-hbar-row">
-          <div class="s3n-hbar-label">Singapore</div>
-          <div class="s3n-hbar-track">
-            <div class="s3n-hbar-fill s3n-gray" style="width:20%;"></div>
-            <div class="s3n-hbar-val">$22B</div>
-          </div>
-        </div>
-      </div>
-      <div class="s3n-chart-note">Source: Google/Temasek/Bain e-Conomy SEA 2024</div>
-    </div>
-
-    <!-- Right: Social media stat -->
-    <div class="s3n-stat-block">
-      <div class="s3n-stat-num">64.3%</div>
-      <div class="s3n-stat-title">active social media users &mdash; highest on Earth</div>
-      <div class="s3n-stat-text">Southeast Asia spends more time on social media than any region on Earth. Facebook ad reach exceeds 100% of the population in the Philippines. Combined with the cheapest mobile data outside India, this creates unmatched marketing efficiency for consumer-facing businesses. Digital customer acquisition is cheaper and faster here than in the US, Europe, or East Asia.</div>
-    </div>
-  </div>
-
-  <!-- Source + Footer -->
-  <div class="source-note animate-in stagger-6">Sources: Google/Temasek/Bain e-Conomy SEA 2024-2025, Thunes, DataReportal 2025, Meltwater, Payment Asia 2024, DBS Research</div>
-  <div class="slide-footer"><span>March 2026</span><div class="sep"></div><span>For Qualified Investors Only</span><div class="sep"></div><span>lanmea.com</span></div>
-</div>
-
-
-<!-- ══════════════════════════════════════════════════════════
-     SLIDE 5: THE GREAT MANUFACTURING MIGRATION
-     ══════════════════════════════════════════════════════════ -->
-<div class="slide slide-light s4n-slide" data-bg="light">
-  <div class="accent-bar"></div><div class="top-line"></div>
-
-  <!-- Header -->
-  <div class="slide-header animate-in stagger-1">
-    <div class="section-label">THE SEA OPPORTUNITY</div>
-    <h2>The Great Manufacturing <span>Migration</span></h2>
-    <div class="sub">China+1 is not a forecast &mdash; it&rsquo;s a measurable, structural shift in global supply chains.</div>
-  </div>
-  <div class="header-divider"></div>
-
-  <!-- Intro paragraph -->
-  <p class="s4n-intro animate-in stagger-2">Apple makes nearly all iPads, Macs, AirPods, and Watches in Vietnam. Samsung&rsquo;s single largest manufacturing base outside Korea is Vietnam. ASEAN is the world&rsquo;s 2nd largest semiconductor exporter. This is not theory &mdash; the world&rsquo;s most valuable companies are actively executing China+1 in Southeast Asia, and the capital flows prove it: ASEAN has been the #1 FDI destination among developing regions for three consecutive years.</p>
+  <p class="s4n-intro animate-in stagger-2">Apple makes nearly all its iPads, Macs, AirPods, and Watches in Vietnam. Samsung&rsquo;s single largest manufacturing base outside Korea is Vietnam &mdash; generating revenue equal to 13% of the country&rsquo;s entire GDP. Malaysia exports $130 billion in semiconductors. Thailand produces more cars than the UK or Italy. This is not a forecast. ASEAN has been the #1 FDI destination among developing regions for three consecutive years.</p>
 
   <!-- Triple Panel -->
   <div class="s4n-panel animate-in stagger-3">
@@ -2312,64 +2437,253 @@ body::-webkit-scrollbar { display: none; }
       <div class="s4n-triple-col">
         <div class="s4n-triple-num">17%</div>
         <div class="s4n-triple-title">Share of Global FDI</div>
-        <div class="s4n-triple-sub">Nearly 3x ASEAN&rsquo;s share a decade ago &mdash; rose from ~6% to 17%</div>
+        <div class="s4n-triple-sub">Nearly 3x ASEAN&rsquo;s share a decade ago. Rose from ~6% to 17%.</div>
       </div>
       <div class="s4n-triple-col">
         <div class="s4n-triple-num">$226B</div>
         <div class="s4n-triple-title">FDI Inflows (2024)</div>
-        <div class="s4n-triple-sub">+8% YoY while global FDI declined 11%</div>
+        <div class="s4n-triple-sub">+8% YoY while global FDI declined 11%. #1 among developing regions, 3 years running.</div>
       </div>
       <div class="s4n-triple-col">
         <div class="s4n-triple-num">23.6%</div>
         <div class="s4n-triple-title">Global Semiconductor Exports</div>
-        <div class="s4n-triple-sub">Behind only East Asia combined &mdash; ahead of the US and Europe</div>
+        <div class="s4n-triple-sub">World&rsquo;s #2 exporter. Behind only East Asia. Ahead of the US and Europe.</div>
       </div>
     </div>
     <div class="s4n-panel-divider"></div>
-    <div class="s4n-panel-footer">The Manufacturing Migration Is Structural</div>
+    <div class="s4n-panel-footer">The Manufacturing Migration Is Structural and Accelerating</div>
   </div>
 
-  <!-- Vertical connector -->
   <div class="s4n-vline animate-in stagger-4"></div>
 
-  <!-- Two-column takeaway -->
+  <!-- Two-column: Vietnam + Malaysia/Thailand -->
   <div class="s4n-takeaway animate-in stagger-5">
     <div class="s4n-take-col">
       <div class="s4n-take-num">85%</div>
       <div class="s4n-take-title">of new electronics investments went to Vietnam (2018&ndash;2024)</div>
-      <div class="s4n-take-lead">Vietnam has transformed from a low-cost labor market to a core, irreplaceable node in global tech supply chains:</div>
+      <div class="s4n-take-lead">Vietnam captured 85% of global electronics greenfield FDI &mdash; transforming from a low-cost labor market to an irreplaceable node in global tech supply chains:</div>
       <ul class="s4n-take-bullets">
-        <li>Apple: 35+ suppliers, 38 factories in Vietnam &mdash; everything except iPhones is diversifying here</li>
-        <li>Samsung: $23.2B invested, $54.4B in exports &mdash; single largest base outside Korea</li>
-        <li>Manufacturing rose from 49% to 86% of Vietnam&rsquo;s exports in 20 years &mdash; a complete economic transformation</li>
+        <li>Apple: 35+ suppliers, 38 factories &mdash; everything except iPhones is diversifying to Vietnam</li>
+        <li>Samsung: $23.2B invested, $54.4B in exports &mdash; revenue equals 13% of Vietnam&rsquo;s GDP</li>
+        <li>96.6% literacy rate at $4,700 GDP per capita &mdash; higher than countries 3x richer. This is why manufacturing chose Vietnam over cheaper alternatives</li>
       </ul>
-      <div class="s4n-take-closing">Vietnam&rsquo;s GDP crossed $500B in 2025 &mdash; up from $116B in 2012. A 4.3x increase in 13 years. FTSE upgraded Vietnam to emerging market status in October 2025.</div>
+      <div class="s4n-take-closing">Vietnam&rsquo;s GDP crossed $500B in 2025 &mdash; up from $116B in 2012. 4.3x in 13 years. FTSE upgraded Vietnam to emerging market status in October 2025.</div>
     </div>
     <div class="s4n-take-col">
-      <div class="s4n-take-num">$50B+</div>
-      <div class="s4n-take-title">in AI infrastructure investment since 2023</div>
+      <div class="s4n-take-num">$130B</div>
+      <div class="s4n-take-title">Malaysia semiconductor exports &mdash; 13% of global chip testing &amp; packaging</div>
       <ul class="s4n-take-bullets">
-        <li>Microsoft, Google, Amazon, ByteDance investing billions across Malaysia, Indonesia, Singapore, Thailand</li>
-        <li>Malaysia alone: Google ($2B), Microsoft ($2.2B), ByteDance ($2.1B) in data center investments in 2024</li>
+        <li>National Semiconductor Strategy launched 2024 with $100B+ investment target. Google ($2B), Microsoft ($2.2B), ByteDance ($2.1B) all building in Malaysia</li>
+        <li>43.5% of tertiary students in STEM &mdash; highest in ASEAN</li>
         <li>Johor is becoming the &lsquo;Northern Virginia of ASEAN&rsquo; &mdash; $25-30B+ committed by hyperscalers, 30km from Singapore</li>
       </ul>
-      <div class="s4n-take-closing">SEA is positioning as a global AI deployment and data center hub &mdash; not just a consumer market, but where AI infrastructure is being built. Singapore alone captures 75%+ of SEA&rsquo;s AI venture capital.</div>
+      <div class="s4n-take-closing" style="margin-top:10px;padding-top:8px;"><strong style="color:var(--maroon);">Thailand &mdash; &ldquo;Detroit of Asia&rdquo;:</strong> 1.8M vehicles/year, more than the UK or Italy. EV adoption surged from 0% to ~12% of new car sales in just 3 years &mdash; fastest in Southeast Asia. BYD opened its first overseas passenger vehicle factory in Rayong.</div>
     </div>
   </div>
 
   <!-- Pull-quote -->
   <div class="s4n-pullquote animate-in stagger-6">
-    <div class="s4n-pullquote-text">ASEAN holds a critical, irreplaceable position in the world&rsquo;s most strategic supply chains &mdash; semiconductors, electronics, EVs, and now AI infrastructure. Where the world&rsquo;s three largest economies are all competing for market access, that is where capital should be deployed.</div>
+    <div class="s4n-pullquote-text">ASEAN holds a critical, irreplaceable position in the world&rsquo;s most strategic supply chains &mdash; semiconductors, electronics, EVs, and AI infrastructure. The capital is already there. The question for European LPs is why they aren&rsquo;t.</div>
   </div>
 
-  <!-- Source + Footer -->
-  <div class="source-note animate-in stagger-7">Sources: ASEAN Investment Report 2024, McKinsey 2024, Vietnam-Briefing 2025, ASEAN Exchanges, MIDA, FTSE Russell, company announcements</div>
+  <div class="source-note animate-in stagger-7">Sources: ASEAN Investment Report 2024, McKinsey 2024, Vietnam-Briefing 2025, FTSE Russell, ASEAN Exchanges, Malaysia NSS, MIDA, FTI, OICA, EVAT</div>
   <div class="slide-footer"><span>March 2026</span><div class="sep"></div><span>For Qualified Investors Only</span><div class="sep"></div><span>lanmea.com</span></div>
 </div>
 
 
 <!-- ══════════════════════════════════════════════════════════
-     SLIDE 6: COVER (CLOSING)
+     SLIDE 5: LOCAL CHAMPIONS, GLOBAL AMBITION
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide slide-light s5c-slide" data-bg="light">
+  <div class="accent-bar"></div><div class="top-line"></div>
+
+  <div class="slide-header animate-in stagger-1">
+    <div class="section-label">THE SEA OPPORTUNITY</div>
+    <h2>Local Champions, <span>Global Ambition</span></h2>
+    <div class="sub">These aren&rsquo;t just cheap-labour economies. Local brands beat global giants, and the depth of these markets will surprise you.</div>
+  </div>
+  <div class="header-divider"></div>
+
+  <p class="s5c-intro animate-in stagger-2">Every major emerging market has its version of the &ldquo;it&rsquo;s more than just GDP&rdquo; story. Southeast Asia&rsquo;s version is uniquely vivid: a fast-food chain that outsells McDonald&rsquo;s 3-to-1, a coffee brand with 6x more stores than Starbucks, a country building a $33 billion new capital city, and 80.6 million motorcycles about to become cars.</p>
+
+  <!-- Country fact cards -->
+  <div class="s5c-grid animate-in stagger-3">
+
+    <!-- Philippines -->
+    <div class="s5c-card">
+      <div class="s5c-card-head">
+        <span class="s5c-card-flag">&#x1F1F5;&#x1F1ED;</span>
+        <span class="s5c-card-country">Philippines</span>
+      </div>
+      <div class="s5c-card-headline">Jollibee beats McDonald&rsquo;s 55% to 20%</div>
+      <div class="s5c-card-text">The world&rsquo;s 3rd largest English-speaking country, with a $38B BPO industry employing 1.82 million people. Local champions don&rsquo;t just compete &mdash; they <strong>dominate</strong>. Jollibee is now expanding to 30+ countries. Median age 24.3, demographic peak not until the 2050s.</div>
+    </div>
+
+    <!-- Vietnam -->
+    <div class="s5c-card">
+      <div class="s5c-card-head">
+        <span class="s5c-card-flag">&#x1F1FB;&#x1F1F3;</span>
+        <span class="s5c-card-country">Vietnam</span>
+      </div>
+      <div class="s5c-card-headline">Highlands Coffee has 6x more stores than Starbucks</div>
+      <div class="s5c-card-text">The world&rsquo;s #2 coffee producer. GDP went from $116B to $500B in 13 years. <strong>80.6 million motorcycles</strong> for 100 million people &mdash; on the cusp of the car ownership transition that fuelled growth in Korea, China, and Thailand. 96.6% literacy at just $4,700 per capita.</div>
+    </div>
+
+    <!-- Indonesia -->
+    <div class="s5c-card">
+      <div class="s5c-card-head">
+        <span class="s5c-card-flag">&#x1F1EE;&#x1F1E9;</span>
+        <span class="s5c-card-country">Indonesia</span>
+      </div>
+      <div class="s5c-card-headline">Building a $33B new capital city in Borneo</div>
+      <div class="s5c-card-text">284 million people. $5.9 trillion in purchasing power &mdash; 8th globally, ahead of the UK and France. Jakarta is literally sinking, so Indonesia is building Nusantara from scratch: 80% privately funded, designed as a forest city. One of the largest new-city projects of the 21st century.</div>
+    </div>
+
+    <!-- Thailand -->
+    <div class="s5c-card">
+      <div class="s5c-card-head">
+        <span class="s5c-card-flag">&#x1F1F9;&#x1F1ED;</span>
+        <span class="s5c-card-country">Thailand</span>
+      </div>
+      <div class="s5c-card-headline">32.4M tourists, $42.7B in spending</div>
+      <div class="s5c-card-text">8th most visited country globally. Tourism growing to 30% of GDP by 2030. But Thailand isn&rsquo;t just beaches: Bumrungrad Hospital treats patients from <strong>190+ countries</strong>. 3.5&ndash;4 million medical tourists per year. Heart bypass: $15&ndash;25K vs $100&ndash;150K+ in the US, at comparable clinical outcomes.</div>
+    </div>
+
+    <!-- Malaysia -->
+    <div class="s5c-card" style="grid-column: 1 / -1;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+        <div>
+          <div class="s5c-card-head">
+            <span class="s5c-card-flag">&#x1F1F2;&#x1F1FE;</span>
+            <span class="s5c-card-country">Malaysia</span>
+          </div>
+          <div class="s5c-card-headline">JAKIM halal certification &mdash; passport to a $3T+ economy</div>
+          <div class="s5c-card-text">The world&rsquo;s first government-backed halal certification body, recognised across all 57 OIC member states (~2 billion Muslims). Malaysia ranked #1 on the Global Islamic Economy Indicator for ~10 consecutive years. JAKIM is the &lsquo;Swiss Made&rsquo; of halal &mdash; a regulatory moat no other country possesses.</div>
+        </div>
+        <div>
+          <div class="s5c-card-headline" style="margin-top:22px;">PETRONAS: ~$75B revenue, ~$25B profit</div>
+          <div class="s5c-card-text">More profitable than most European energy majors. Ranks #3&ndash;5 globally among national oil companies by net profit. Operations in 50+ countries. Its supply chain creates PE opportunities in oilfield services, downstream petrochemicals, and energy transition.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pull-quote -->
+  <div class="s5c-pullquote animate-in stagger-4">
+    <div class="s5c-pullquote-text">The pattern repeats across Southeast Asia: local champions adapted to local tastes and conditions consistently outperform global incumbents. Jollibee over McDonald&rsquo;s. Highlands over Starbucks. Grab over Uber. Shopee over Amazon. For PE investors, this is the thesis &mdash; back the local winners.</div>
+  </div>
+
+  <div class="source-note animate-in stagger-5">Sources: JFC Annual Reports, VietData, Nusantara NCA, Tourism Authority Thailand, Bumrungrad, DinarStandard, PETRONAS Annual Report, Euromonitor</div>
+  <div class="slide-footer"><span>March 2026</span><div class="sep"></div><span>For Qualified Investors Only</span><div class="sep"></div><span>lanmea.com</span></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 6: THE SINGAPORE GATEWAY
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide slide-cream s6g-slide" data-bg="light">
+  <div class="accent-bar"></div><div class="top-line"></div>
+
+  <div class="slide-header animate-in stagger-1">
+    <div class="section-label">THE SEA OPPORTUNITY</div>
+    <h2>The Singapore <span>Gateway</span></h2>
+    <div class="sub">World-class investment infrastructure is already in place &mdash; and the timing has never been better.</div>
+  </div>
+  <div class="header-divider"></div>
+
+  <p class="s6g-intro animate-in stagger-2">Singapore is 733 square kilometres &mdash; roughly the size of one New York City borough &mdash; with a GDP per capita above $140,000. It surpassed Hong Kong as Asia&rsquo;s #1 financial centre in 2024, ranks #3 globally after New York and London, and manages $4.1 trillion in assets. For LPs allocating to Southeast Asia, the infrastructure, legal frameworks, and talent are already world-class.</p>
+
+  <!-- Hero stat row -->
+  <div class="s6g-hero-row animate-in stagger-3">
+    <div class="s6g-hero-col">
+      <div class="s6g-hero-num">#3</div>
+      <div class="s6g-hero-label">Global Financial Centre</div>
+    </div>
+    <div class="s6g-hero-col">
+      <div class="s6g-hero-num">$4.1T</div>
+      <div class="s6g-hero-label">Assets Under Management</div>
+    </div>
+    <div class="s6g-hero-col">
+      <div class="s6g-hero-num">56%</div>
+      <div class="s6g-hero-label">of All SEA PE Deal Value</div>
+    </div>
+    <div class="s6g-hero-col">
+      <div class="s6g-hero-num">1,500+</div>
+      <div class="s6g-hero-label">Family Offices (from 400 in 2020)</div>
+    </div>
+  </div>
+
+  <!-- Two columns -->
+  <div class="s6g-columns animate-in stagger-4">
+    <!-- Left: Capital Migration -->
+    <div>
+      <div class="s6g-section-label">Capital Is Migrating to Singapore</div>
+      <div class="s6g-fact-list">
+        <div class="s6g-fact">
+          <div class="s6g-fact-num">3.5x</div>
+          <div class="s6g-fact-body">
+            <div class="s6g-fact-title">Family office growth in four years</div>
+            <div class="s6g-fact-text">From ~400 in 2020 to 1,500+ in 2024. Inflows from Greater China, Indonesia, India, and the Middle East. Singapore is now arguably the #1 family office destination in Asia.</div>
+          </div>
+        </div>
+        <div class="s6g-fact">
+          <div class="s6g-fact-num">$4.1T</div>
+          <div class="s6g-fact-body">
+            <div class="s6g-fact-title">Largest wealth management centre in Asia-Pacific</div>
+            <div class="s6g-fact-text">78% of AUM sourced from outside Singapore. 64% growth since 2017. Gaining share as Swiss private banks and Hong Kong-based firms relocate Asia desks. 800+ fund management companies.</div>
+          </div>
+        </div>
+        <div class="s6g-fact">
+          <div class="s6g-fact-num">$50B+</div>
+          <div class="s6g-fact-body">
+            <div class="s6g-fact-title">AI infrastructure investment flowing into the region</div>
+            <div class="s6g-fact-text">Microsoft, Google, Amazon, ByteDance all building across SEA. Singapore captures 75%+ of the region&rsquo;s AI venture capital. The next wave of infrastructure spending is being allocated here.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: PE/VC Entry Point -->
+    <div>
+      <div class="s6g-section-label">A Generational Entry Point</div>
+      <div class="s6g-fact-list">
+        <div class="s6g-fact">
+          <div class="s6g-fact-num">-87%</div>
+          <div class="s6g-fact-body">
+            <div class="s6g-fact-title">VC correction from 2021 peak</div>
+            <div class="s6g-fact-text">Peak: $34.7B (2021) &rarr; $4.6B (2024). The excess has washed out. What remains are rational valuations and quality deals. SaaS funding +262%, AI +217% in 2024. Post-correction vintages historically outperform.</div>
+          </div>
+        </div>
+        <div class="s6g-fact">
+          <div class="s6g-fact-num">64</div>
+          <div class="s6g-fact-body">
+            <div class="s6g-fact-title">Unicorns reaching exit maturity</div>
+            <div class="s6g-fact-text">Grab reached profitability. Sea Group&rsquo;s financial services +35% to $2.4B. PropertyGuru acquired for $1.1B. The first generation of SEA tech companies are reaching scale, profitability, and exit readiness.</div>
+          </div>
+        </div>
+        <div class="s6g-fact">
+          <div class="s6g-fact-num">60%</div>
+          <div class="s6g-fact-body">
+            <div class="s6g-fact-title">PE deal value surge in 2024</div>
+            <div class="s6g-fact-text">SEA PE deal value surged to $16B. Average deal size: $133M (+22%). Megadeals ($1B+) up 50%. VCs pivoting from moonshots to 3&ndash;4x returns on profitable companies. The market is graduating from venture to institutional PE.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Closing callout -->
+  <div class="s6g-callout animate-in stagger-5">
+    <div class="s6g-callout-text">Singapore is not just a gateway &mdash; it is the London of Southeast Asia. Rule of law, English-speaking, world-class financial infrastructure, and a self-reinforcing flywheel: more wealth migrates here, more PE capital forms, more deals get done, more returns attract more wealth.</div>
+  </div>
+
+  <div class="source-note animate-in stagger-6">Sources: GFCI 2024, MAS Asset Management Survey 2023, EY SEA PE Pulse 2024, Bain APAC PE Report 2025, DealStreetAsia, PitchBook 2025, Deloitte</div>
+  <div class="slide-footer"><span>March 2026</span><div class="sep"></div><span>For Qualified Investors Only</span><div class="sep"></div><span>lanmea.com</span></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 7: COVER (CLOSING)
      ══════════════════════════════════════════════════════════ -->
 <div class="slide slide-cover" data-bg="light">
   <div class="accent-bar"></div>
@@ -2378,9 +2692,9 @@ body::-webkit-scrollbar { display: none; }
   <div class="deco-circle-dashed" style="top:30%;right:2%;width:22vh;height:22vh;border-color:rgba(107,10,20,0.10);animation-duration:100s;"></div>
   <div class="deco-glow" style="top:15%;right:3%;width:35vh;height:35vh;background:radial-gradient(circle,rgba(107,10,20,0.08),transparent 70%);"></div>
   <div class="cover-content">
-    <div class="cover-fund-label animate-in stagger-1">Lanmea Capital - Market Appendix</div>
+    <div class="cover-fund-label animate-in stagger-1">Lanmea Capital &mdash; Market Appendix</div>
     <h1 class="animate-in stagger-2">Southeast Asia <em>Private Markets</em><br>Market Context &amp; Data</h1>
-    <p class="cover-tagline animate-in stagger-3">Macro opportunity, manufacturing migration, digital maturation, and the case for disciplined manager selection across the world&rsquo;s most underweighted growth region.</p>
+    <p class="cover-tagline animate-in stagger-3">Macro opportunity, manufacturing migration, digital maturation, and the case for disciplined manager selection across six economies and $3.8 trillion in GDP.</p>
     <div class="animate-in stagger-3" style="width:64px;height:1.5px;background:#6B0A14;margin-top:20px;opacity:0.3;"></div>
   </div>
   <div class="cover-footer animate-in stagger-4">

@@ -1936,7 +1936,8 @@ body::-webkit-scrollbar { display: none; }
   box-shadow: 0 3px 12px rgba(107,10,20,0.04);
   transform: translateY(-1px);
 }
-.s2v-econ-flag { font-size: 16px; margin-bottom: 4px; }
+.s2v-econ-flag { margin-bottom: 4px; }
+.s2v-econ-flag img { width: 22px; height: auto; border-radius: 2px; display: block; }
 .s2v-econ-name {
   font-size: 8px; font-weight: 600; letter-spacing: 0.8px;
   text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px;
@@ -2108,9 +2109,9 @@ body::-webkit-scrollbar { display: none; }
   transform: translateY(-2px);
 }
 .s4v-cc-head {
-  display: flex; align-items: center; gap: 6px; margin-bottom: 8px;
+  display: flex; align-items: center; gap: 8px; margin-bottom: 8px;
 }
-.s4v-cc-flag { font-size: 10px; line-height: 1; font-weight: 400; color: var(--text-muted); }
+.s4v-cc-flag img { width: 20px; height: auto; border-radius: 2px; display: block; }
 .s4v-cc-name {
   font-size: 10px; font-weight: 600; letter-spacing: 1.2px;
   text-transform: uppercase; color: var(--text-muted); line-height: 1;
@@ -2177,7 +2178,9 @@ body::-webkit-scrollbar { display: none; }
 .s5v-vs-country {
   font-size: 8px; font-weight: 600; letter-spacing: 1.2px;
   text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px;
+  display: flex; align-items: center; gap: 6px;
 }
+.s5v-vs-country img { width: 16px; height: auto; border-radius: 2px; }
 .s5v-vs-matchup {
   display: flex; flex-direction: column; gap: 5px; margin-bottom: 10px;
 }
@@ -2226,7 +2229,7 @@ body::-webkit-scrollbar { display: none; }
 .s5v-cc-head {
   display: flex; align-items: center; gap: 6px; margin-bottom: 6px;
 }
-.s5v-cc-flag { font-size: 14px; }
+.s5v-cc-flag img { width: 18px; height: auto; border-radius: 2px; }
 .s5v-cc-name {
   font-size: 8px; font-weight: 600; letter-spacing: 1px;
   text-transform: uppercase; color: var(--text-muted);
@@ -2507,42 +2510,42 @@ body::-webkit-scrollbar { display: none; }
   <!-- Six Economy Cards -->
   <div class="s2v-economies animate-in stagger-4">
     <div class="s2v-econ-card">
-      <div class="s2v-econ-flag">&#x1F1EE;&#x1F1E9;</div>
+      <div class="s2v-econ-flag"><img src="https://flagcdn.com/w40/id.png" alt="ID"></div>
       <div class="s2v-econ-name">Indonesia</div>
       <div class="s2v-econ-gdp">$1.4T</div>
       <div class="s2v-econ-percap">$4,900 per capita</div>
       <div class="s2v-econ-growth">+5.0% real GDP growth (2024)</div>
     </div>
     <div class="s2v-econ-card">
-      <div class="s2v-econ-flag">&#x1F1F9;&#x1F1ED;</div>
+      <div class="s2v-econ-flag"><img src="https://flagcdn.com/w40/th.png" alt="TH"></div>
       <div class="s2v-econ-name">Thailand</div>
       <div class="s2v-econ-gdp">$527B</div>
       <div class="s2v-econ-percap">$7,300 per capita</div>
       <div class="s2v-econ-growth">+2.5% real GDP growth (2024)</div>
     </div>
     <div class="s2v-econ-card">
-      <div class="s2v-econ-flag">&#x1F1F8;&#x1F1EC;</div>
+      <div class="s2v-econ-flag"><img src="https://flagcdn.com/w40/sg.png" alt="SG"></div>
       <div class="s2v-econ-name">Singapore</div>
       <div class="s2v-econ-gdp">$547B</div>
       <div class="s2v-econ-percap">$93,000 per capita</div>
       <div class="s2v-econ-growth">+4.1% real GDP growth (2024)</div>
     </div>
     <div class="s2v-econ-card">
-      <div class="s2v-econ-flag">&#x1F1FB;&#x1F1F3;</div>
+      <div class="s2v-econ-flag"><img src="https://flagcdn.com/w40/vn.png" alt="VN"></div>
       <div class="s2v-econ-name">Vietnam</div>
       <div class="s2v-econ-gdp">$500B+</div>
       <div class="s2v-econ-percap">$4,700 per capita</div>
       <div class="s2v-econ-growth">+7.1% real GDP growth (2024)</div>
     </div>
     <div class="s2v-econ-card">
-      <div class="s2v-econ-flag">&#x1F1F5;&#x1F1ED;</div>
+      <div class="s2v-econ-flag"><img src="https://flagcdn.com/w40/ph.png" alt="PH"></div>
       <div class="s2v-econ-name">Philippines</div>
       <div class="s2v-econ-gdp">$462B</div>
       <div class="s2v-econ-percap">$3,500 per capita</div>
       <div class="s2v-econ-growth">+5.8% real GDP growth (2024)</div>
     </div>
     <div class="s2v-econ-card">
-      <div class="s2v-econ-flag">&#x1F1F2;&#x1F1FE;</div>
+      <div class="s2v-econ-flag"><img src="https://flagcdn.com/w40/my.png" alt="MY"></div>
       <div class="s2v-econ-name">Malaysia</div>
       <div class="s2v-econ-gdp">$422B</div>
       <div class="s2v-econ-percap">$11,700 per capita</div>
@@ -2708,7 +2711,7 @@ body::-webkit-scrollbar { display: none; }
     <!-- Vietnam -->
     <div class="s4v-country-card">
       <div class="s4v-cc-head">
-        <span class="s4v-cc-flag">&#x1F1FB;&#x1F1F3;</span>
+        <span class="s4v-cc-flag"><img src="https://flagcdn.com/w40/vn.png" alt="VN"></span>
         <span class="s4v-cc-name">Vietnam</span>
       </div>
       <div class="s4v-cc-num">85%</div>
@@ -2719,7 +2722,7 @@ body::-webkit-scrollbar { display: none; }
     <!-- Malaysia -->
     <div class="s4v-country-card">
       <div class="s4v-cc-head">
-        <span class="s4v-cc-flag">&#x1F1F2;&#x1F1FE;</span>
+        <span class="s4v-cc-flag"><img src="https://flagcdn.com/w40/my.png" alt="MY"></span>
         <span class="s4v-cc-name">Malaysia</span>
       </div>
       <div class="s4v-cc-num">$130B</div>
@@ -2730,7 +2733,7 @@ body::-webkit-scrollbar { display: none; }
     <!-- Thailand -->
     <div class="s4v-country-card">
       <div class="s4v-cc-head">
-        <span class="s4v-cc-flag">&#x1F1F9;&#x1F1ED;</span>
+        <span class="s4v-cc-flag"><img src="https://flagcdn.com/w40/th.png" alt="TH"></span>
         <span class="s4v-cc-name">Thailand</span>
       </div>
       <div class="s4v-cc-num">1.8M</div>
@@ -2767,7 +2770,7 @@ body::-webkit-scrollbar { display: none; }
   <div class="s5v-vs-section animate-in stagger-3">
     <!-- Jollibee vs McDonald's -->
     <div class="s5v-vs-card">
-      <div class="s5v-vs-country">&#x1F1F5;&#x1F1ED; Philippines</div>
+      <div class="s5v-vs-country"><img src="https://flagcdn.com/w40/ph.png" alt="PH"> Philippines</div>
       <div class="s5v-vs-matchup">
         <div class="s5v-vs-row">
           <div class="s5v-vs-name s5v-local">Jollibee</div>
@@ -2782,7 +2785,7 @@ body::-webkit-scrollbar { display: none; }
     </div>
     <!-- Highlands vs Starbucks -->
     <div class="s5v-vs-card">
-      <div class="s5v-vs-country">&#x1F1FB;&#x1F1F3; Vietnam</div>
+      <div class="s5v-vs-country"><img src="https://flagcdn.com/w40/vn.png" alt="VN"> Vietnam</div>
       <div class="s5v-vs-matchup">
         <div class="s5v-vs-row">
           <div class="s5v-vs-name s5v-local">Highlands</div>
@@ -2801,7 +2804,7 @@ body::-webkit-scrollbar { display: none; }
   <div class="s5v-countries animate-in stagger-4">
     <div class="s5v-country-card">
       <div class="s5v-cc-head">
-        <span class="s5v-cc-flag">&#x1F1EE;&#x1F1E9;</span>
+        <span class="s5v-cc-flag"><img src="https://flagcdn.com/w40/id.png" alt="ID"></span>
         <span class="s5v-cc-name">Indonesia</span>
       </div>
       <div class="s5v-cc-headline">$33B new capital city in Borneo</div>
@@ -2809,7 +2812,7 @@ body::-webkit-scrollbar { display: none; }
     </div>
     <div class="s5v-country-card">
       <div class="s5v-cc-head">
-        <span class="s5v-cc-flag">&#x1F1F9;&#x1F1ED;</span>
+        <span class="s5v-cc-flag"><img src="https://flagcdn.com/w40/th.png" alt="TH"></span>
         <span class="s5v-cc-name">Thailand</span>
       </div>
       <div class="s5v-cc-headline">32.4M tourists, $42.7B in spending</div>
@@ -2817,7 +2820,7 @@ body::-webkit-scrollbar { display: none; }
     </div>
     <div class="s5v-country-card">
       <div class="s5v-cc-head">
-        <span class="s5v-cc-flag">&#x1F1F2;&#x1F1FE;</span>
+        <span class="s5v-cc-flag"><img src="https://flagcdn.com/w40/my.png" alt="MY"></span>
         <span class="s5v-cc-name">Malaysia</span>
       </div>
       <div class="s5v-cc-headline">JAKIM halal - passport to a $3T+ economy</div>

@@ -2378,6 +2378,40 @@ body::-webkit-scrollbar { display: none; }
 .s6v-vc-fill.s6v-pe-bar { background: rgba(29,59,41,0.25); }
 .s6v-vc-fill.s6v-pe-rebound { background: var(--green); }
 .s6v-vc-fill.s6v-pe-rebound + .s6v-vc-val { color: var(--green); font-weight: 700; }
+
+/* Stacked VC + PE chart */
+.s6v-stacked-chart { display: flex; flex-direction: column; gap: 6px; }
+.s6v-stacked-row { display: flex; align-items: center; gap: 8px; }
+.s6v-stacked-year {
+  font-size: 9px; font-weight: 400; color: var(--text-muted);
+  width: 36px; flex-shrink: 0; text-align: right;
+}
+.s6v-stacked-track {
+  flex: 1; height: 22px; background: rgba(36,24,24,0.03);
+  border-radius: 3px; display: flex; overflow: hidden;
+}
+.s6v-stacked-vc {
+  height: 100%; background: var(--maroon); border-radius: 3px 0 0 3px;
+}
+.s6v-stacked-pe {
+  height: 100%; background: rgba(107,10,20,0.25); border-radius: 0 3px 3px 0;
+}
+.s6v-stacked-val {
+  font-size: 9px; font-weight: 600; color: var(--text-secondary);
+  white-space: nowrap; min-width: 44px;
+}
+.s6v-stacked-legend {
+  display: flex; gap: 14px; margin-top: 6px; margin-bottom: 2px;
+}
+.s6v-legend-item {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 8px; font-weight: 500; color: var(--text-muted);
+}
+.s6v-legend-swatch {
+  width: 10px; height: 10px; border-radius: 2px; display: inline-block;
+}
+.s6v-swatch-vc { background: var(--maroon); }
+.s6v-swatch-pe { background: rgba(107,10,20,0.25); }
 .s6v-vc-val {
   font-size: 9px; font-weight: 600; margin-left: 6px;
   white-space: nowrap; color: var(--text-secondary);
@@ -2906,7 +2940,7 @@ body::-webkit-scrollbar { display: none; }
   </div>
   <div class="header-divider"></div>
 
-  <p class="s6v-intro animate-in stagger-2">ASEAN-6 has the financial infrastructure, the structural growth drivers, and - after an 82% VC correction from the 2021 peak - the valuations. Singapore is the hub through which capital flows into the region, but each economy offers distinct investment angles that most portfolios are not positioned to capture.</p>
+  <p class="s6v-intro animate-in stagger-2">ASEAN-6 has the financial infrastructure, the structural growth drivers, and - after a sharp correction from the 2021 peak - the valuations. Singapore is the hub through which capital flows into the region, but each economy offers distinct investment angles that most portfolios are not positioned to capture.</p>
 
   <!-- Hero Stat Bar -->
   <div class="s6v-hero-title animate-in stagger-3">Singapore - Asia&rsquo;s #1 Financial Centre</div>
@@ -2964,48 +2998,52 @@ body::-webkit-scrollbar { display: none; }
       <div class="s6v-col-note"><strong>Single family offices</strong> surged 3.5x in four years. Inflows from Greater China, Indonesia, India, and the Middle East. 78% of AUM sourced from outside Singapore. <strong>$50B+</strong> in AI infrastructure investment flowing into the region.</div>
     </div>
 
-    <!-- Right: The Entry Point -->
+    <!-- Right: VC + PE Stacked Chart -->
     <div>
       <div class="s6v-col-label">A Generational Entry Point</div>
-      <div class="s6v-col-sublabel">VC valuations have corrected 82% - the froth is gone</div>
-      <div class="s6v-vc-chart">
-        <div class="s6v-vc-row">
-          <div class="s6v-vc-year">2021</div>
-          <div class="s6v-vc-track"><div class="s6v-vc-fill s6v-peak" style="width:100%;"></div><div class="s6v-vc-val">$25.7B (peak)</div></div>
+      <div class="s6v-col-sublabel">SEA private capital by year - VC (dark) + PE (light)</div>
+      <div class="s6v-stacked-chart">
+        <div class="s6v-stacked-row">
+          <div class="s6v-stacked-year">2021</div>
+          <div class="s6v-stacked-track" style="width:100%;">
+            <div class="s6v-stacked-vc" style="width:51%;"></div><div class="s6v-stacked-pe" style="width:49%;"></div>
+          </div>
+          <div class="s6v-stacked-val">$50.7B</div>
         </div>
-        <div class="s6v-vc-row">
-          <div class="s6v-vc-year">2022</div>
-          <div class="s6v-vc-track"><div class="s6v-vc-fill s6v-peak" style="width:66%;"></div><div class="s6v-vc-val">$17B</div></div>
+        <div class="s6v-stacked-row">
+          <div class="s6v-stacked-year">2022</div>
+          <div class="s6v-stacked-track" style="width:59%;">
+            <div class="s6v-stacked-vc" style="width:57%;"></div><div class="s6v-stacked-pe" style="width:43%;"></div>
+          </div>
+          <div class="s6v-stacked-val">$30B</div>
         </div>
-        <div class="s6v-vc-row">
-          <div class="s6v-vc-year">2023</div>
-          <div class="s6v-vc-track"><div class="s6v-vc-fill s6v-recovery" style="width:27%;"></div><div class="s6v-vc-val">$7B</div></div>
+        <div class="s6v-stacked-row">
+          <div class="s6v-stacked-year">2023</div>
+          <div class="s6v-stacked-track" style="width:32%;">
+            <div class="s6v-stacked-vc" style="width:44%;"></div><div class="s6v-stacked-pe" style="width:56%;"></div>
+          </div>
+          <div class="s6v-stacked-val">$16B</div>
         </div>
-        <div class="s6v-vc-row">
-          <div class="s6v-vc-year">2024</div>
-          <div class="s6v-vc-track"><div class="s6v-vc-fill s6v-bottom" style="width:18%;"></div><div class="s6v-vc-val">$4.6B (-82%)</div><span class="s6v-vc-badge s6v-green">SaaS +262%</span><span class="s6v-vc-badge s6v-green">AI +217%</span></div>
+        <div class="s6v-stacked-row">
+          <div class="s6v-stacked-year">2024</div>
+          <div class="s6v-stacked-track" style="width:41%;">
+            <div class="s6v-stacked-vc" style="width:22%;"></div><div class="s6v-stacked-pe" style="width:78%;"></div>
+          </div>
+          <div class="s6v-stacked-val">$20.6B</div>
+        </div>
+        <div class="s6v-stacked-row">
+          <div class="s6v-stacked-year">2025</div>
+          <div class="s6v-stacked-track" style="width:38%;">
+            <div class="s6v-stacked-vc" style="width:28%;"></div><div class="s6v-stacked-pe" style="width:72%;"></div>
+          </div>
+          <div class="s6v-stacked-val">$19.4B</div>
         </div>
       </div>
-      <div class="s6v-col-sublabel" style="margin-top: 12px;">But PE deal value is already rebounding - smart money is moving</div>
-      <div class="s6v-vc-chart">
-        <div class="s6v-vc-row">
-          <div class="s6v-vc-year">2021</div>
-          <div class="s6v-vc-track"><div class="s6v-vc-fill s6v-pe-bar" style="width:100%;"></div><div class="s6v-vc-val">$25B (record)</div></div>
-        </div>
-        <div class="s6v-vc-row">
-          <div class="s6v-vc-year">2022</div>
-          <div class="s6v-vc-track"><div class="s6v-vc-fill s6v-pe-bar" style="width:52%;"></div><div class="s6v-vc-val">$13B</div></div>
-        </div>
-        <div class="s6v-vc-row">
-          <div class="s6v-vc-year">2023</div>
-          <div class="s6v-vc-track"><div class="s6v-vc-fill s6v-pe-bar" style="width:36%;"></div><div class="s6v-vc-val">$9B (trough)</div></div>
-        </div>
-        <div class="s6v-vc-row">
-          <div class="s6v-vc-year">2024</div>
-          <div class="s6v-vc-track"><div class="s6v-vc-fill s6v-pe-rebound" style="width:64%;"></div><div class="s6v-vc-val">$16B (+60%)</div></div>
-        </div>
+      <div class="s6v-stacked-legend">
+        <span class="s6v-legend-item"><span class="s6v-legend-swatch s6v-swatch-vc"></span>VC/Startup</span>
+        <span class="s6v-legend-item"><span class="s6v-legend-swatch s6v-swatch-pe"></span>PE deals</span>
       </div>
-      <div class="s6v-col-note">The excess has washed out and valuations have reset. At the same time, <strong>PE deal value rebounded 60% to $16B in 2024</strong> after two years of decline - institutional capital is returning at rational prices. Post-correction vintages historically outperform. The window is open.</div>
+      <div class="s6v-col-note">VC valuations have corrected 82% from the 2021 peak - the froth is gone. At the same time, <strong>PE deal value rebounded to $16B in 2024</strong> after two years of decline. Institutional capital is returning at rational prices while VC entry points remain historically attractive.</div>
     </div>
   </div>
 
@@ -3034,7 +3072,7 @@ body::-webkit-scrollbar { display: none; }
     <div class="s6v-callout-text">World-class financial infrastructure through Singapore. Structural investment angles across every economy - from Indonesia&rsquo;s nickel dominance to the Philippines&rsquo; remittance-fuelled consumption. And a post-correction entry point where quality deals are available at rational valuations. The pieces are in place.</div>
   </div>
 
-  <div class="source-note animate-in stagger-7">Sources: GFCI 2024, MAS Asset Management Survey 2023, EY SEA PE Pulse 2024, Bain APAC PE Report 2025, DealStreetAsia, PitchBook, USGS, BSP, Tourism Authority Thailand, DinarStandard, PETRONAS</div>
+  <div class="source-note animate-in stagger-7">Sources: GFCI 2024, MAS Asset Management Survey 2024, Bain APAC PE Report 2026, DealStreetAsia SE Asia Deal Review 2025, USGS, BSP, Tourism Authority Thailand, DinarStandard</div>
   <div class="slide-footer"><span>March 2026</span><div class="sep"></div><span>For Qualified Investors Only</span><div class="sep"></div><span>lanmea.com</span></div>
 </div>
 

@@ -2185,6 +2185,10 @@ body::-webkit-scrollbar { display: none; }
   display: flex; align-items: center; gap: 6px;
 }
 .s5v-vs-country img { width: 16px; height: auto; border-radius: 2px; }
+.s5v-vs-label {
+  font-size: 9px; font-weight: 500; color: var(--text-secondary);
+  margin-bottom: 6px; font-style: italic;
+}
 .s5v-vs-matchup {
   display: flex; flex-direction: column; gap: 5px; margin-bottom: 10px;
 }
@@ -2218,7 +2222,7 @@ body::-webkit-scrollbar { display: none; }
 
 /* Three country cards below */
 .s5v-countries {
-  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 12px; margin-top: 14px; flex: none;
 }
 .s5v-country-card {
@@ -2769,6 +2773,7 @@ body::-webkit-scrollbar { display: none; }
     <!-- Jollibee vs McDonald's -->
     <div class="s5v-vs-card">
       <div class="s5v-vs-country"><img src="https://flagcdn.com/w40/ph.png" alt="PH"> Philippines</div>
+      <div class="s5v-vs-label">Fast food market share</div>
       <div class="s5v-vs-matchup">
         <div class="s5v-vs-row">
           <div class="s5v-vs-name s5v-local">Jollibee</div>
@@ -2779,11 +2784,12 @@ body::-webkit-scrollbar { display: none; }
           <div class="s5v-vs-track"><div class="s5v-vs-fill s5v-global-fill" style="width:20%;"></div><div class="s5v-vs-val">20%</div></div>
         </div>
       </div>
-      <div class="s5v-vs-detail">Expanding to <strong>30+ countries</strong>. The world&rsquo;s 3rd largest English-speaking country (55M speakers). $38B BPO industry employing 1.82M people - 9% of GDP. Median age 24.3, demographic peak not until the 2050s.</div>
+      <div class="s5v-vs-detail">Jollibee doesn&rsquo;t just compete with McDonald&rsquo;s in the Philippines - it dominates, and is now expanding to <strong>30+ countries</strong>. The Philippines is also the world&rsquo;s 3rd largest English-speaking country (55M speakers) with a <strong>$38B BPO industry</strong> employing 1.82M people. At a median age of just 24.3, its demographic peak is still decades away.</div>
     </div>
     <!-- Highlands vs Starbucks -->
     <div class="s5v-vs-card">
       <div class="s5v-vs-country"><img src="https://flagcdn.com/w40/vn.png" alt="VN"> Vietnam</div>
+      <div class="s5v-vs-label">Coffee chain stores in Vietnam</div>
       <div class="s5v-vs-matchup">
         <div class="s5v-vs-row">
           <div class="s5v-vs-name s5v-local">Highlands</div>
@@ -2794,11 +2800,11 @@ body::-webkit-scrollbar { display: none; }
           <div class="s5v-vs-track"><div class="s5v-vs-fill s5v-global-fill" style="width:12%;"></div><div class="s5v-vs-val">~150 stores</div></div>
         </div>
       </div>
-      <div class="s5v-vs-detail">World&rsquo;s <strong>#2 coffee producer</strong>. GDP went from $116B to $500B in 13 years. <strong>80.6M motorcycles</strong> for 100M people - on the cusp of the car ownership transition that fuelled growth in Korea, China, and Thailand.</div>
+      <div class="s5v-vs-detail">In the world&rsquo;s <strong>#2 coffee-producing country</strong>, a local chain has 6x more stores than Starbucks. Vietnam&rsquo;s GDP went from $116B to $500B in 13 years, and with <strong>80.6M motorcycles</strong> for 100M people, the country is on the cusp of the car ownership transition that fuelled growth in Korea and China.</div>
     </div>
   </div>
 
-  <!-- Three Country Cards -->
+  <!-- Four Country Cards -->
   <div class="s5v-countries animate-in stagger-4">
     <div class="s5v-country-card">
       <div class="s5v-cc-head">
@@ -2806,7 +2812,7 @@ body::-webkit-scrollbar { display: none; }
         <span class="s5v-cc-name">Indonesia</span>
       </div>
       <div class="s5v-cc-headline">$33B new capital city in Borneo</div>
-      <div class="s5v-cc-text">284M people. $5.9T purchasing power (8th globally, ahead of UK and France). Jakarta is sinking, so they&rsquo;re building Nusantara from scratch. 80% privately funded.</div>
+      <div class="s5v-cc-text">With 284M people and $5.9T in purchasing power (8th globally, ahead of the UK and France), Indonesia is building an entirely new capital - Nusantara - because Jakarta is literally sinking. The project is 80% privately funded, signalling long-term nation-building ambition.</div>
     </div>
     <div class="s5v-country-card">
       <div class="s5v-cc-head">
@@ -2814,7 +2820,7 @@ body::-webkit-scrollbar { display: none; }
         <span class="s5v-cc-name">Thailand</span>
       </div>
       <div class="s5v-cc-headline">32.4M tourists, $42.7B in spending</div>
-      <div class="s5v-cc-text">8th most visited country globally. Tourism growing to 30% of GDP. Bumrungrad Hospital treats patients from 190+ countries. 3.5-4M medical tourists per year.</div>
+      <div class="s5v-cc-text">The 8th most visited country on Earth, with tourism projected to reach 30% of GDP. Thailand is also a major medical tourism hub - Bumrungrad Hospital alone treats patients from 190+ countries, with 3.5-4M medical tourists visiting annually.</div>
     </div>
     <div class="s5v-country-card">
       <div class="s5v-cc-head">
@@ -2822,7 +2828,15 @@ body::-webkit-scrollbar { display: none; }
         <span class="s5v-cc-name">Malaysia</span>
       </div>
       <div class="s5v-cc-headline">JAKIM halal - passport to a $3T+ economy</div>
-      <div class="s5v-cc-text">World&rsquo;s first halal certification, recognised across 57 OIC nations (~2B Muslims). #1 on Global Islamic Economy Indicator for ~10 years. A regulatory moat no other country has.</div>
+      <div class="s5v-cc-text">Malaysia created the world&rsquo;s first halal certification system, now recognised across 57 OIC nations representing ~2 billion Muslims. Ranked #1 on the Global Islamic Economy Indicator for a decade, JAKIM certification gives Malaysian companies a regulatory moat no other country can replicate.</div>
+    </div>
+    <div class="s5v-country-card">
+      <div class="s5v-cc-head">
+        <span class="s5v-cc-flag"><img src="https://flagcdn.com/w40/sg.png" alt="SG"></span>
+        <span class="s5v-cc-name">Singapore</span>
+      </div>
+      <div class="s5v-cc-headline">1,500+ family offices, $4.1T in AUM</div>
+      <div class="s5v-cc-text">The number of family offices in Singapore has tripled since 2020, making it Asia&rsquo;s #1 wealth management hub. With $4.1 trillion in assets under management and 78% sourced from outside Singapore, the city-state is the financial gateway through which most SEA capital flows.</div>
     </div>
   </div>
 

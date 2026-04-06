@@ -2384,6 +2384,27 @@ body::-webkit-scrollbar { display: none; }
   text-transform: uppercase; color: var(--text-muted);
 }
 
+/* Country investment angle cards */
+.s6v-country-angles {
+  display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px; margin-top: 14px; flex: none;
+}
+.s6v-angle-card {
+  padding: 12px 14px; border-radius: 10px;
+  border: 1px solid var(--border-light); background: var(--white);
+}
+.s6v-angle-head {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 9px; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px;
+}
+.s6v-angle-head img { width: 16px; height: auto; border-radius: 2px; }
+.s6v-angle-text {
+  font-size: 10px; font-weight: 300; line-height: 1.5;
+  color: var(--text-secondary);
+}
+.s6v-angle-text strong { font-weight: 600; color: var(--text-primary); }
+
 /* Callout */
 .s6v-callout {
   margin-top: auto; padding: 14px 22px; border-radius: 12px;
@@ -2828,31 +2849,6 @@ body::-webkit-scrollbar { display: none; }
     </div>
   </div>
 
-  <!-- Country Depth: unique angles -->
-  <div class="s5v-depth animate-in stagger-5">
-    <div class="s5v-depth-card">
-      <div class="s5v-depth-flag"><img src="https://flagcdn.com/w40/id.png" alt="ID"></div>
-      <div class="s5v-depth-body">
-        <div class="s5v-depth-title">Indonesia</div>
-        <div class="s5v-depth-text">Building a <strong>$33B new capital</strong> (Nusantara) in Borneo because Jakarta is sinking. $5.9T purchasing power, 8th globally.</div>
-      </div>
-    </div>
-    <div class="s5v-depth-card">
-      <div class="s5v-depth-flag"><img src="https://flagcdn.com/w40/th.png" alt="TH"></div>
-      <div class="s5v-depth-body">
-        <div class="s5v-depth-title">Thailand</div>
-        <div class="s5v-depth-text"><strong>32.4M tourists</strong>, $42.7B in spending. Bumrungrad Hospital treats patients from <strong>190+ countries</strong>.</div>
-      </div>
-    </div>
-    <div class="s5v-depth-card">
-      <div class="s5v-depth-flag"><img src="https://flagcdn.com/w40/my.png" alt="MY"></div>
-      <div class="s5v-depth-body">
-        <div class="s5v-depth-title">Malaysia</div>
-        <div class="s5v-depth-text"><strong>JAKIM halal certification</strong> recognised across 57 nations (~2B Muslims). A regulatory moat over a <strong>$3T+ market</strong>.</div>
-      </div>
-    </div>
-  </div>
-
   <!-- Pattern Callout -->
   <div class="s5v-callout animate-in stagger-5">
     <div class="s5v-callout-text">The pattern repeats: Jollibee over McDonald&rsquo;s. Highlands over Starbucks. Grab over Uber. Shopee over Amazon. Local champions adapted to local tastes consistently outperform global incumbents. For PE investors, this is the thesis - back the local winners.</div>
@@ -2869,12 +2865,12 @@ body::-webkit-scrollbar { display: none; }
 
   <div class="slide-header animate-in stagger-1">
     <div class="section-label">THE SEA OPPORTUNITY</div>
-    <h2>The Singapore <span>Gateway</span></h2>
-    <div class="sub">World-class investment infrastructure is already in place - and the timing has never been better.</div>
+    <h2>Infrastructure, Capital, <span>Timing</span></h2>
+    <div class="sub">Singapore provides world-class financial infrastructure, each economy has unique investment angles, and the entry point has never been better.</div>
   </div>
   <div class="header-divider"></div>
 
-  <p class="s6v-intro animate-in stagger-2">Singapore is 733 square kilometres - roughly one New York City borough - with a GDP per capita above $140,000. It surpassed Hong Kong as Asia&rsquo;s #1 financial centre in 2024, ranks #3 globally, and manages $4.1 trillion in assets. For LPs allocating to Southeast Asia, the infrastructure, legal frameworks, and talent are already world-class.</p>
+  <p class="s6v-intro animate-in stagger-2">Singapore - 733 sq km, GDP per capita above $140,000 - surpassed Hong Kong as Asia&rsquo;s #1 financial centre in 2024 and manages $4.1 trillion in assets. It is the hub through which capital flows into the region. But the investment case extends well beyond Singapore: each ASEAN economy has structural advantages that most portfolios are not positioned to capture.</p>
 
   <!-- Hero Stat Bar -->
   <div class="s6v-hero animate-in stagger-3">
@@ -2956,28 +2952,32 @@ body::-webkit-scrollbar { display: none; }
     </div>
   </div>
 
-  <!-- Bottom Stats -->
-  <div class="s6v-bottom-stats animate-in stagger-5">
-    <div class="s6v-bstat">
-      <div class="s6v-bstat-num">64</div>
-      <div class="s6v-bstat-label">Unicorns reaching exit maturity</div>
+  <!-- Country Investment Angles -->
+  <div class="s6v-country-angles animate-in stagger-5">
+    <div class="s6v-angle-card">
+      <div class="s6v-angle-head"><img src="https://flagcdn.com/w40/id.png" alt="ID"> <span>Indonesia</span></div>
+      <div class="s6v-angle-text">Controls <strong>~50% of global nickel production</strong> - the critical EV battery mineral. Banned raw exports, forcing $30B+ in processing investment onshore. Building a <strong>$33B new capital</strong> in Borneo. Financial inclusion leaped from 49% to 74% in 6 years via mobile wallets.</div>
     </div>
-    <div class="s6v-bstat">
-      <div class="s6v-bstat-num">$16B</div>
-      <div class="s6v-bstat-label">PE deal value 2024 (+60% YoY)</div>
+    <div class="s6v-angle-card">
+      <div class="s6v-angle-head"><img src="https://flagcdn.com/w40/ph.png" alt="PH"> <span>Philippines</span></div>
+      <div class="s6v-angle-text"><strong>$38.6B in overseas worker remittances</strong> per year - ~9% of GDP and the 4th largest globally. This is a built-in consumption floor: during COVID, remittances fell just 0.8% while GDP contracted 9.5%. Consumer-facing investments ride this structural tailwind.</div>
     </div>
-    <div class="s6v-bstat">
-      <div class="s6v-bstat-num">$50B+</div>
-      <div class="s6v-bstat-label">AI infrastructure investment</div>
+    <div class="s6v-angle-card">
+      <div class="s6v-angle-head"><img src="https://flagcdn.com/w40/th.png" alt="TH"> <span>Thailand</span></div>
+      <div class="s6v-angle-text"><strong>3.5-4M medical tourists</strong> per year, generating $5-6B in revenue. Bumrungrad Hospital alone treats patients from 190+ countries. Tourism projected to reach 30% of GDP, driving downstream PE opportunities in hospitality, healthcare, and logistics.</div>
+    </div>
+    <div class="s6v-angle-card">
+      <div class="s6v-angle-head"><img src="https://flagcdn.com/w40/my.png" alt="MY"> <span>Malaysia</span></div>
+      <div class="s6v-angle-text"><strong>JAKIM halal certification</strong> is the global gold standard, recognised across 57 OIC nations (~2B Muslims) - a regulatory moat over a $3T+ market. PETRONAS generates ~$75B in revenue and ~$25B in profit, anchoring the economy.</div>
     </div>
   </div>
 
   <!-- Callout -->
   <div class="s6v-callout animate-in stagger-6">
-    <div class="s6v-callout-text">Singapore is the London of Southeast Asia. Rule of law, English-speaking, world-class financial infrastructure, and a self-reinforcing flywheel: more wealth migrates, more PE capital forms, more deals get done, more returns attract more wealth.</div>
+    <div class="s6v-callout-text">Singapore provides the financial infrastructure. Each ASEAN economy provides a distinct, structural investment angle. The VC correction has created a generational entry point. For PE investors, the question is not whether to allocate to Southeast Asia - it is how much.</div>
   </div>
 
-  <div class="source-note animate-in stagger-7">Sources: GFCI 2024, MAS Asset Management Survey 2023, EY SEA PE Pulse 2024, Bain APAC PE Report 2025, DealStreetAsia, PitchBook, Deloitte</div>
+  <div class="source-note animate-in stagger-7">Sources: GFCI 2024, MAS Asset Management Survey 2023, EY SEA PE Pulse 2024, Bain APAC PE Report 2025, DealStreetAsia, PitchBook, USGS, BSP, Tourism Authority Thailand, DinarStandard, PETRONAS</div>
   <div class="slide-footer"><span>March 2026</span><div class="sep"></div><span>For Qualified Investors Only</span><div class="sep"></div><span>lanmea.com</span></div>
 </div>
 

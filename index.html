@@ -2221,36 +2221,26 @@ body::-webkit-scrollbar { display: none; }
 .s5v-vs-detail strong { font-weight: 600; color: var(--text-primary); }
 
 /* Three country cards below */
-.s5v-countries {
-  display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;
+/* Country depth compact row */
+.s5v-depth {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
   gap: 12px; margin-top: 14px; flex: none;
 }
-.s5v-country-card {
-  padding: 14px 16px; border-radius: 12px;
+.s5v-depth-card {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 12px 14px; border-radius: 10px;
   border: 1px solid var(--border-light); background: var(--cream);
-  transition: all 0.3s ease;
 }
-.s5v-country-card:hover {
-  border-color: rgba(107,10,20,0.15);
-  transform: translateY(-1px);
+.s5v-depth-flag img { width: 20px; height: auto; border-radius: 2px; margin-top: 1px; }
+.s5v-depth-title {
+  font-size: 9px; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 3px;
 }
-.s5v-cc-head {
-  display: flex; align-items: center; gap: 6px; margin-bottom: 6px;
-}
-.s5v-cc-flag img { width: 18px; height: auto; border-radius: 2px; }
-.s5v-cc-name {
-  font-size: 8px; font-weight: 600; letter-spacing: 1px;
-  text-transform: uppercase; color: var(--text-muted);
-}
-.s5v-cc-headline {
-  font-family: 'Gelasio', Georgia, serif;
-  font-size: 13px; font-weight: 600; color: var(--maroon);
-  line-height: 1.25; margin-bottom: 5px;
-}
-.s5v-cc-text {
+.s5v-depth-text {
   font-size: 10px; font-weight: 300; line-height: 1.5;
   color: var(--text-secondary);
 }
+.s5v-depth-text strong { font-weight: 600; color: var(--text-primary); }
 
 /* Pattern callout */
 .s5v-callout {
@@ -2766,7 +2756,7 @@ body::-webkit-scrollbar { display: none; }
   </div>
   <div class="header-divider"></div>
 
-  <p class="s5v-intro animate-in stagger-2">Every major emerging market has its &ldquo;more than just GDP&rdquo; story. Southeast Asia&rsquo;s version is uniquely vivid: a fast-food chain that outsells McDonald&rsquo;s 3-to-1, a coffee brand with 6x more stores than Starbucks, and a country building a $33 billion new capital city from scratch.</p>
+  <p class="s5v-intro animate-in stagger-2">In market after market across Southeast Asia, local companies have beaten global giants by adapting faster to local consumers. A Filipino fast-food chain outsells McDonald&rsquo;s 3-to-1. A Vietnamese coffee brand has 6x more stores than Starbucks. A Malaysian ride-hailing app forced Uber to sell up and leave. A Singaporean e-commerce platform made Amazon irrelevant in the region.</p>
 
   <!-- VS Comparison Cards -->
   <div class="s5v-vs-section animate-in stagger-3">
@@ -2784,7 +2774,7 @@ body::-webkit-scrollbar { display: none; }
           <div class="s5v-vs-track"><div class="s5v-vs-fill s5v-global-fill" style="width:20%;"></div><div class="s5v-vs-val">20%</div></div>
         </div>
       </div>
-      <div class="s5v-vs-detail">Jollibee doesn&rsquo;t just compete with McDonald&rsquo;s in the Philippines - it dominates, and is now expanding to <strong>30+ countries</strong>. The Philippines is also the world&rsquo;s 3rd largest English-speaking country (55M speakers) with a <strong>$38B BPO industry</strong> employing 1.82M people. At a median age of just 24.3, its demographic peak is still decades away.</div>
+      <div class="s5v-vs-detail">Jollibee doesn&rsquo;t just compete with McDonald&rsquo;s in the Philippines - it dominates, and is now expanding to <strong>30+ countries</strong>. The Philippines is also the world&rsquo;s 3rd largest English-speaking country (55M speakers) with a <strong>$38B BPO industry</strong> - the <strong>#1 voice-based outsourcing destination globally</strong> - employing 1.82M people. At a <strong>median age of just 24.3</strong>, its demographic peak is still decades away.</div>
     </div>
     <!-- Highlands vs Starbucks -->
     <div class="s5v-vs-card">
@@ -2804,39 +2794,62 @@ body::-webkit-scrollbar { display: none; }
     </div>
   </div>
 
-  <!-- Four Country Cards -->
-  <div class="s5v-countries animate-in stagger-4">
-    <div class="s5v-country-card">
-      <div class="s5v-cc-head">
-        <span class="s5v-cc-flag"><img src="https://flagcdn.com/w40/id.png" alt="ID"></span>
-        <span class="s5v-cc-name">Indonesia</span>
+  <!-- Grab vs Uber & Shopee vs Amazon -->
+  <div class="s5v-vs-section animate-in stagger-4">
+    <div class="s5v-vs-card">
+      <div class="s5v-vs-country"><img src="https://flagcdn.com/w40/my.png" alt="MY"><img src="https://flagcdn.com/w40/sg.png" alt="SG"> Malaysia / Singapore</div>
+      <div class="s5v-vs-label">Ride-hailing market outcome</div>
+      <div class="s5v-vs-matchup">
+        <div class="s5v-vs-row">
+          <div class="s5v-vs-name s5v-local">Grab</div>
+          <div class="s5v-vs-track"><div class="s5v-vs-fill s5v-local-fill" style="width:80%;"></div><div class="s5v-vs-val">Uber exited SEA</div></div>
+        </div>
+        <div class="s5v-vs-row">
+          <div class="s5v-vs-name s5v-global">Uber</div>
+          <div class="s5v-vs-track"><div class="s5v-vs-fill s5v-global-fill" style="width:0%;"></div><div class="s5v-vs-val">Sold to Grab (2018)</div></div>
+        </div>
       </div>
-      <div class="s5v-cc-headline">$33B new capital city in Borneo</div>
-      <div class="s5v-cc-text">With 284M people and $5.9T in purchasing power (8th globally, ahead of the UK and France), Indonesia is building an entirely new capital - Nusantara - because Jakarta is literally sinking. The project is 80% privately funded, signalling long-term nation-building ambition.</div>
+      <div class="s5v-vs-detail">Founded in a Malaysian garage in 2012, Grab now operates across <strong>8 SEA countries</strong> with 300M+ app downloads. Uber didn&rsquo;t just lose market share - it sold its entire Southeast Asian business to Grab in 2018 and left the region. Grab is now a listed super-app spanning ride-hailing, food delivery, payments, and lending.</div>
     </div>
-    <div class="s5v-country-card">
-      <div class="s5v-cc-head">
-        <span class="s5v-cc-flag"><img src="https://flagcdn.com/w40/th.png" alt="TH"></span>
-        <span class="s5v-cc-name">Thailand</span>
+    <div class="s5v-vs-card">
+      <div class="s5v-vs-country"><img src="https://flagcdn.com/w40/sg.png" alt="SG"> Singapore</div>
+      <div class="s5v-vs-label">E-commerce GMV in Southeast Asia</div>
+      <div class="s5v-vs-matchup">
+        <div class="s5v-vs-row">
+          <div class="s5v-vs-name s5v-local">Shopee</div>
+          <div class="s5v-vs-track"><div class="s5v-vs-fill s5v-local-fill" style="width:75%;"></div><div class="s5v-vs-val">#1 in SEA</div></div>
+        </div>
+        <div class="s5v-vs-row">
+          <div class="s5v-vs-name s5v-global">Amazon</div>
+          <div class="s5v-vs-track"><div class="s5v-vs-fill s5v-global-fill" style="width:5%;"></div><div class="s5v-vs-val">Minimal presence</div></div>
+        </div>
       </div>
-      <div class="s5v-cc-headline">32.4M tourists, $42.7B in spending</div>
-      <div class="s5v-cc-text">The 8th most visited country on Earth, with tourism projected to reach 30% of GDP. Thailand is also a major medical tourism hub - Bumrungrad Hospital alone treats patients from 190+ countries, with 3.5-4M medical tourists visiting annually.</div>
+      <div class="s5v-vs-detail">Sea Group (SGX-listed) built Shopee into SEA&rsquo;s dominant e-commerce platform, leaving Amazon with negligible market share in the region. Sea&rsquo;s digital financial services arm grew <strong>+35% to $2.4B</strong> in revenue. The company also operates Garena, one of the world&rsquo;s largest gaming platforms.</div>
     </div>
-    <div class="s5v-country-card">
-      <div class="s5v-cc-head">
-        <span class="s5v-cc-flag"><img src="https://flagcdn.com/w40/my.png" alt="MY"></span>
-        <span class="s5v-cc-name">Malaysia</span>
+  </div>
+
+  <!-- Country Depth: unique angles -->
+  <div class="s5v-depth animate-in stagger-5">
+    <div class="s5v-depth-card">
+      <div class="s5v-depth-flag"><img src="https://flagcdn.com/w40/id.png" alt="ID"></div>
+      <div class="s5v-depth-body">
+        <div class="s5v-depth-title">Indonesia</div>
+        <div class="s5v-depth-text">Building a <strong>$33B new capital</strong> (Nusantara) in Borneo because Jakarta is sinking. $5.9T purchasing power, 8th globally.</div>
       </div>
-      <div class="s5v-cc-headline">JAKIM halal - passport to a $3T+ economy</div>
-      <div class="s5v-cc-text">Malaysia created the world&rsquo;s first halal certification system, now recognised across 57 OIC nations representing ~2 billion Muslims. Ranked #1 on the Global Islamic Economy Indicator for a decade, JAKIM certification gives Malaysian companies a regulatory moat no other country can replicate.</div>
     </div>
-    <div class="s5v-country-card">
-      <div class="s5v-cc-head">
-        <span class="s5v-cc-flag"><img src="https://flagcdn.com/w40/sg.png" alt="SG"></span>
-        <span class="s5v-cc-name">Singapore</span>
+    <div class="s5v-depth-card">
+      <div class="s5v-depth-flag"><img src="https://flagcdn.com/w40/th.png" alt="TH"></div>
+      <div class="s5v-depth-body">
+        <div class="s5v-depth-title">Thailand</div>
+        <div class="s5v-depth-text"><strong>32.4M tourists</strong>, $42.7B in spending. Bumrungrad Hospital treats patients from <strong>190+ countries</strong>.</div>
       </div>
-      <div class="s5v-cc-headline">1,500+ family offices, $4.1T in AUM</div>
-      <div class="s5v-cc-text">The number of family offices in Singapore has tripled since 2020, making it Asia&rsquo;s #1 wealth management hub. With $4.1 trillion in assets under management and 78% sourced from outside Singapore, the city-state is the financial gateway through which most SEA capital flows.</div>
+    </div>
+    <div class="s5v-depth-card">
+      <div class="s5v-depth-flag"><img src="https://flagcdn.com/w40/my.png" alt="MY"></div>
+      <div class="s5v-depth-body">
+        <div class="s5v-depth-title">Malaysia</div>
+        <div class="s5v-depth-text"><strong>JAKIM halal certification</strong> recognised across 57 nations (~2B Muslims). A regulatory moat over a <strong>$3T+ market</strong>.</div>
+      </div>
     </div>
   </div>
 
@@ -2845,7 +2858,7 @@ body::-webkit-scrollbar { display: none; }
     <div class="s5v-callout-text">The pattern repeats: Jollibee over McDonald&rsquo;s. Highlands over Starbucks. Grab over Uber. Shopee over Amazon. Local champions adapted to local tastes consistently outperform global incumbents. For PE investors, this is the thesis - back the local winners.</div>
   </div>
 
-  <div class="source-note animate-in stagger-6">Sources: JFC Annual Reports, VietData, Nusantara NCA, Tourism Authority Thailand, Bumrungrad, DinarStandard, Euromonitor, IBPAP</div>
+  <div class="source-note animate-in stagger-6">Sources: JFC Annual Reports, VietData, Grab Group, Sea Group, Euromonitor, IBPAP, Nusantara NCA, Tourism Authority Thailand, DinarStandard</div>
   <div class="slide-footer"><span>March 2026</span><div class="sep"></div><span>For Qualified Investors Only</span><div class="sep"></div><span>lanmea.com</span></div>
 </div>
 

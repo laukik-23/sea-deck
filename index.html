@@ -2379,27 +2379,29 @@ body::-webkit-scrollbar { display: none; }
 .s6v-vc-fill.s6v-pe-rebound { background: var(--green); }
 .s6v-vc-fill.s6v-pe-rebound + .s6v-vc-val { color: var(--green); font-weight: 700; }
 
-/* Stacked VC + PE chart */
-.s6v-stacked-chart { display: flex; flex-direction: column; gap: 6px; }
-.s6v-stacked-row { display: flex; align-items: center; gap: 8px; }
-.s6v-stacked-year {
+/* Dual VC + PE bar chart */
+.s6v-dual-chart { display: flex; flex-direction: column; gap: 8px; }
+.s6v-dual-group { display: flex; align-items: center; gap: 8px; }
+.s6v-dual-year {
   font-size: 9px; font-weight: 400; color: var(--text-muted);
   width: 36px; flex-shrink: 0; text-align: right;
 }
-.s6v-stacked-track {
-  flex: 1; height: 22px; background: rgba(36,24,24,0.03);
-  border-radius: 3px; display: flex; overflow: hidden;
+.s6v-dual-bars { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+.s6v-dual-row {
+  display: flex; align-items: center; height: 12px;
 }
-.s6v-stacked-vc {
-  height: 100%; background: var(--maroon); border-radius: 3px 0 0 3px;
+.s6v-dual-fill {
+  height: 100%; border-radius: 2px;
+  transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.s6v-stacked-pe {
-  height: 100%; background: rgba(107,10,20,0.25); border-radius: 0 3px 3px 0;
+.s6v-dual-fill.s6v-vc-fill { background: var(--maroon); }
+.s6v-dual-fill.s6v-pe-fill { background: rgba(107,10,20,0.30); }
+.s6v-dual-fill.s6v-pe-highlight { background: rgba(29,59,41,0.7); }
+.s6v-dual-label {
+  font-size: 8px; font-weight: 600; margin-left: 5px; white-space: nowrap;
+  color: var(--text-secondary);
 }
-.s6v-stacked-val {
-  font-size: 9px; font-weight: 600; color: var(--text-secondary);
-  white-space: nowrap; min-width: 44px;
-}
+.s6v-dual-fill.s6v-pe-highlight + .s6v-dual-label { color: var(--green); }
 .s6v-stacked-legend {
   display: flex; gap: 14px; margin-top: 6px; margin-bottom: 2px;
 }
@@ -2411,7 +2413,7 @@ body::-webkit-scrollbar { display: none; }
   width: 10px; height: 10px; border-radius: 2px; display: inline-block;
 }
 .s6v-swatch-vc { background: var(--maroon); }
-.s6v-swatch-pe { background: rgba(107,10,20,0.25); }
+.s6v-swatch-pe { background: rgba(107,10,20,0.30); }
 .s6v-vc-val {
   font-size: 9px; font-weight: 600; margin-left: 6px;
   white-space: nowrap; color: var(--text-secondary);
@@ -2950,7 +2952,7 @@ body::-webkit-scrollbar { display: none; }
       <div class="s6v-hero-label">Global Financial Centre</div>
     </div>
     <div class="s6v-hero-col">
-      <div class="s6v-hero-num">$4.1T</div>
+      <div class="s6v-hero-num">$4.7T</div>
       <div class="s6v-hero-label">Assets Under Management</div>
     </div>
     <div class="s6v-hero-col">
@@ -2998,52 +3000,52 @@ body::-webkit-scrollbar { display: none; }
       <div class="s6v-col-note"><strong>Single family offices</strong> surged 3.5x in four years. Inflows from Greater China, Indonesia, India, and the Middle East. 78% of AUM sourced from outside Singapore. <strong>$50B+</strong> in AI infrastructure investment flowing into the region.</div>
     </div>
 
-    <!-- Right: VC + PE Stacked Chart -->
+    <!-- Right: VC + PE Side-by-Side -->
     <div>
       <div class="s6v-col-label">A Generational Entry Point</div>
-      <div class="s6v-col-sublabel">SEA private capital by year - VC (dark) + PE (light)</div>
-      <div class="s6v-stacked-chart">
-        <div class="s6v-stacked-row">
-          <div class="s6v-stacked-year">2021</div>
-          <div class="s6v-stacked-track" style="width:100%;">
-            <div class="s6v-stacked-vc" style="width:51%;"></div><div class="s6v-stacked-pe" style="width:49%;"></div>
+      <div class="s6v-col-sublabel">SEA deal value by year (USD billions)</div>
+      <div class="s6v-dual-chart">
+        <div class="s6v-dual-group">
+          <div class="s6v-dual-year">2021</div>
+          <div class="s6v-dual-bars">
+            <div class="s6v-dual-row"><div class="s6v-dual-fill s6v-vc-fill" style="width:100%;"></div><div class="s6v-dual-label">$25.7B</div></div>
+            <div class="s6v-dual-row"><div class="s6v-dual-fill s6v-pe-fill" style="width:97%;"></div><div class="s6v-dual-label">$25B</div></div>
           </div>
-          <div class="s6v-stacked-val">$50.7B</div>
         </div>
-        <div class="s6v-stacked-row">
-          <div class="s6v-stacked-year">2022</div>
-          <div class="s6v-stacked-track" style="width:59%;">
-            <div class="s6v-stacked-vc" style="width:57%;"></div><div class="s6v-stacked-pe" style="width:43%;"></div>
+        <div class="s6v-dual-group">
+          <div class="s6v-dual-year">2022</div>
+          <div class="s6v-dual-bars">
+            <div class="s6v-dual-row"><div class="s6v-dual-fill s6v-vc-fill" style="width:61%;"></div><div class="s6v-dual-label">$15.8B</div></div>
+            <div class="s6v-dual-row"><div class="s6v-dual-fill s6v-pe-fill" style="width:51%;"></div><div class="s6v-dual-label">$13B</div></div>
           </div>
-          <div class="s6v-stacked-val">$30B</div>
         </div>
-        <div class="s6v-stacked-row">
-          <div class="s6v-stacked-year">2023</div>
-          <div class="s6v-stacked-track" style="width:32%;">
-            <div class="s6v-stacked-vc" style="width:44%;"></div><div class="s6v-stacked-pe" style="width:56%;"></div>
+        <div class="s6v-dual-group">
+          <div class="s6v-dual-year">2023</div>
+          <div class="s6v-dual-bars">
+            <div class="s6v-dual-row"><div class="s6v-dual-fill s6v-vc-fill" style="width:31%;"></div><div class="s6v-dual-label">$8B</div></div>
+            <div class="s6v-dual-row"><div class="s6v-dual-fill s6v-pe-fill" style="width:35%;"></div><div class="s6v-dual-label">$9B</div></div>
           </div>
-          <div class="s6v-stacked-val">$16B</div>
         </div>
-        <div class="s6v-stacked-row">
-          <div class="s6v-stacked-year">2024</div>
-          <div class="s6v-stacked-track" style="width:41%;">
-            <div class="s6v-stacked-vc" style="width:22%;"></div><div class="s6v-stacked-pe" style="width:78%;"></div>
+        <div class="s6v-dual-group">
+          <div class="s6v-dual-year">2024</div>
+          <div class="s6v-dual-bars">
+            <div class="s6v-dual-row"><div class="s6v-dual-fill s6v-vc-fill" style="width:18%;"></div><div class="s6v-dual-label">$4.6B</div></div>
+            <div class="s6v-dual-row"><div class="s6v-dual-fill s6v-pe-fill s6v-pe-highlight" style="width:62%;"></div><div class="s6v-dual-label">$16B</div></div>
           </div>
-          <div class="s6v-stacked-val">$20.6B</div>
         </div>
-        <div class="s6v-stacked-row">
-          <div class="s6v-stacked-year">2025</div>
-          <div class="s6v-stacked-track" style="width:38%;">
-            <div class="s6v-stacked-vc" style="width:28%;"></div><div class="s6v-stacked-pe" style="width:72%;"></div>
+        <div class="s6v-dual-group">
+          <div class="s6v-dual-year">2025</div>
+          <div class="s6v-dual-bars">
+            <div class="s6v-dual-row"><div class="s6v-dual-fill s6v-vc-fill" style="width:21%;"></div><div class="s6v-dual-label">$5.4B</div></div>
+            <div class="s6v-dual-row"><div class="s6v-dual-fill s6v-pe-fill" style="width:54%;"></div><div class="s6v-dual-label">$14B</div></div>
           </div>
-          <div class="s6v-stacked-val">$19.4B</div>
         </div>
       </div>
       <div class="s6v-stacked-legend">
-        <span class="s6v-legend-item"><span class="s6v-legend-swatch s6v-swatch-vc"></span>VC/Startup</span>
-        <span class="s6v-legend-item"><span class="s6v-legend-swatch s6v-swatch-pe"></span>PE deals</span>
+        <span class="s6v-legend-item"><span class="s6v-legend-swatch s6v-swatch-vc"></span>VC/Startup (DealStreetAsia)</span>
+        <span class="s6v-legend-item"><span class="s6v-legend-swatch s6v-swatch-pe"></span>PE deals (Bain)</span>
       </div>
-      <div class="s6v-col-note">VC valuations have corrected 82% from the 2021 peak - the froth is gone. At the same time, <strong>PE deal value rebounded to $16B in 2024</strong> after two years of decline. Institutional capital is returning at rational prices while VC entry points remain historically attractive.</div>
+      <div class="s6v-col-note">VC valuations corrected 82% from the 2021 peak - the froth is gone. At the same time, <strong>PE deal value rebounded to $16B in 2024</strong> after two years of decline. Institutional capital is returning at rational prices while VC entry points remain historically attractive.</div>
     </div>
   </div>
 

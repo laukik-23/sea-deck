@@ -2375,6 +2375,9 @@ body::-webkit-scrollbar { display: none; }
 .s6v-vc-fill.s6v-peak { background: rgba(36,24,24,0.15); }
 .s6v-vc-fill.s6v-bottom { background: var(--maroon); }
 .s6v-vc-fill.s6v-recovery { background: rgba(107,10,20,0.5); }
+.s6v-vc-fill.s6v-pe-bar { background: rgba(29,59,41,0.25); }
+.s6v-vc-fill.s6v-pe-rebound { background: var(--green); }
+.s6v-vc-fill.s6v-pe-rebound + .s6v-vc-val { color: var(--green); font-weight: 700; }
 .s6v-vc-val {
   font-size: 9px; font-weight: 600; margin-left: 6px;
   white-space: nowrap; color: var(--text-secondary);
@@ -2961,10 +2964,10 @@ body::-webkit-scrollbar { display: none; }
       <div class="s6v-col-note"><strong>Single family offices</strong> surged 3.5x in four years. Inflows from Greater China, Indonesia, India, and the Middle East. 78% of AUM sourced from outside Singapore. <strong>$50B+</strong> in AI infrastructure investment flowing into the region.</div>
     </div>
 
-    <!-- Right: VC Correction -->
+    <!-- Right: The Entry Point -->
     <div>
       <div class="s6v-col-label">A Generational Entry Point</div>
-      <div class="s6v-col-sublabel">SEA VC/startup funding by year (USD)</div>
+      <div class="s6v-col-sublabel">VC valuations have corrected 82% - the froth is gone</div>
       <div class="s6v-vc-chart">
         <div class="s6v-vc-row">
           <div class="s6v-vc-year">2021</div>
@@ -2983,7 +2986,26 @@ body::-webkit-scrollbar { display: none; }
           <div class="s6v-vc-track"><div class="s6v-vc-fill s6v-bottom" style="width:18%;"></div><div class="s6v-vc-val">$4.6B (-82%)</div><span class="s6v-vc-badge s6v-green">SaaS +262%</span><span class="s6v-vc-badge s6v-green">AI +217%</span></div>
         </div>
       </div>
-      <div class="s6v-col-note">The excess has washed out. What remains are <strong>rational valuations and quality deals</strong>. Post-correction vintages historically outperform. PE deal value surged 60% to $16B in 2024. VCs pivoting from moonshots to 3-4x returns on profitable companies.</div>
+      <div class="s6v-col-sublabel" style="margin-top: 12px;">But PE deal value is already rebounding - smart money is moving</div>
+      <div class="s6v-vc-chart">
+        <div class="s6v-vc-row">
+          <div class="s6v-vc-year">2021</div>
+          <div class="s6v-vc-track"><div class="s6v-vc-fill s6v-pe-bar" style="width:100%;"></div><div class="s6v-vc-val">$25B (record)</div></div>
+        </div>
+        <div class="s6v-vc-row">
+          <div class="s6v-vc-year">2022</div>
+          <div class="s6v-vc-track"><div class="s6v-vc-fill s6v-pe-bar" style="width:52%;"></div><div class="s6v-vc-val">$13B</div></div>
+        </div>
+        <div class="s6v-vc-row">
+          <div class="s6v-vc-year">2023</div>
+          <div class="s6v-vc-track"><div class="s6v-vc-fill s6v-pe-bar" style="width:36%;"></div><div class="s6v-vc-val">$9B (trough)</div></div>
+        </div>
+        <div class="s6v-vc-row">
+          <div class="s6v-vc-year">2024</div>
+          <div class="s6v-vc-track"><div class="s6v-vc-fill s6v-pe-rebound" style="width:64%;"></div><div class="s6v-vc-val">$16B (+60%)</div></div>
+        </div>
+      </div>
+      <div class="s6v-col-note">The excess has washed out and valuations have reset. At the same time, <strong>PE deal value rebounded 60% to $16B in 2024</strong> after two years of decline - institutional capital is returning at rational prices. Post-correction vintages historically outperform. The window is open.</div>
     </div>
   </div>
 

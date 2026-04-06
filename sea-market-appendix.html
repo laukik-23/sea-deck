@@ -2189,28 +2189,16 @@ body::-webkit-scrollbar { display: none; }
   font-size: 9px; font-weight: 500; color: var(--text-secondary);
   margin-bottom: 6px; font-style: italic;
 }
-/* Grab timeline */
-.s5v-timeline {
-  display: flex; flex-direction: column; gap: 4px; margin-bottom: 10px;
-  padding-left: 2px; border-left: 2px solid rgba(107,10,20,0.15);
+/* Story stat callout (for cards without charts) */
+.s5v-story-stat {
+  font-family: 'Gelasio', Georgia, serif;
+  font-size: 32px; font-weight: 600; color: var(--maroon);
+  line-height: 1; margin-bottom: 2px;
 }
-.s5v-tl-row {
-  display: flex; align-items: baseline; gap: 8px;
-  padding-left: 10px; font-size: 9px; line-height: 1.4;
-  color: var(--text-secondary);
+.s5v-story-stat-sub {
+  font-size: 9px; font-weight: 400; color: var(--text-muted);
+  margin-bottom: 10px;
 }
-.s5v-tl-year {
-  font-weight: 600; color: var(--text-muted); min-width: 32px;
-  flex-shrink: 0;
-}
-.s5v-tl-event { font-weight: 300; }
-.s5v-tl-highlight {
-  background: rgba(107,10,20,0.05); border-radius: 4px;
-  padding: 3px 10px; margin-left: -2px;
-  border-left: 2px solid var(--maroon);
-}
-.s5v-tl-highlight .s5v-tl-year { color: var(--maroon); }
-.s5v-tl-highlight .s5v-tl-event { color: var(--text-primary); }
 
 .s5v-vs-matchup {
   display: flex; flex-direction: column; gap: 5px; margin-bottom: 10px;
@@ -2842,15 +2830,10 @@ body::-webkit-scrollbar { display: none; }
   <div class="s5v-vs-section animate-in stagger-4">
     <div class="s5v-vs-card">
       <div class="s5v-vs-country"><img src="https://flagcdn.com/w40/my.png" alt="MY"><img src="https://flagcdn.com/w40/sg.png" alt="SG"> Malaysia / Singapore</div>
-      <div class="s5v-vs-label">Grab&rsquo;s journey: Malaysian garage to SEA super-app</div>
-      <div class="s5v-timeline">
-        <div class="s5v-tl-row"><span class="s5v-tl-year">2012</span><span class="s5v-tl-event">Founded in Kuala Lumpur as MyTeksi</span></div>
-        <div class="s5v-tl-row"><span class="s5v-tl-year">2014</span><span class="s5v-tl-event">Rebranded to Grab, expanded across SEA</span></div>
-        <div class="s5v-tl-row"><span class="s5v-tl-year">2016</span><span class="s5v-tl-event">SoftBank leads $750M round; surpasses Uber in SEA rides</span></div>
-        <div class="s5v-tl-row s5v-tl-highlight"><span class="s5v-tl-year">2018</span><span class="s5v-tl-event"><strong>Uber sells entire SEA business to Grab</strong> for 27.5% stake</span></div>
-        <div class="s5v-tl-row"><span class="s5v-tl-year">2021</span><span class="s5v-tl-event">IPO on Nasdaq via SPAC ($40B valuation)</span></div>
-      </div>
-      <div class="s5v-vs-detail">Grab didn&rsquo;t just win a market - it forced the world&rsquo;s largest ride-hailing company to exit an entire region. Now operating across <strong>8 countries</strong> as a super-app spanning ride-hailing, food delivery, payments, and lending.</div>
+      <div class="s5v-vs-label">Grab vs Uber - ride-hailing in Southeast Asia</div>
+      <div class="s5v-story-stat">$40B</div>
+      <div class="s5v-story-stat-sub">Nasdaq IPO - founded in a Malaysian garage in 2012</div>
+      <div class="s5v-vs-detail">Founded in a Kuala Lumpur garage in 2012, Grab grew so dominant across Southeast Asia that by 2018, <strong>Uber sold its entire SEA business to Grab and left the region</strong>. Today Grab operates across <strong>8 countries</strong> as a listed super-app spanning ride-hailing, food delivery, payments, and lending. It is the same pattern that played out in China, where Didi forced Uber out two years earlier.</div>
     </div>
     <div class="s5v-vs-card">
       <div class="s5v-vs-country"><img src="https://flagcdn.com/w40/sg.png" alt="SG"> Singapore</div>

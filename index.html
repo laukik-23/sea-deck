@@ -987,7 +987,9 @@ body::-webkit-scrollbar { display: none; }
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: 8px;
+  display: flex; align-items: center; justify-content: center; gap: 5px;
 }
+.s2n-card-name img { width: 16px; height: auto; border-radius: 2px; display: block; }
 .s2n-india-card .s2n-card-name {
   color: rgba(255,255,255,0.7);
 }
@@ -1936,11 +1938,13 @@ body::-webkit-scrollbar { display: none; }
   box-shadow: 0 3px 12px rgba(107,10,20,0.04);
   transform: translateY(-1px);
 }
-.s2v-econ-flag { margin-bottom: 4px; }
-.s2v-econ-flag img { width: 22px; height: auto; border-radius: 2px; display: block; }
+.s2v-econ-head {
+  display: flex; align-items: center; justify-content: center; gap: 5px; margin-bottom: 6px;
+}
+.s2v-econ-head img { width: 18px; height: auto; border-radius: 2px; display: block; }
 .s2v-econ-name {
   font-size: 8px; font-weight: 600; letter-spacing: 0.8px;
-  text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px;
+  text-transform: uppercase; color: var(--text-muted);
 }
 .s2v-econ-gdp {
   font-family: 'Gelasio', Georgia, serif;
@@ -2510,43 +2514,37 @@ body::-webkit-scrollbar { display: none; }
   <!-- Six Economy Cards -->
   <div class="s2v-economies animate-in stagger-4">
     <div class="s2v-econ-card">
-      <div class="s2v-econ-flag"><img src="https://flagcdn.com/w40/id.png" alt="ID"></div>
-      <div class="s2v-econ-name">Indonesia</div>
+      <div class="s2v-econ-head"><img src="https://flagcdn.com/w40/id.png" alt="ID"><span class="s2v-econ-name">Indonesia</span></div>
       <div class="s2v-econ-gdp">$1.4T</div>
       <div class="s2v-econ-percap">$4,900 per capita</div>
       <div class="s2v-econ-growth">+5.0% real GDP growth (2024)</div>
     </div>
     <div class="s2v-econ-card">
-      <div class="s2v-econ-flag"><img src="https://flagcdn.com/w40/th.png" alt="TH"></div>
-      <div class="s2v-econ-name">Thailand</div>
+      <div class="s2v-econ-head"><img src="https://flagcdn.com/w40/th.png" alt="TH"><span class="s2v-econ-name">Thailand</span></div>
       <div class="s2v-econ-gdp">$527B</div>
       <div class="s2v-econ-percap">$7,300 per capita</div>
       <div class="s2v-econ-growth">+2.5% real GDP growth (2024)</div>
     </div>
     <div class="s2v-econ-card">
-      <div class="s2v-econ-flag"><img src="https://flagcdn.com/w40/sg.png" alt="SG"></div>
-      <div class="s2v-econ-name">Singapore</div>
+      <div class="s2v-econ-head"><img src="https://flagcdn.com/w40/sg.png" alt="SG"><span class="s2v-econ-name">Singapore</span></div>
       <div class="s2v-econ-gdp">$547B</div>
       <div class="s2v-econ-percap">$93,000 per capita</div>
       <div class="s2v-econ-growth">+4.1% real GDP growth (2024)</div>
     </div>
     <div class="s2v-econ-card">
-      <div class="s2v-econ-flag"><img src="https://flagcdn.com/w40/vn.png" alt="VN"></div>
-      <div class="s2v-econ-name">Vietnam</div>
+      <div class="s2v-econ-head"><img src="https://flagcdn.com/w40/vn.png" alt="VN"><span class="s2v-econ-name">Vietnam</span></div>
       <div class="s2v-econ-gdp">$500B+</div>
       <div class="s2v-econ-percap">$4,700 per capita</div>
       <div class="s2v-econ-growth">+7.1% real GDP growth (2024)</div>
     </div>
     <div class="s2v-econ-card">
-      <div class="s2v-econ-flag"><img src="https://flagcdn.com/w40/ph.png" alt="PH"></div>
-      <div class="s2v-econ-name">Philippines</div>
+      <div class="s2v-econ-head"><img src="https://flagcdn.com/w40/ph.png" alt="PH"><span class="s2v-econ-name">Philippines</span></div>
       <div class="s2v-econ-gdp">$462B</div>
       <div class="s2v-econ-percap">$3,500 per capita</div>
       <div class="s2v-econ-growth">+5.8% real GDP growth (2024)</div>
     </div>
     <div class="s2v-econ-card">
-      <div class="s2v-econ-flag"><img src="https://flagcdn.com/w40/my.png" alt="MY"></div>
-      <div class="s2v-econ-name">Malaysia</div>
+      <div class="s2v-econ-head"><img src="https://flagcdn.com/w40/my.png" alt="MY"><span class="s2v-econ-name">Malaysia</span></div>
       <div class="s2v-econ-gdp">$422B</div>
       <div class="s2v-econ-percap">$11,700 per capita</div>
       <div class="s2v-econ-growth">+4.8% real GDP growth (2024)</div>
@@ -2592,42 +2590,42 @@ body::-webkit-scrollbar { display: none; }
   <!-- Country Age Cards -->
   <div class="s2n-cards-row animate-in stagger-3">
     <div class="s2n-country-card s2n-india-card">
-      <div class="s2n-card-name">Philippines</div>
+      <div class="s2n-card-name"><img src="https://flagcdn.com/w40/ph.png" alt="PH"> Philippines</div>
       <div class="s2n-card-num">24.3</div>
       <div class="s2n-card-sub">median age</div>
       <div class="s2n-card-line"></div>
       <div class="s2n-card-tag">Youngest in ASEAN</div>
     </div>
     <div class="s2n-country-card">
-      <div class="s2n-card-name">Malaysia</div>
+      <div class="s2n-card-name"><img src="https://flagcdn.com/w40/my.png" alt="MY"> Malaysia</div>
       <div class="s2n-card-num">28.5</div>
       <div class="s2n-card-sub">median age</div>
       <div class="s2n-card-line"></div>
       <div class="s2n-card-tag s2n-gap-tag">Sweet spot</div>
     </div>
     <div class="s2n-country-card">
-      <div class="s2n-card-name">Vietnam</div>
+      <div class="s2n-card-name"><img src="https://flagcdn.com/w40/vn.png" alt="VN"> Vietnam</div>
       <div class="s2n-card-num">30.0</div>
       <div class="s2n-card-sub">median age</div>
       <div class="s2n-card-line"></div>
       <div class="s2n-card-tag s2n-gap-tag">101M people</div>
     </div>
     <div class="s2n-country-card">
-      <div class="s2n-card-name">Indonesia</div>
+      <div class="s2n-card-name"><img src="https://flagcdn.com/w40/id.png" alt="ID"> Indonesia</div>
       <div class="s2n-card-num">30.2</div>
       <div class="s2n-card-sub">median age</div>
       <div class="s2n-card-line"></div>
       <div class="s2n-card-tag s2n-gap-tag">284M people</div>
     </div>
     <div class="s2n-country-card">
-      <div class="s2n-card-name">Germany</div>
+      <div class="s2n-card-name"><img src="https://flagcdn.com/w40/de.png" alt="DE"> Germany</div>
       <div class="s2n-card-num">45.3</div>
       <div class="s2n-card-sub">median age</div>
       <div class="s2n-card-line"></div>
       <div class="s2n-card-tag s2n-gap-tag">+15 yrs older</div>
     </div>
     <div class="s2n-country-card">
-      <div class="s2n-card-name">Japan</div>
+      <div class="s2n-card-name"><img src="https://flagcdn.com/w40/jp.png" alt="JP"> Japan</div>
       <div class="s2n-card-num">49.4</div>
       <div class="s2n-card-sub">median age</div>
       <div class="s2n-card-line"></div>

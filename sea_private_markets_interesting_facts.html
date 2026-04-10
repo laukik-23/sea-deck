@@ -19,6 +19,10 @@
   --green: #1D3B29;
   --white: #FFFFFF;
   --text-primary: #241818;
+  /* Text contrast bumped 2026-04-06 for readability.
+     To match Sivugo/lanmea-presentation reference style,
+     set --text-secondary to rgba(36, 24, 24, 0.65)
+     and --text-muted    to rgba(36, 24, 24, 0.4) */
   --text-secondary: rgba(36, 24, 24, 0.92);
   --text-muted: rgba(36, 24, 24, 0.70);
   --border-light: rgba(36, 24, 24, 0.08);
@@ -50,6 +54,9 @@ body::-webkit-scrollbar { display: none; }
   top: 0;
   overflow: hidden;
   transform-origin: top left;
+  /* Reference (Sivugo/lanmea-presentation) uses Inter Light (300) as base body weight
+     for an airy editorial feel. Specific selectors at 500/600/700 still win. */
+  font-weight: 300;
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -2015,7 +2022,7 @@ body::-webkit-scrollbar { display: none; }
 }
 .s3v-stat-num {
   font-family: 'Gelasio', Georgia, serif;
-  font-size: 32px; font-weight: 600; color: var(--maroon);
+  font-size: 28px; font-weight: 600; color: var(--maroon);
   line-height: 1; margin-bottom: 5px;
 }
 .s3v-stat-title {
@@ -2192,7 +2199,7 @@ body::-webkit-scrollbar { display: none; }
 /* Story stat callout (for cards without charts) */
 .s5v-story-stat {
   font-family: 'Gelasio', Georgia, serif;
-  font-size: 32px; font-weight: 600; color: var(--maroon);
+  font-size: 28px; font-weight: 600; color: var(--maroon);
   line-height: 1; margin-bottom: 2px;
 }
 .s5v-story-stat-sub {

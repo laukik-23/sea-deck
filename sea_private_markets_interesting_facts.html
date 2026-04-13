@@ -2888,9 +2888,58 @@ body::-webkit-scrollbar { display: none; }
   </div>
   <div class="header-divider"></div>
 
-  <!-- 6 Cards: Left = comparison charts, Right = story stats -->
+  <!-- 6 Cards: Left = story stats + callout, Right = comparison charts -->
   <div class="s5v-vs-grid animate-in stagger-2">
-    <!-- Left Column: Comparison Charts -->
+    <!-- Left Column: Callout + Story Stats (horizontal layout) -->
+    <div class="s5v-vs-col">
+      <!-- Pattern Callout -->
+      <div class="s3v-callout">
+        <div class="s3v-callout-text">Jollibee over McDonald&rsquo;s. Highlands over Starbucks. Grab over Uber. Shopee over Amazon. Across Southeast Asia, local champions consistently outperform global incumbents - not by competing on price, but by adapting faster to local consumers.</div>
+      </div>
+      <!-- Grab vs Uber -->
+      <div class="s5v-vs-card" style="flex:1;display:flex;flex-direction:column;justify-content:center;">
+        <div class="s5v-vs-country"><img src="https://flagcdn.com/w40/my.png" alt="MY" style="width:18px;height:12px;object-fit:cover;"><img src="https://flagcdn.com/w40/sg.png" alt="SG" style="width:18px;height:12px;object-fit:cover;"> Malaysia / Singapore</div>
+        <div class="s5v-vs-label">Grab vs Uber - ride-hailing in Southeast Asia</div>
+        <div class="s5v-stat-row">
+          <div class="s5v-stat-left">
+            <div class="s5v-story-stat">$40B</div>
+            <div class="s5v-story-stat-sub">Nasdaq IPO</div>
+          </div>
+          <div class="s5v-stat-right">
+            <div class="s5v-vs-detail">Founded in a Kuala Lumpur garage in 2012, Grab grew so dominant across Southeast Asia that by 2018, <strong>Uber sold its entire SEA business to Grab and left the region</strong>. Today Grab operates across <strong>8 countries</strong> as a listed super-app spanning ride-hailing, food delivery, payments, and lending. It is the same pattern that played out in China, where Didi forced Uber out two years earlier.</div>
+          </div>
+        </div>
+      </div>
+      <!-- Thailand -->
+      <div class="s5v-vs-card" style="flex:1;display:flex;flex-direction:column;justify-content:center;">
+        <div class="s5v-vs-country"><img src="https://flagcdn.com/w40/th.png" alt="TH"> Thailand</div>
+        <div class="s5v-vs-label">Medical tourism - a local champion going global</div>
+        <div class="s5v-stat-row">
+          <div class="s5v-stat-left">
+            <div class="s5v-story-stat">190+</div>
+            <div class="s5v-story-stat-sub">countries</div>
+          </div>
+          <div class="s5v-stat-right">
+            <div class="s5v-vs-detail">Tourism drives 12% of GDP today and is projected to reach <strong>30%</strong>. Thailand isn&rsquo;t just beaches - Bumrungrad generates <strong>$5-6B/year</strong> from medical tourism alone. A heart bypass costs <strong>$15-25K</strong> here versus $100-150K+ in the US, with comparable clinical outcomes. With 32.4M tourists in 2024 and post-COVID recovery still accelerating, healthcare and hospitality are entering their strongest growth phase.</div>
+          </div>
+        </div>
+      </div>
+      <!-- Malaysia -->
+      <div class="s5v-vs-card" style="flex:1;display:flex;flex-direction:column;justify-content:center;">
+        <div class="s5v-vs-country"><img src="https://flagcdn.com/w40/my.png" alt="MY"> Malaysia</div>
+        <div class="s5v-vs-label">Halal certification - a regulatory moat across 57 nations</div>
+        <div class="s5v-stat-row">
+          <div class="s5v-stat-left">
+            <div class="s5v-story-stat">$5T+</div>
+            <div class="s5v-story-stat-sub">by 2030</div>
+          </div>
+          <div class="s5v-stat-right">
+            <div class="s5v-vs-detail">Malaysia created the world&rsquo;s first halal certification system, now the global standard across <strong>57 nations</strong> representing 2 billion Muslims. The halal economy is growing at <strong>6-8% annually</strong> and Malaysia has ranked <strong>#1 on the Global Islamic Economy Indicator</strong> for over a decade. JAKIM certification gives Malaysian companies a regulatory moat into that market that no competitor can replicate.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Right Column: Comparison Charts -->
     <div class="s5v-vs-col">
       <!-- Jollibee vs McDonald's -->
       <div class="s5v-vs-card">
@@ -2947,55 +2996,6 @@ body::-webkit-scrollbar { display: none; }
           </div>
         </div>
         <div class="s5v-vs-detail">The Singapore-based, SGX-listed Sea Group built Shopee into SEA&rsquo;s dominant platform with <strong>48% market share</strong> - larger than Lazada and TikTok Shop combined. Total SEA e-commerce GMV: <strong>$185B</strong>. Amazon, the world&rsquo;s largest e-commerce company, has virtually no presence in the region.</div>
-      </div>
-    </div>
-    <!-- Right Column: Story Stats (horizontal layout) -->
-    <div class="s5v-vs-col">
-      <!-- Grab vs Uber -->
-      <div class="s5v-vs-card" style="flex:1;display:flex;flex-direction:column;justify-content:center;">
-        <div class="s5v-vs-country"><img src="https://flagcdn.com/w40/my.png" alt="MY" style="width:18px;height:12px;object-fit:cover;"><img src="https://flagcdn.com/w40/sg.png" alt="SG" style="width:18px;height:12px;object-fit:cover;"> Malaysia / Singapore</div>
-        <div class="s5v-vs-label">Grab vs Uber - ride-hailing in Southeast Asia</div>
-        <div class="s5v-stat-row">
-          <div class="s5v-stat-left">
-            <div class="s5v-story-stat">$40B</div>
-            <div class="s5v-story-stat-sub">Nasdaq IPO</div>
-          </div>
-          <div class="s5v-stat-right">
-            <div class="s5v-vs-detail">Founded in a Kuala Lumpur garage in 2012, Grab grew so dominant across Southeast Asia that by 2018, <strong>Uber sold its entire SEA business to Grab and left the region</strong>. Today Grab operates across <strong>8 countries</strong> as a listed super-app spanning ride-hailing, food delivery, payments, and lending. It is the same pattern that played out in China, where Didi forced Uber out two years earlier.</div>
-          </div>
-        </div>
-      </div>
-      <!-- Thailand -->
-      <div class="s5v-vs-card" style="flex:1;display:flex;flex-direction:column;justify-content:center;">
-        <div class="s5v-vs-country"><img src="https://flagcdn.com/w40/th.png" alt="TH"> Thailand</div>
-        <div class="s5v-vs-label">Medical tourism - a local champion going global</div>
-        <div class="s5v-stat-row">
-          <div class="s5v-stat-left">
-            <div class="s5v-story-stat">190+</div>
-            <div class="s5v-story-stat-sub">countries</div>
-          </div>
-          <div class="s5v-stat-right">
-            <div class="s5v-vs-detail">Tourism drives 12% of GDP today and is projected to reach <strong>30%</strong>. Thailand isn&rsquo;t just beaches - Bumrungrad generates <strong>$5-6B/year</strong> from medical tourism alone. A heart bypass costs <strong>$15-25K</strong> here versus $100-150K+ in the US, with comparable clinical outcomes. With 32.4M tourists in 2024 and post-COVID recovery still accelerating, healthcare and hospitality are entering their strongest growth phase.</div>
-          </div>
-        </div>
-      </div>
-      <!-- Malaysia -->
-      <div class="s5v-vs-card" style="flex:1;display:flex;flex-direction:column;justify-content:center;">
-        <div class="s5v-vs-country"><img src="https://flagcdn.com/w40/my.png" alt="MY"> Malaysia</div>
-        <div class="s5v-vs-label">Halal certification - a regulatory moat across 57 nations</div>
-        <div class="s5v-stat-row">
-          <div class="s5v-stat-left">
-            <div class="s5v-story-stat">$5T+</div>
-            <div class="s5v-story-stat-sub">by 2030</div>
-          </div>
-          <div class="s5v-stat-right">
-            <div class="s5v-vs-detail">Malaysia created the world&rsquo;s first halal certification system, now the global standard across <strong>57 nations</strong> representing 2 billion Muslims. The halal economy is growing at <strong>6-8% annually</strong> and Malaysia has ranked <strong>#1 on the Global Islamic Economy Indicator</strong> for over a decade. JAKIM certification gives Malaysian companies a regulatory moat into that market that no competitor can replicate.</div>
-          </div>
-        </div>
-      </div>
-      <!-- Pattern Callout -->
-      <div class="s3v-callout" style="margin-top:auto;">
-        <div class="s3v-callout-text">Jollibee over McDonald&rsquo;s. Highlands over Starbucks. Grab over Uber. Shopee over Amazon. Across Southeast Asia, local champions consistently outperform global incumbents - not by competing on price, but by adapting faster to local consumers.</div>
       </div>
     </div>
   </div>
